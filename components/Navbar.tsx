@@ -378,7 +378,7 @@ const Navbar = () => {
             </div>
 
             {/* Desktop CTA Button */}
-            <button className="hidden sm:block minimal-button minimal-button-primary text-sm lg:text-base">
+            <button className="bg-black text-white rounded-2xl px-2 h-8  hidden sm:block minimal-button minimal-button-primary text-sm lg:text-base">
               {`Let's chat ↗`}
             </button>
 
