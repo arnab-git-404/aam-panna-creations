@@ -379,7 +379,7 @@ const Navbar = () => {
 
             {/* Desktop CTA Button */}
             <button className="hidden sm:block minimal-button minimal-button-primary text-sm lg:text-base">
-              Let's chat ↗
+              {`Let's chat ↗`}
             </button>
 
             {/* Mobile menu button */}
