@@ -44,6 +44,7 @@ const Projects = () => {
                   </p>
                 </div>
               ))}
+              
             </div>
           </div>
         </div>
@@ -63,6 +64,7 @@ const Projects = () => {
 
           <div className="relative overflow-hidden mb-16">
             <div className="flex animate-scroll">
+
               {/* First set of items */}
               {[...Array(10)].map((_, i) => (
                 <div 
