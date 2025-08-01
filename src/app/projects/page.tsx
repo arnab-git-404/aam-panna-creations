@@ -49,15 +49,41 @@ const Projects = () => {
         </div>
       </section>
 
+
       {/* Portfolio Gallery */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+          
           {/* Top row of portfolio items */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
             {[...Array(7)].map((_, i) => (
               <div key={i} className="aspect-square bg-gray-400 rounded-lg"></div>
             ))}
+          </div> */}
+
+          <div className="relative overflow-hidden mb-16">
+            <div className="flex animate-scroll">
+              {/* First set of items */}
+              {[...Array(10)].map((_, i) => (
+                <div 
+                  key={`first-${i}`} 
+                  className="flex-shrink-0 w-32 h-32 bg-gray-400 rounded-lg mr-4"
+                ></div>
+              ))}
+
+              {/* Duplicate set for seamless loop */}
+              {[...Array(10)].map((_, i) => (
+                <div 
+                  key={`second-${i}`} 
+                  className="flex-shrink-0 w-32 h-32 bg-gray-400 rounded-lg mr-4"
+                ></div>
+              ))}
+
+            </div>
           </div>
+
+
+
 
           {/* Project cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
