@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 
 const NotFound = () => {
-//   const location = useLocation();
 
+//   const location = useLocation();
 //   useEffect(() => {
 //     console.error(
 //       "404 Error: User attempted to access non-existent route:",

@@ -11,8 +11,9 @@ const Testimonials = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {[...Array(4)].map((_, i) => (
               <div key={i} className="bg-white rounded-lg shadow-lg p-6 card-hover">
-                <div className="aspect-square bg-black rounded-lg mb-4"></div>
                 <h3 className="font-bold mb-2">Description</h3>
+
+                <div className="aspect-square bg-black rounded-lg mb-4"></div>
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-medium">Title</p>
