@@ -52,11 +52,11 @@ const Form: React.FC = () => {
                   </div>
 
                   <h2 className="text-2xl lg:text-3xl font-bold mb-3 leading-tight">
-                    Let's Start a<br />
+                    {`Let's Start a`} <br />
                     <span className="text-yellow-300">Conversation</span>
                   </h2>
                   <p className="text-sm text-blue-100 mb-6 leading-relaxed">
-                    We're here to help and answer any questions you might have.
+                    {`We're here to help and answer any questions you might have.`}
                   </p>
                 </div>
 
@@ -120,13 +120,13 @@ const Form: React.FC = () => {
               <div className="h-full flex flex-col justify-center">
                 <div className="text-center mb-6">
                   <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-3">Send us a Message</h2>
-                  <p className="text-gray-600">We'd love to hear from you.</p>
+                  <p className="text-gray-600">{`We'd love to hear from you.`}</p>
                 </div>
                 
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                      What's your name?
+                      {`What's your name?`}
                     </label>
                     <input
                       type="text"
@@ -142,7 +142,7 @@ const Form: React.FC = () => {
 
                   <div>
                     <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                      What's your email address?
+                      {`What's your email address?`}
                     </label>
                     <input
                       type="email"
