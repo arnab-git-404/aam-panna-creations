@@ -38,13 +38,10 @@ const Hero = () => {
           alt="Hero Image"
           width={500}
           height={578}
-
           className=""
           
         />
-    
-        {/* <h1>Welcome to AAM Panna Creations</h1>
-        <p>Your creative partner for amazing projects</p> */}
+  
       </div>
     </section>
   );
