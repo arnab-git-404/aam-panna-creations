@@ -94,7 +94,7 @@
 // // //           <div className="services-left">
 // // //             <p className="scroll-note">Auto scroll, and scroll animation</p>
 // // //             <p className="card-note">Each card represents a service we provide</p>
-            
+
 // // //             <div className="services-scroll-container" ref={scrollRef}>
 // // //               {services.map((service) => (
 // // //                 <div key={service.id} className="service-card">
@@ -300,8 +300,6 @@
 
 // // // export default Services;
 
-
-
 // // 'use client';
 
 // // import React, { useEffect, useRef } from 'react';
@@ -424,7 +422,7 @@
 // //               <p>Auto scroll of all clients</p>
 // //               <div className="scroll-arrow">→</div>
 // //             </div>
-            
+
 // //             <div className="services-scroll-container" ref={scrollRef}>
 // //               {services.map((service) => (
 // //                 <div key={service.id} className="service-card">
@@ -708,9 +706,7 @@
 
 // export default ServicesSection;
 
-
-
-// COMMENTED ON 11.08.25 
+// COMMENTED ON 11.08.25
 
 // 'use client';
 
@@ -787,7 +783,7 @@
 
 //   return (
 //     <div className="relative w-full h-[1504px] bg-white flex items-center justify-center px-20">
-      
+
 //       {/* Left Scroll Section - Service Cards */}
 //       {/* <div className="absolute left-10 top-1/2 transform -translate-y-1/2 w-48 h-[500px] overflow-hidden" ref={cardListRef}>
 //         <div className="flex flex-col gap-8">
@@ -797,8 +793,8 @@
 //               <div
 //                 key={`${service.id}-${i}`}
 //                 className={`w-40 h-24 rounded-lg rotate-[10deg] transition-all duration-500 shadow-lg transform hover:scale-105 ${
-//                   isActive 
-//                     ? `${service.color} text-white opacity-100 scale-110` 
+//                   isActive
+//                     ? `${service.color} text-white opacity-100 scale-110`
 //                     : 'bg-gray-300 text-gray-600 opacity-70 grayscale'
 //                 }`}
 //               >
@@ -823,13 +819,13 @@
 //             const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
 //             const isActive = i === activeCardIndex;
 //             const isVisible = angle >= -90 && angle <= 90; // Only show cards in semicircle view
-            
+
 //             return (
 //               <div
 //                 key={service.id}
 //                 className={`absolute w-40 h-24 rounded-lg transition-all duration-700 shadow-lg transform ${
-//                   isActive 
-//                     ? `${service.color} text-white opacity-100 scale-125 z-20` 
+//                   isActive
+//                     ? `${service.color} text-white opacity-100 scale-125 z-20`
 //                     : 'bg-gray-300 text-gray-600 opacity-70 grayscale z-10'
 //                 } ${isVisible ? 'visible' : 'invisible'}`}
 //                 style={{
@@ -852,7 +848,7 @@
 
 //       {/* Semi Good  */}
 //       <div className="absolute left-2 w-96 h-[500px] overflow-hidden">
-        
+
 //         <div className=" w-full h-full">
 //           {[...services, ...services].map((service, i) => {
 //             const isActive = i % services.length === activeCardIndex;
@@ -860,13 +856,13 @@
 //             const radius = 180; // Distance from center
 //             const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
 //             const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
-            
+
 //             return (
 //               <div
 //                 key={`${service.id}-${i}`}
 //                 className={`absolute w-40 h-24 rounded-lg transition-all duration-500 shadow-lg transform hover:scale-105 ${
-//                   isActive 
-//                     ? `${service.color} text-white opacity-100 scale-110 z-20` 
+//                   isActive
+//                     ? `${service.color} text-white opacity-100 scale-110 z-20`
 //                     : 'bg-gray-300 text-gray-600 opacity-70 grayscale z-10'
 //                 }`}
 //                 style={{
@@ -885,11 +881,6 @@
 //           })}
 //         </div>
 //       </div>
-     
-
-
-
-
 
 //       {/* Center Content */}
 //       <div className="text-center max-w-md z-10">
@@ -901,10 +892,10 @@
 //           <span className="text-blue-500 ml-2">↗</span>
 //         </h2>
 //         <p className="text-gray-600 leading-relaxed">
-//           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venia quis pretium risus. 
+//           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venia quis pretium risus.
 //           Euismod dictum egestas orci molestie facilisis.
 //         </p>
-        
+
 //         {/* Active Service Display */}
 //         <div className="mt-8 p-4 bg-gray-50 rounded-lg">
 //           <h3 className="font-semibold text-lg text-gray-800">
@@ -925,8 +916,8 @@
 //               <div
 //                 key={`${client.id}-${i}`}
 //                 className={`w-20 h-20 rounded-lg shadow-md transition-all duration-500 flex items-center justify-center ${
-//                   isActive 
-//                     ? `${client.color} opacity-100 scale-110 shadow-xl` 
+//                   isActive
+//                     ? `${client.color} opacity-100 scale-110 shadow-xl`
 //                     : 'bg-gray-200 opacity-60 grayscale'
 //                 }`}
 //               >
@@ -942,7 +933,6 @@
 // };
 
 // export default ServicesSection;
-
 
 //Got the Structure
 
@@ -1011,15 +1001,12 @@
 //   ]
 
 //   return (
-   
-   
-    
 
 //  <div className="flex flex-col items-start justify-center h-screen gap-6">
 //       {icons.map((item, index) => (
 //         <div
 //           key={index}
-//           className={`flex items-center justify-center rounded-full transition-all duration-300 cursor-pointer ${item.offset} 
+//           className={`flex items-center justify-center rounded-full transition-all duration-300 cursor-pointer ${item.offset}
 //             ${item.active ? "bg-yellow-400 text-white w-16 h-16" : "bg-gray-300 text-gray-600 w-12 h-12"}`}
 //         >
 //           <FiClock size={item.active ? 28 : 20} />
@@ -1079,26 +1066,26 @@
 //   }, []);
 
 //   const icons = [
-  
+
 //     { active: false , offset: "ml-8" },
 //     { active: false , offset: "ml-26" },
 //     { active: true , offset: "ml-36" }, // Highlighted one
 //     { active: false , offset: "ml-26" },
 //     { active: false , offset: "ml-8" },
-   
+
 //   ];
 
 //   const rightCards = Array.from({ length: 7 }, (_, i) => i);
 
 //   return (
 //     <div className="flex items-center justify-between h-screen px-8 bg-gray-50">
-      
+
 //       {/* Left Side Icons */}
 //       <div className="flex flex-col gap-6">
 //         {icons.map((item, index) => (
 //           <div
 //             key={index}
-//             className={`w-12 h-12 flex items-center justify-center rounded-full 
+//             className={`w-12 h-12 flex items-center justify-center rounded-full
 //               transition-all duration-300 cursor-pointer  ${item.offset}
 //               ${item.active ? "bg-orange-400 text-white w-16 h-16" : "bg-gray-300 text-gray-600"}`}
 //           >
@@ -1135,7 +1122,6 @@
 // };
 
 // export default Services;
-
 
 // Right Side Courasal Working & UI + UX
 // "use client";
@@ -1204,13 +1190,13 @@
 
 //   return (
 //     <div className="flex items-center justify-between h-screen px-8 bg-gray-50">
-      
+
 //       {/* Left Side Icons */}
 //       <div className="flex flex-col gap-6">
 //         {icons.map((item, index) => (
 //           <div
 //             key={index}
-//             className={`w-12 h-12 flex items-center justify-center rounded-full 
+//             className={`w-12 h-12 flex items-center justify-center rounded-full
 //               transition-all duration-300 cursor-pointer ${item.offset}
 //               ${item.active ? "bg-orange-400 text-white w-16 h-16" : "bg-gray-300 text-gray-600"}`}
 //           >
@@ -1238,8 +1224,8 @@
 //           <div
 //             key={index}
 //             className={`w-20 h-16 rounded-lg shadow-sm transition-all duration-500 ${
-//               index === activeCardIndex 
-//                 ? "bg-blue-400 scale-110 shadow-lg" 
+//               index === activeCardIndex
+//                 ? "bg-blue-400 scale-110 shadow-lg"
 //                 : "bg-gray-300"
 //             }`}
 //           />
@@ -1251,8 +1237,6 @@
 // };
 
 // export default Services;
-
-
 
 // GOOD WITH UI + UX & animation - we can make it better
 // "use client";
@@ -1321,13 +1305,13 @@
 
 //   return (
 //     <div className="flex items-center justify-between h-screen px-8 bg-gray-50">
-      
+
 //       {/* Left Side Icons - Dynamic */}
 //       <div className="flex flex-col gap-6">
 //         {generateIcons().map((item, index) => (
 //           <div
 //             key={index}
-//             className={`w-12 h-12 flex items-center justify-center rounded-full 
+//             className={`w-12 h-12 flex items-center justify-center rounded-full
 //               transition-all duration-500 cursor-pointer ${item.offset}
 //               ${item.active ? "bg-orange-400 text-white w-16 h-16" : "bg-gray-300 text-gray-600"}`}
 //             onClick={() => setActiveIndex(index)}
@@ -1356,8 +1340,8 @@
 //           <div
 //             key={index}
 //             className={`w-20 h-16 rounded-lg shadow-sm transition-all duration-500 ${
-//               index === activeCardIndex 
-//                 ? "bg-blue-400 scale-110 shadow-lg" 
+//               index === activeCardIndex
+//                 ? "bg-blue-400 scale-110 shadow-lg"
 //                 : "bg-gray-300"
 //             }`}
 //           />
@@ -1370,8 +1354,147 @@
 
 // export default Services;
 
+// FInal
 
-// FInal 
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import { FiClock } from "react-icons/fi";
+
+// interface Service {
+//   id: number;
+//   title: string;
+//   description: string;
+// }
+
+// const servicesData: Service[] = [
+//   {
+//     id: 1,
+//     title: "Services",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci molestie facilisis ut magna cursus orci in.",
+//   },
+//   {
+//     id: 2,
+//     title: "Consulting",
+//     description: "We provide expert consulting for business strategy and growth planning.",
+//   },
+//   {
+//     id: 3,
+//     title: "Development",
+//     description: "Custom web and mobile app development solutions.",
+//   },
+//   {
+//     id: 4,
+//     title: "Marketing",
+//     description: "Creative marketing solutions for your brand and business.",
+//   },
+//   {
+//     id: 5,
+//     title: "Marketing",
+//     description: "Creative marketing solutions for your brand and business.",
+//   },
+
+// ];
+
+// const Services: React.FC = () => {
+//   const [activeIndex, setActiveIndex] = useState<number>(0);
+//   const [activeCardIndex, setActiveCardIndex] = useState<number>(0);
+
+//   // Auto carousel effect for center content
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setActiveIndex((prev) => (prev + 1) % servicesData.length);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   // Auto carousel effect for right cards
+//   useEffect(() => {
+//     const cardInterval = setInterval(() => {
+//       setActiveCardIndex((prev) => (prev + 1) % 7);
+//     }, 2000);
+//     return () => clearInterval(cardInterval);
+//   }, []);
+
+//   // Generate circular positions for icons
+//   const generateCircularIcons = () => {
+//     const radius = 200; // Distance from center
+//     const totalIcons = servicesData.length;
+//     const angleStep = 180 / (totalIcons - 1); // Spread across semicircle (180 degrees)
+//     const startAngle = -90; // Start from top (-90 degrees)
+
+//     return servicesData.map((_, index) => {
+//       const angle = startAngle + (index * angleStep);
+//       const x = Math.cos((angle * Math.PI) / 180) * radius;
+//       const y = Math.sin((angle * Math.PI) / 180) * radius;
+
+//       return {
+//         active: index === activeIndex,
+//         x: x + 70, // Center offset
+//         y: y + 400, // Center offset
+//       };
+//     });
+//   };
+
+//   const rightCards = Array.from({ length: 7 }, (_, i) => i);
+
+//   return (
+//     <div className="flex items-center justify-between h-screen px-8 bg-gray-50">
+
+//       {/* Left Side Icons - Circular Layout */}
+//       <div className="relative w-80 h-full flex ">
+//         <div className="relative w-full h-96">
+//           {generateCircularIcons().map((item, index) => (
+//             <div
+//               key={index}
+//               className={`absolute flex items-center justify-center rounded-full
+//                 transition-all duration-500 cursor-pointer transform
+//                 ${item.active ? "bg-orange-400 text-white w-16 h-16 scale-110" : "bg-gray-300 text-gray-600 w-12 h-12"}`}
+//               style={{
+//                 left: `${item.x}px`,
+//                 top: `${item.y}px`,
+//                 transform: `translate(-50%, -50%) ${item.active ? 'scale(1.1)' : 'scale(1)'}`,
+//               }}
+//               onClick={() => setActiveIndex(index)}
+//             >
+//               <FiClock size={item.active ? 28 : 20} />
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+
+//       {/* Center Content */}
+//       <div className="flex-1 max-w-md mx-16">
+//         <div className="text-center">
+//           <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
+//             {servicesData[activeIndex].title}
+//             <span className="text-2xl">↗</span>
+//           </h2>
+//           <p className="text-gray-600 leading-relaxed text-sm">
+//             {servicesData[activeIndex].description}
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* Right Side Cards - Auto Carousel */}
+//       <div className="flex flex-col gap-4">
+//         {rightCards.map((_, index) => (
+//           <div
+//             key={index}
+//             className={`w-20 h-16 rounded-lg shadow-sm transition-all duration-500 ${
+//               index === activeCardIndex
+//                 ? "bg-blue-400 scale-110 shadow-lg"
+//                 : "bg-gray-300"
+//             }`}
+//           />
+//         ))}
+//       </div>
+
+//     </div>
+//   );
+// };
+
+// export default Services;
 
 "use client";
 import React, { useState, useEffect } from "react";
@@ -1393,7 +1516,8 @@ const servicesData: Service[] = [
   {
     id: 2,
     title: "Consulting",
-    description: "We provide expert consulting for business strategy and growth planning.",
+    description:
+      "We provide expert consulting for business strategy and growth planning.",
   },
   {
     id: 3,
@@ -1407,10 +1531,9 @@ const servicesData: Service[] = [
   },
   {
     id: 5,
-    title: "Marketing",
-    description: "Creative marketing solutions for your brand and business.",
+    title: "Design",
+    description: "Creative design solutions for your brand and business.",
   },
-
 ];
 
 const Services: React.FC = () => {
@@ -1441,10 +1564,10 @@ const Services: React.FC = () => {
     const startAngle = -90; // Start from top (-90 degrees)
 
     return servicesData.map((_, index) => {
-      const angle = startAngle + (index * angleStep);
+      const angle = startAngle + index * angleStep;
       const x = Math.cos((angle * Math.PI) / 180) * radius;
       const y = Math.sin((angle * Math.PI) / 180) * radius;
-      
+
       return {
         active: index === activeIndex,
         x: x + 70, // Center offset
@@ -1456,58 +1579,127 @@ const Services: React.FC = () => {
   const rightCards = Array.from({ length: 7 }, (_, i) => i);
 
   return (
-    <div className="flex items-center justify-between h-screen px-8 bg-gray-50">
-      
-      {/* Left Side Icons - Circular Layout */}
-      <div className="relative w-80 h-full flex ">
-        <div className="relative w-full h-96">
-          {generateCircularIcons().map((item, index) => (
+    <>
+      {/* Desktop Version */}
+      <div className="px-12 space-y-6">
+        <h2 className=" font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight">
+          Services
+        </h2>
+      </div>
+      <div className="hidden md:flex items-center justify-between h-screen px-8 bg-gray-50">
+        {/* Left Side Icons - Circular Layout */}
+        <div className="relative w-80 h-full flex">
+          <div className="relative w-full h-96">
+            {generateCircularIcons().map((item, index) => (
+              <div
+                key={index}
+                className={`absolute flex items-center justify-center rounded-full 
+                  transition-all duration-500 cursor-pointer transform
+                  ${
+                    item.active
+                      ? "bg-orange-400 text-white w-16 h-16 scale-110"
+                      : "bg-gray-300 text-gray-600 w-12 h-12"
+                  }`}
+                style={{
+                  left: `${item.x}px`,
+                  top: `${item.y}px`,
+                  transform: `translate(-50%, -50%) ${
+                    item.active ? "scale(1.1)" : "scale(1)"
+                  }`,
+                }}
+                onClick={() => setActiveIndex(index)}
+              >
+                <FiClock size={item.active ? 45 : 40} />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Center Content */}
+        <div className="flex-1 max-w-md mx-16">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
+              {servicesData[activeIndex].title}
+              <span className="text-2xl">↗</span>
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-sm">
+              {servicesData[activeIndex].description}
+            </p>
+          </div>
+        </div>
+
+        {/* Right Side Cards - Auto Carousel */}
+        <div className="flex flex-col gap-4">
+          {rightCards.map((_, index) => (
             <div
               key={index}
-              className={`absolute flex items-center justify-center rounded-full 
-                transition-all duration-500 cursor-pointer transform
-                ${item.active ? "bg-orange-400 text-white w-16 h-16 scale-110" : "bg-gray-300 text-gray-600 w-12 h-12"}`}
-              style={{
-                left: `${item.x}px`,
-                top: `${item.y}px`,
-                transform: `translate(-50%, -50%) ${item.active ? 'scale(1.1)' : 'scale(1)'}`,
-              }}
-              onClick={() => setActiveIndex(index)}
-            >
-              <FiClock size={item.active ? 28 : 20} />
-            </div>
+              className={`w-20 h-16 rounded-lg shadow-sm transition-all duration-500 ${
+                index === activeCardIndex
+                  ? "bg-blue-400 scale-110 shadow-lg"
+                  : "bg-gray-300"
+              }`}
+            />
           ))}
         </div>
       </div>
 
-      {/* Center Content */}
-      <div className="flex-1 max-w-md mx-16">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
-            {servicesData[activeIndex].title}
-            <span className="text-2xl">↗</span>
-          </h2>
-          <p className="text-gray-600 leading-relaxed text-sm">
-            {servicesData[activeIndex].description}
-          </p>
+      {/* Mobile Version */}
+      <div className="md:hidden relative h-96 bg-white overflow-hidden">
+        {/* Blur Effect Top */}
+        {/* <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-white via-white/90 to-transparent z-10 backdrop-blur-sm"></div> */}
+
+        {/* Blur Effect Bottom */}
+        {/* <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/90 to-transparent z-10 backdrop-blur-sm"></div> */}
+
+        {/* Top Cards */}
+        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex gap-3">
+          {rightCards.slice(0, 4).map((_, index) => (
+            <div
+              key={index}
+              className={`w-16 h-12 rounded-lg shadow-sm transition-all duration-500 ${
+                index === activeCardIndex % 4
+                  ? "bg-blue-400 scale-110 shadow-lg"
+                  : "bg-gray-200"
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Center Content */}
+        <div className="flex flex-col items-center justify-center h-full px-6 z-20 relative">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
+              {servicesData[activeIndex].title}
+              <span className="text-xl">↗</span>
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-sm max-w-sm">
+              {servicesData[activeIndex].description}
+            </p>
+          </div>
+
+          {/* Bottom Circular Icons */}
+          <div className="relative">
+            <div className="flex gap-4 items-center">
+              {servicesData.map((_, index) => (
+                <div
+                  key={index}
+                  className={`flex items-center justify-center rounded-full 
+                    transition-all duration-500 cursor-pointer
+                    ${
+                      index === activeIndex
+                        ? "bg-orange-400 text-white w-16 h-16 scale-110"
+                        : "bg-gray-300 text-gray-600 w-12 h-12"
+                    }`}
+                  onClick={() => setActiveIndex(index)}
+                >
+                  <FiClock size={index === activeIndex ? 24 : 16} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Right Side Cards - Auto Carousel */}
-      <div className="flex flex-col gap-4">
-        {rightCards.map((_, index) => (
-          <div
-            key={index}
-            className={`w-20 h-16 rounded-lg shadow-sm transition-all duration-500 ${
-              index === activeCardIndex 
-                ? "bg-blue-400 scale-110 shadow-lg" 
-                : "bg-gray-300"
-            }`}
-          />
-        ))}
-      </div>
-
-    </div>
+    </>
   );
 };
 
