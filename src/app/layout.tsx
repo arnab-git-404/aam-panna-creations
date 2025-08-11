@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   description: "Aam Panna Creations is a creative studio specializing in web design, development, and digital solutions.",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{

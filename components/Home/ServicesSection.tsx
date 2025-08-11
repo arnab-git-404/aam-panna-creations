@@ -710,234 +710,805 @@
 
 
 
+// COMMENTED ON 11.08.25 
 
-'use client';
+// 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+// import React, { useEffect, useRef, useState } from 'react';
 
-interface Service {
-  id: number;
-  title: string;
-  description: string;
-  icon: string;
-  color: string;
-}
+// interface Service {
+//   id: number;
+//   title: string;
+//   description: string;
+//   icon: string;
+//   color: string;
+// }
 
-const ServicesSection: React.FC = () => {
-  const clientListRef = useRef<HTMLDivElement>(null);
-  const cardListRef = useRef<HTMLDivElement>(null);
-  const [activeCardIndex, setActiveCardIndex] = useState(0);
-  const [activeClientIndex, setActiveClientIndex] = useState(0);
+// const ServicesSection: React.FC = () => {
+//   const clientListRef = useRef<HTMLDivElement>(null);
+//   const cardListRef = useRef<HTMLDivElement>(null);
+//   const [activeCardIndex, setActiveCardIndex] = useState(0);
+//   const [activeClientIndex, setActiveClientIndex] = useState(0);
 
-  const services: Service[] = [
-    { id: 1, title: "Web Development", description: "Creating modern web applications", icon: "🌐", color: "bg-blue-500" },
-    { id: 2, title: "Mobile Apps", description: "iOS and Android development", icon: "📱", color: "bg-green-500" },
-    { id: 3, title: "UI/UX Design", description: "Beautiful user experiences", icon: "🎨", color: "bg-purple-500" },
-    { id: 4, title: "Digital Marketing", description: "Grow your online presence", icon: "📊", color: "bg-orange-500" },
-    { id: 5, title: "Brand Identity", description: "Memorable brand designs", icon: "💎", color: "bg-pink-500" },
-    { id: 6, title: "Consulting", description: "Strategic business advice", icon: "💼", color: "bg-indigo-500" }
-  ];
+//   const services: Service[] = [
+//     { id: 1, title: "Web Development", description: "Creating modern web applications", icon: "🌐", color: "bg-blue-500" },
+//     { id: 2, title: "Mobile Apps", description: "iOS and Android development", icon: "📱", color: "bg-green-500" },
+//     { id: 3, title: "UI/UX Design", description: "Beautiful user experiences", icon: "🎨", color: "bg-purple-500" },
+//     { id: 4, title: "Digital Marketing", description: "Grow your online presence", icon: "📊", color: "bg-orange-500" },
+//     { id: 5, title: "Brand Identity", description: "Memorable brand designs", icon: "💎", color: "bg-pink-500" },
+//     { id: 6, title: "Consulting", description: "Strategic business advice", icon: "💼", color: "bg-indigo-500" }
+//   ];
 
-  const clients = [
-    { id: 1, name: "Client A", logo: "🏢", color: "bg-red-400" },
-    { id: 2, name: "Client B", logo: "🏪", color: "bg-blue-400" },
-    { id: 3, name: "Client C", logo: "🏭", color: "bg-green-400" },
-    { id: 4, name: "Client D", logo: "🏬", color: "bg-yellow-400" },
-    { id: 5, name: "Client E", logo: "🏘️", color: "bg-purple-400" },
-    { id: 6, name: "Client F", logo: "🏙️", color: "bg-pink-400" },
-    { id: 7, name: "Client G", logo: "🏟️", color: "bg-indigo-400" },
-    { id: 8, name: "Client H", logo: "🏛️", color: "bg-gray-400" }
-  ];
+//   const clients = [
+//     { id: 1, name: "Client A", logo: "🏢", color: "bg-red-400" },
+//     { id: 2, name: "Client B", logo: "🏪", color: "bg-blue-400" },
+//     { id: 3, name: "Client C", logo: "🏭", color: "bg-green-400" },
+//     { id: 4, name: "Client D", logo: "🏬", color: "bg-yellow-400" },
+//     { id: 5, name: "Client E", logo: "🏘️", color: "bg-purple-400" },
+//     { id: 6, name: "Client F", logo: "🏙️", color: "bg-pink-400" },
+//     { id: 7, name: "Client G", logo: "🏟️", color: "bg-indigo-400" },
+//     { id: 8, name: "Client H", logo: "🏛️", color: "bg-gray-400" }
+//   ];
 
-  useEffect(() => {
-    const cardInterval = setInterval(() => {
-      setActiveCardIndex((prev) => (prev + 1) % services.length);
-    }, 2000);
+//   useEffect(() => {
+//     const cardInterval = setInterval(() => {
+//       setActiveCardIndex((prev) => (prev + 1) % services.length);
+//     }, 2000);
 
-    const clientInterval = setInterval(() => {
-      setActiveClientIndex((prev) => (prev + 1) % clients.length);
-    }, 1500);
+//     const clientInterval = setInterval(() => {
+//       setActiveClientIndex((prev) => (prev + 1) % clients.length);
+//     }, 1500);
 
-    return () => {
-      clearInterval(cardInterval);
-      clearInterval(clientInterval);
-    };
-  }, [services.length, clients.length]);
+//     return () => {
+//       clearInterval(cardInterval);
+//       clearInterval(clientInterval);
+//     };
+//   }, [services.length, clients.length]);
 
-  useEffect(() => {
-    const scrollElement = (element: HTMLDivElement | null, speed: number) => {
-      if (!element) return;
+//   useEffect(() => {
+//     const scrollElement = (element: HTMLDivElement | null, speed: number) => {
+//       if (!element) return;
 
-      let scrollAmount = 0;
-      const scroll = () => {
-        scrollAmount += speed;
-        element.scrollTop = scrollAmount;
-        if (scrollAmount >= element.scrollHeight - element.clientHeight) {
-          scrollAmount = 0;
-        }
-        requestAnimationFrame(scroll);
-      };
-      scroll();
-    };
+//       let scrollAmount = 0;
+//       const scroll = () => {
+//         scrollAmount += speed;
+//         element.scrollTop = scrollAmount;
+//         if (scrollAmount >= element.scrollHeight - element.clientHeight) {
+//           scrollAmount = 0;
+//         }
+//         requestAnimationFrame(scroll);
+//       };
+//       scroll();
+//     };
 
-    scrollElement(clientListRef.current, 0.5);
-    scrollElement(cardListRef.current, 0.3);
-  }, []);
+//     scrollElement(clientListRef.current, 0.5);
+//     scrollElement(cardListRef.current, 0.3);
+//   }, []);
 
-  return (
-    <div className="relative w-full h-[1504px] bg-white flex items-center justify-center px-20">
+//   return (
+//     <div className="relative w-full h-[1504px] bg-white flex items-center justify-center px-20">
       
-      {/* Left Scroll Section - Service Cards */}
-      {/* <div className="absolute left-10 top-1/2 transform -translate-y-1/2 w-48 h-[500px] overflow-hidden" ref={cardListRef}>
-        <div className="flex flex-col gap-8">
-          {[...services, ...services].map((service, i) => {
-            const isActive = i % services.length === activeCardIndex;
-            return (
-              <div
-                key={`${service.id}-${i}`}
-                className={`w-40 h-24 rounded-lg rotate-[10deg] transition-all duration-500 shadow-lg transform hover:scale-105 ${
-                  isActive 
-                    ? `${service.color} text-white opacity-100 scale-110` 
-                    : 'bg-gray-300 text-gray-600 opacity-70 grayscale'
-                }`}
-              >
-                <div className="p-3 h-full flex flex-col justify-center items-center text-center">
-                  <div className="text-lg mb-1">{service.icon}</div>
-                  <div className="text-xs font-semibold">{service.title}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div> */}
+//       {/* Left Scroll Section - Service Cards */}
+//       {/* <div className="absolute left-10 top-1/2 transform -translate-y-1/2 w-48 h-[500px] overflow-hidden" ref={cardListRef}>
+//         <div className="flex flex-col gap-8">
+//           {[...services, ...services].map((service, i) => {
+//             const isActive = i % services.length === activeCardIndex;
+//             return (
+//               <div
+//                 key={`${service.id}-${i}`}
+//                 className={`w-40 h-24 rounded-lg rotate-[10deg] transition-all duration-500 shadow-lg transform hover:scale-105 ${
+//                   isActive 
+//                     ? `${service.color} text-white opacity-100 scale-110` 
+//                     : 'bg-gray-300 text-gray-600 opacity-70 grayscale'
+//                 }`}
+//               >
+//                 <div className="p-3 h-full flex flex-col justify-center items-center text-center">
+//                   <div className="text-lg mb-1">{service.icon}</div>
+//                   <div className="text-xs font-semibold">{service.title}</div>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </div> */}
 
-      {/* <div className="absolute left-10 top-1/2 transform -translate-y-1/2 w-96 h-[500px] overflow-hidden" ref={cardListRef}>
-        <div className="relative w-full h-full">
-          {services.map((service, i) => {
-            const totalCards = services.length;
-            const currentOffset = (activeCardIndex * (180 / totalCards)) % 360;
-            const angle = (i * (180 / (totalCards - 1))) - currentOffset;
-            const radius = 180;
-            const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
-            const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
-            const isActive = i === activeCardIndex;
-            const isVisible = angle >= -90 && angle <= 90; // Only show cards in semicircle view
+//       {/* <div className="absolute left-10 top-1/2 transform -translate-y-1/2 w-96 h-[500px] overflow-hidden" ref={cardListRef}>
+//         <div className="relative w-full h-full">
+//           {services.map((service, i) => {
+//             const totalCards = services.length;
+//             const currentOffset = (activeCardIndex * (180 / totalCards)) % 360;
+//             const angle = (i * (180 / (totalCards - 1))) - currentOffset;
+//             const radius = 180;
+//             const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
+//             const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
+//             const isActive = i === activeCardIndex;
+//             const isVisible = angle >= -90 && angle <= 90; // Only show cards in semicircle view
             
-            return (
-              <div
-                key={service.id}
-                className={`absolute w-40 h-24 rounded-lg transition-all duration-700 shadow-lg transform ${
-                  isActive 
-                    ? `${service.color} text-white opacity-100 scale-125 z-20` 
-                    : 'bg-gray-300 text-gray-600 opacity-70 grayscale z-10'
-                } ${isVisible ? 'visible' : 'invisible'}`}
-                style={{
-                  left: `${x + 200}px`,
-                  top: `${y + 250}px`,
-                  transform: `rotate(${Math.min(Math.max(angle - 90, -45), 45)}deg) ${isActive ? 'scale(1.25)' : 'scale(1)'}`,
-                  transformOrigin: 'center',
-                  transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
-                }}
-              >
-                <div className="p-3 h-full flex flex-col justify-center items-center text-center">
-                  <div className="text-lg mb-1">{service.icon}</div>
-                  <div className="text-xs font-semibold">{service.title}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div> */}
+//             return (
+//               <div
+//                 key={service.id}
+//                 className={`absolute w-40 h-24 rounded-lg transition-all duration-700 shadow-lg transform ${
+//                   isActive 
+//                     ? `${service.color} text-white opacity-100 scale-125 z-20` 
+//                     : 'bg-gray-300 text-gray-600 opacity-70 grayscale z-10'
+//                 } ${isVisible ? 'visible' : 'invisible'}`}
+//                 style={{
+//                   left: `${x + 200}px`,
+//                   top: `${y + 250}px`,
+//                   transform: `rotate(${Math.min(Math.max(angle - 90, -45), 45)}deg) ${isActive ? 'scale(1.25)' : 'scale(1)'}`,
+//                   transformOrigin: 'center',
+//                   transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)',
+//                 }}
+//               >
+//                 <div className="p-3 h-full flex flex-col justify-center items-center text-center">
+//                   <div className="text-lg mb-1">{service.icon}</div>
+//                   <div className="text-xs font-semibold">{service.title}</div>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </div> */}
 
-      {/* Semi Good  */}
-      <div className="absolute left-2 w-96 h-[500px] overflow-hidden">
+//       {/* Semi Good  */}
+//       <div className="absolute left-2 w-96 h-[500px] overflow-hidden">
         
-        <div className=" w-full h-full">
-          {[...services, ...services].map((service, i) => {
-            const isActive = i % services.length === activeCardIndex;
-            const angle = (i % services.length) * (180 / (services.length - 1)); // Distribute cards in semicircle
-            const radius = 180; // Distance from center
-            const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
-            const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
+//         <div className=" w-full h-full">
+//           {[...services, ...services].map((service, i) => {
+//             const isActive = i % services.length === activeCardIndex;
+//             const angle = (i % services.length) * (180 / (services.length - 1)); // Distribute cards in semicircle
+//             const radius = 180; // Distance from center
+//             const x = Math.cos((angle - 90) * Math.PI / 180) * radius;
+//             const y = Math.sin((angle - 90) * Math.PI / 180) * radius;
             
-            return (
-              <div
-                key={`${service.id}-${i}`}
-                className={`absolute w-40 h-24 rounded-lg transition-all duration-500 shadow-lg transform hover:scale-105 ${
-                  isActive 
-                    ? `${service.color} text-white opacity-100 scale-110 z-20` 
-                    : 'bg-gray-300 text-gray-600 opacity-70 grayscale z-10'
-                }`}
-                style={{
-                  left: `${x + 200}px`,
-                  top: `${y + 250}px`,
-                  transform: `rotate(${angle - 90}deg) ${isActive ? 'scale(1.1)' : 'scale(1)'}`,
-                  transformOrigin: 'center',
-                }}
-              >
-                <div className="p-3 h-full flex flex-col justify-center items-center text-center">
-                  <div className="text-lg mb-1">{service.icon}</div>
-                  <div className="text-xs font-semibold">{service.title}</div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+//             return (
+//               <div
+//                 key={`${service.id}-${i}`}
+//                 className={`absolute w-40 h-24 rounded-lg transition-all duration-500 shadow-lg transform hover:scale-105 ${
+//                   isActive 
+//                     ? `${service.color} text-white opacity-100 scale-110 z-20` 
+//                     : 'bg-gray-300 text-gray-600 opacity-70 grayscale z-10'
+//                 }`}
+//                 style={{
+//                   left: `${x + 200}px`,
+//                   top: `${y + 250}px`,
+//                   transform: `rotate(${angle - 90}deg) ${isActive ? 'scale(1.1)' : 'scale(1)'}`,
+//                   transformOrigin: 'center',
+//                 }}
+//               >
+//                 <div className="p-3 h-full flex flex-col justify-center items-center text-center">
+//                   <div className="text-lg mb-1">{service.icon}</div>
+//                   <div className="text-xs font-semibold">{service.title}</div>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </div>
      
 
 
 
 
 
-      {/* Center Content */}
-      <div className="text-center max-w-md z-10">
-        <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white flex items-center justify-center mb-6 shadow-lg">
-          <span className="text-2xl">👥</span>
-        </div>
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
-          Services
-          <span className="text-blue-500 ml-2">↗</span>
-        </h2>
-        <p className="text-gray-600 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venia quis pretium risus. 
-          Euismod dictum egestas orci molestie facilisis.
-        </p>
+//       {/* Center Content */}
+//       <div className="text-center max-w-md z-10">
+//         <div className="mx-auto w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white flex items-center justify-center mb-6 shadow-lg">
+//           <span className="text-2xl">👥</span>
+//         </div>
+//         <h2 className="text-4xl font-bold text-gray-800 mb-4">
+//           Services
+//           <span className="text-blue-500 ml-2">↗</span>
+//         </h2>
+//         <p className="text-gray-600 leading-relaxed">
+//           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venia quis pretium risus. 
+//           Euismod dictum egestas orci molestie facilisis.
+//         </p>
         
-        {/* Active Service Display */}
-        <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-          <h3 className="font-semibold text-lg text-gray-800">
-            {services[activeCardIndex].title}
-          </h3>
-          <p className="text-sm text-gray-600 mt-2">
-            {services[activeCardIndex].description}
+//         {/* Active Service Display */}
+//         <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+//           <h3 className="font-semibold text-lg text-gray-800">
+//             {services[activeCardIndex].title}
+//           </h3>
+//           <p className="text-sm text-gray-600 mt-2">
+//             {services[activeCardIndex].description}
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* Right Scroll Section - Client Logos */}
+//       <div className="absolute right-10 top-1/2 transform -translate-y-1/2 w-24 h-[500px] overflow-hidden" ref={clientListRef}>
+//         <div className="flex flex-col gap-4">
+//           {[...clients, ...clients].map((client, i) => {
+//             const isActive = i % clients.length === activeClientIndex;
+//             return (
+//               <div
+//                 key={`${client.id}-${i}`}
+//                 className={`w-20 h-20 rounded-lg shadow-md transition-all duration-500 flex items-center justify-center ${
+//                   isActive 
+//                     ? `${client.color} opacity-100 scale-110 shadow-xl` 
+//                     : 'bg-gray-200 opacity-60 grayscale'
+//                 }`}
+//               >
+//                 <span className="text-2xl">{client.logo}</span>
+//               </div>
+//             );
+//           })}
+//         </div>
+//       </div>
+
+//     </div>
+//   );
+// };
+
+// export default ServicesSection;
+
+
+//Got the Structure
+
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import { FiClock } from "react-icons/fi";
+// import Image from "next/image";
+
+// interface Service {
+//   id: number;
+//   title: string;
+//   description: string;
+//   image: string;
+//   icon: JSX.Element;
+// }
+
+// const servicesData: Service[] = [
+//   {
+//     id: 1,
+//     title: "Services",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus.",
+//     image: "/images/service1.jpg",
+//     icon: <FiClock size={20} />,
+//   },
+//   {
+//     id: 2,
+//     title: "Consulting",
+//     description: "We provide expert consulting for business strategy.",
+//     image: "/images/service2.jpg",
+//     icon: <FiClock size={20} />,
+//   },
+//   {
+//     id: 3,
+//     title: "Development",
+//     description: "Custom web and mobile app development.",
+//     image: "/images/service3.jpg",
+//     icon: <FiClock size={20} />,
+//   },
+//   {
+//     id: 4,
+//     title: "Marketing",
+//     description: "Creative marketing solutions for your brand.",
+//     image: "/images/service4.jpg",
+//     icon: <FiClock size={20} />,
+//   },
+// ];
+
+// const Services: React.FC = () => {
+//   const [activeIndex, setActiveIndex] = useState<number>(0);
+
+//   // Auto carousel effect
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setActiveIndex((prev) => (prev + 1) % servicesData.length);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   const icons = [
+//     { active: false, offset: "ml-8" },
+//     { active: false, offset: "ml-26" },
+//     { active: true, offset: "ml-36    " },
+//     { active: false, offset: "ml-26" },
+//     { active: false, offset: "ml-8" },
+//   ]
+
+//   return (
+   
+   
+    
+
+//  <div className="flex flex-col items-start justify-center h-screen gap-6">
+//       {icons.map((item, index) => (
+//         <div
+//           key={index}
+//           className={`flex items-center justify-center rounded-full transition-all duration-300 cursor-pointer ${item.offset} 
+//             ${item.active ? "bg-yellow-400 text-white w-16 h-16" : "bg-gray-300 text-gray-600 w-12 h-12"}`}
+//         >
+//           <FiClock size={item.active ? 28 : 20} />
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default Services;
+
+// CORRECT UI & UX
+
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import { FiClock } from "react-icons/fi";
+
+// interface Service {
+//   id: number;
+//   title: string;
+//   description: string;
+// }
+
+// const servicesData: Service[] = [
+//   {
+//     id: 1,
+//     title: "Services",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci molestie facilisis ut magna cursus orci in.",
+//   },
+//   {
+//     id: 2,
+//     title: "Consulting",
+//     description: "We provide expert consulting for business strategy and growth planning.",
+//   },
+//   {
+//     id: 3,
+//     title: "Development",
+//     description: "Custom web and mobile app development solutions.",
+//   },
+//   {
+//     id: 4,
+//     title: "Marketing",
+//     description: "Creative marketing solutions for your brand and business.",
+//   },
+// ];
+
+// const Services: React.FC = () => {
+//   const [activeIndex, setActiveIndex] = useState<number>(0);
+
+//   // Auto carousel effect
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setActiveIndex((prev) => (prev + 1) % servicesData.length);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   const icons = [
+  
+//     { active: false , offset: "ml-8" },
+//     { active: false , offset: "ml-26" },
+//     { active: true , offset: "ml-36" }, // Highlighted one
+//     { active: false , offset: "ml-26" },
+//     { active: false , offset: "ml-8" },
+   
+//   ];
+
+//   const rightCards = Array.from({ length: 7 }, (_, i) => i);
+
+//   return (
+//     <div className="flex items-center justify-between h-screen px-8 bg-gray-50">
+      
+//       {/* Left Side Icons */}
+//       <div className="flex flex-col gap-6">
+//         {icons.map((item, index) => (
+//           <div
+//             key={index}
+//             className={`w-12 h-12 flex items-center justify-center rounded-full 
+//               transition-all duration-300 cursor-pointer  ${item.offset}
+//               ${item.active ? "bg-orange-400 text-white w-16 h-16" : "bg-gray-300 text-gray-600"}`}
+//           >
+//             <FiClock size={item.active ? 28 : 20} />
+//           </div>
+//         ))}
+//       </div>
+
+//       {/* Center Content */}
+//       <div className="flex-1 max-w-md mx-16">
+//         <div className="text-center">
+//           <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
+//             {servicesData[activeIndex].title}
+//             <span className="text-2xl">↗</span>
+//           </h2>
+//           <p className="text-gray-600 leading-relaxed text-sm">
+//             {servicesData[activeIndex].description}
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* Right Side Cards */}
+//       <div className="flex flex-col gap-4">
+//         {rightCards.map((_, index) => (
+//           <div
+//             key={index}
+//             className="w-20 h-16 bg-gray-300 rounded-lg shadow-sm"
+//           />
+//         ))}
+//       </div>
+
+//     </div>
+//   );
+// };
+
+// export default Services;
+
+
+// Right Side Courasal Working & UI + UX
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import { FiClock } from "react-icons/fi";
+
+// interface Service {
+//   id: number;
+//   title: string;
+//   description: string;
+// }
+
+// const servicesData: Service[] = [
+//   {
+//     id: 1,
+//     title: "Services",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci molestie facilisis ut magna cursus orci in.",
+//   },
+//   {
+//     id: 2,
+//     title: "Consulting",
+//     description: "We provide expert consulting for business strategy and growth planning.",
+//   },
+//   {
+//     id: 3,
+//     title: "Development",
+//     description: "Custom web and mobile app development solutions.",
+//   },
+//   {
+//     id: 4,
+//     title: "Marketing",
+//     description: "Creative marketing solutions for your brand and business.",
+//   },
+// ];
+
+// const Services: React.FC = () => {
+//   const [activeIndex, setActiveIndex] = useState<number>(0);
+//   const [activeCardIndex, setActiveCardIndex] = useState<number>(0);
+
+//   // Auto carousel effect for center content
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setActiveIndex((prev) => (prev + 1) % servicesData.length);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   // Auto carousel effect for right cards
+//   useEffect(() => {
+//     const cardInterval = setInterval(() => {
+//       setActiveCardIndex((prev) => (prev + 1) % 7);
+//     }, 2000);
+//     return () => clearInterval(cardInterval);
+//   }, []);
+
+//   const icons = [
+//     { active: false, offset: "ml-8" },
+//     { active: false, offset: "ml-26" },
+//     { active: true, offset: "ml-36" }, // Highlighted one
+//     { active: false, offset: "ml-26" },
+//     { active: false, offset: "ml-8" },
+//   ];
+
+//   const rightCards = Array.from({ length: 7 }, (_, i) => i);
+
+//   return (
+//     <div className="flex items-center justify-between h-screen px-8 bg-gray-50">
+      
+//       {/* Left Side Icons */}
+//       <div className="flex flex-col gap-6">
+//         {icons.map((item, index) => (
+//           <div
+//             key={index}
+//             className={`w-12 h-12 flex items-center justify-center rounded-full 
+//               transition-all duration-300 cursor-pointer ${item.offset}
+//               ${item.active ? "bg-orange-400 text-white w-16 h-16" : "bg-gray-300 text-gray-600"}`}
+//           >
+//             <FiClock size={item.active ? 28 : 20} />
+//           </div>
+//         ))}
+//       </div>
+
+//       {/* Center Content */}
+//       <div className="flex-1 max-w-md mx-16">
+//         <div className="text-center">
+//           <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
+//             {servicesData[activeIndex].title}
+//             <span className="text-2xl">↗</span>
+//           </h2>
+//           <p className="text-gray-600 leading-relaxed text-sm">
+//             {servicesData[activeIndex].description}
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* Right Side Cards - Auto Carousel */}
+//       <div className="flex flex-col gap-4">
+//         {rightCards.map((_, index) => (
+//           <div
+//             key={index}
+//             className={`w-20 h-16 rounded-lg shadow-sm transition-all duration-500 ${
+//               index === activeCardIndex 
+//                 ? "bg-blue-400 scale-110 shadow-lg" 
+//                 : "bg-gray-300"
+//             }`}
+//           />
+//         ))}
+//       </div>
+
+//     </div>
+//   );
+// };
+
+// export default Services;
+
+
+
+// GOOD WITH UI + UX & animation - we can make it better
+// "use client";
+// import React, { useState, useEffect } from "react";
+// import { FiClock } from "react-icons/fi";
+
+// interface Service {
+//   id: number;
+//   title: string;
+//   description: string;
+// }
+
+// const servicesData: Service[] = [
+//   {
+//     id: 1,
+//     title: "Services",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci molestie facilisis ut magna cursus orci in.",
+//   },
+//   {
+//     id: 2,
+//     title: "Consulting",
+//     description: "We provide expert consulting for business strategy and growth planning.",
+//   },
+//   {
+//     id: 3,
+//     title: "Development",
+//     description: "Custom web and mobile app development solutions.",
+//   },
+//   {
+//     id: 4,
+//     title: "Marketing",
+//     description: "Creative marketing solutions for your brand and business.",
+//   },
+// ];
+
+// const Services: React.FC = () => {
+//   const [activeIndex, setActiveIndex] = useState<number>(0);
+//   const [activeCardIndex, setActiveCardIndex] = useState<number>(0);
+
+//   // Auto carousel effect for center content
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setActiveIndex((prev) => (prev + 1) % servicesData.length);
+//     }, 3000);
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   // Auto carousel effect for right cards
+//   useEffect(() => {
+//     const cardInterval = setInterval(() => {
+//       setActiveCardIndex((prev) => (prev + 1) % 7);
+//     }, 2000);
+//     return () => clearInterval(cardInterval);
+//   }, []);
+
+//   // Dynamic left icons based on services data
+//   const generateIcons = () => {
+//     return servicesData.map((_, index) => ({
+//       active: index === activeIndex,
+//       offset: `ml-${8 + (index * 6)}` // Dynamic offset based on index
+//     }));
+//   };
+
+//   const rightCards = Array.from({ length: 7 }, (_, i) => i);
+
+//   return (
+//     <div className="flex items-center justify-between h-screen px-8 bg-gray-50">
+      
+//       {/* Left Side Icons - Dynamic */}
+//       <div className="flex flex-col gap-6">
+//         {generateIcons().map((item, index) => (
+//           <div
+//             key={index}
+//             className={`w-12 h-12 flex items-center justify-center rounded-full 
+//               transition-all duration-500 cursor-pointer ${item.offset}
+//               ${item.active ? "bg-orange-400 text-white w-16 h-16" : "bg-gray-300 text-gray-600"}`}
+//             onClick={() => setActiveIndex(index)}
+//           >
+//             <FiClock size={item.active ? 28 : 20} />
+//           </div>
+//         ))}
+//       </div>
+
+//       {/* Center Content */}
+//       <div className="flex-1 max-w-md mx-16">
+//         <div className="text-center">
+//           <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
+//             {servicesData[activeIndex].title}
+//             <span className="text-2xl">↗</span>
+//           </h2>
+//           <p className="text-gray-600 leading-relaxed text-sm">
+//             {servicesData[activeIndex].description}
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* Right Side Cards - Auto Carousel */}
+//       <div className="flex flex-col gap-4">
+//         {rightCards.map((_, index) => (
+//           <div
+//             key={index}
+//             className={`w-20 h-16 rounded-lg shadow-sm transition-all duration-500 ${
+//               index === activeCardIndex 
+//                 ? "bg-blue-400 scale-110 shadow-lg" 
+//                 : "bg-gray-300"
+//             }`}
+//           />
+//         ))}
+//       </div>
+
+//     </div>
+//   );
+// };
+
+// export default Services;
+
+
+// FInal 
+
+"use client";
+import React, { useState, useEffect } from "react";
+import { FiClock } from "react-icons/fi";
+
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+}
+
+const servicesData: Service[] = [
+  {
+    id: 1,
+    title: "Services",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci molestie facilisis ut magna cursus orci in.",
+  },
+  {
+    id: 2,
+    title: "Consulting",
+    description: "We provide expert consulting for business strategy and growth planning.",
+  },
+  {
+    id: 3,
+    title: "Development",
+    description: "Custom web and mobile app development solutions.",
+  },
+  {
+    id: 4,
+    title: "Marketing",
+    description: "Creative marketing solutions for your brand and business.",
+  },
+  {
+    id: 5,
+    title: "Marketing",
+    description: "Creative marketing solutions for your brand and business.",
+  },
+
+];
+
+const Services: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [activeCardIndex, setActiveCardIndex] = useState<number>(0);
+
+  // Auto carousel effect for center content
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % servicesData.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Auto carousel effect for right cards
+  useEffect(() => {
+    const cardInterval = setInterval(() => {
+      setActiveCardIndex((prev) => (prev + 1) % 7);
+    }, 2000);
+    return () => clearInterval(cardInterval);
+  }, []);
+
+  // Generate circular positions for icons
+  const generateCircularIcons = () => {
+    const radius = 200; // Distance from center
+    const totalIcons = servicesData.length;
+    const angleStep = 180 / (totalIcons - 1); // Spread across semicircle (180 degrees)
+    const startAngle = -90; // Start from top (-90 degrees)
+
+    return servicesData.map((_, index) => {
+      const angle = startAngle + (index * angleStep);
+      const x = Math.cos((angle * Math.PI) / 180) * radius;
+      const y = Math.sin((angle * Math.PI) / 180) * radius;
+      
+      return {
+        active: index === activeIndex,
+        x: x + 70, // Center offset
+        y: y + 400, // Center offset
+      };
+    });
+  };
+
+  const rightCards = Array.from({ length: 7 }, (_, i) => i);
+
+  return (
+    <div className="flex items-center justify-between h-screen px-8 bg-gray-50">
+      
+      {/* Left Side Icons - Circular Layout */}
+      <div className="relative w-80 h-full flex ">
+        <div className="relative w-full h-96">
+          {generateCircularIcons().map((item, index) => (
+            <div
+              key={index}
+              className={`absolute flex items-center justify-center rounded-full 
+                transition-all duration-500 cursor-pointer transform
+                ${item.active ? "bg-orange-400 text-white w-16 h-16 scale-110" : "bg-gray-300 text-gray-600 w-12 h-12"}`}
+              style={{
+                left: `${item.x}px`,
+                top: `${item.y}px`,
+                transform: `translate(-50%, -50%) ${item.active ? 'scale(1.1)' : 'scale(1)'}`,
+              }}
+              onClick={() => setActiveIndex(index)}
+            >
+              <FiClock size={item.active ? 28 : 20} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Center Content */}
+      <div className="flex-1 max-w-md mx-16">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-2">
+            {servicesData[activeIndex].title}
+            <span className="text-2xl">↗</span>
+          </h2>
+          <p className="text-gray-600 leading-relaxed text-sm">
+            {servicesData[activeIndex].description}
           </p>
         </div>
       </div>
 
-      {/* Right Scroll Section - Client Logos */}
-      <div className="absolute right-10 top-1/2 transform -translate-y-1/2 w-24 h-[500px] overflow-hidden" ref={clientListRef}>
-        <div className="flex flex-col gap-4">
-          {[...clients, ...clients].map((client, i) => {
-            const isActive = i % clients.length === activeClientIndex;
-            return (
-              <div
-                key={`${client.id}-${i}`}
-                className={`w-20 h-20 rounded-lg shadow-md transition-all duration-500 flex items-center justify-center ${
-                  isActive 
-                    ? `${client.color} opacity-100 scale-110 shadow-xl` 
-                    : 'bg-gray-200 opacity-60 grayscale'
-                }`}
-              >
-                <span className="text-2xl">{client.logo}</span>
-              </div>
-            );
-          })}
-        </div>
+      {/* Right Side Cards - Auto Carousel */}
+      <div className="flex flex-col gap-4">
+        {rightCards.map((_, index) => (
+          <div
+            key={index}
+            className={`w-20 h-16 rounded-lg shadow-sm transition-all duration-500 ${
+              index === activeCardIndex 
+                ? "bg-blue-400 scale-110 shadow-lg" 
+                : "bg-gray-300"
+            }`}
+          />
+        ))}
       </div>
 
     </div>
   );
 };
 
-export default ServicesSection;
+export default Services;
