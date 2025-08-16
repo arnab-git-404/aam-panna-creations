@@ -110,7 +110,7 @@ const Navbar = () => {
 
             {/* Desktop CTA Button */}
             <button className=" text-black hover:cursor-pointer bg-[#FFD500] rounded-2xl px-4 py-2 h-8 hidden sm:flex items-center gap-2 minimal-button minimal-button-primary text-sm lg:text-base">
-              <span>Let's chat</span>
+              {`Let's chat`}
               <svg
                 width="20"
                 height="20"
