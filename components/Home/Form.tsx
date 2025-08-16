@@ -25,7 +25,7 @@ const Form: React.FC = () => {
 
   return (
 
-     <div className="bg-gradient-to-br from-slate-50 to-blue-50 p-4 md:p-6">
+     <div className="bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] p-4 md:p-6">
       <div className="max-w-5xl mx-auto">
         <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-0 min-h-[500px]">
