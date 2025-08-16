@@ -159,17 +159,17 @@ const WhoWeAre = () => {
             </h2>
 
             <p className="text-lg md:text-xl text-black leading-relaxed">
-              At Aam Pannaa Creations, we know every startup has a story worth
+              {`At Aam Pannaa Creations, we know every startup has a story worth
               sharing. We're here to help early-stage ventures turn their ideas
-              into authentic brands that connect and grow.
+              into authentic brands that connect and grow.`}
               <br />
-              We mix creativity with strategy to craft your unique identity and
+              {`We mix creativity with strategy to craft your unique identity and
               manage social media with care. Whether you're a startup, a B2B
               company, or a women-led social venture, our tailored approach is
-              all about your goals and lasting results.
+              all about your goals and lasting results.`}
               <br />
-              More than marketers, we're your partners in success—ready to write
-              your growth story together.
+              {`More than marketers, we're your partners in success—ready to write
+              your growth story together.`}
             </p>
           </div>
 
