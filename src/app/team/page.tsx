@@ -148,6 +148,20 @@ const Team = () => {
     ],
   });
 
+interface TeamMember {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+}
+
+interface TeamMemberCardProps {
+  member: TeamMember;
+  index: number;
+  isYellowSection?: boolean;
+}
+
+
   // const TeamMemberCard = ({ member, index, isYellowSection = false }) => (
   //   <div className="text-center" style={{ animationDelay: `${index * 0.1}s` }}>
   //     {/* <div className="relative mb-4">
@@ -194,7 +208,12 @@ const Team = () => {
   //     </p>
   //   </div>
   // )
-  const TeamMemberCard = ({ member, index, isYellowSection = false }) => (
+const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
+  member,
+  index,
+  isYellowSection = false,
+}) => (
+
   <div 
     className="text-center group cursor-pointer transform transition-all duration-300 hover:scale-105" 
     style={{ animationDelay: `${index * 0.1}s` }}
