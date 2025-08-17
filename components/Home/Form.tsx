@@ -38,7 +38,6 @@ const Form: React.FC = () => {
     <div className="bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] p-4 md:p-6">
       <div className="mx-auto px-4 md:px-6 lg:px-8 mb-10 ">
         <form onSubmit={handleSubmit} className="space-y-6">
-          
           {/* Hello with smiley */}
           <div className="flex items-center gap-3">
             <h1 className="text-4xl md:text-8xl font-bold text-black">Hello</h1>
@@ -111,14 +110,13 @@ const Form: React.FC = () => {
               onChange={handleInputChange}
               placeholder="Enter your message"
               rows={2}
-              className=" border-2 bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
+              className=" border-2 bg-transparent border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
               required
             />
           </div>
 
           {/* Submit Button */}
           <div className="flex justify-center pt-6">
-            
             {/* <button
               type="submit"
               className=" hover:cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-black font-medium text-lg px-8 py-3 rounded-full border-2 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
@@ -140,12 +138,12 @@ const Form: React.FC = () => {
               </span>
             </button> */}
 
-<button className="hover:cursor-pointer relative px-10 py-4 rounded-full bg-yellow-400 text-black font-medium text-xl
-    shadow-[0px_8px_0px_rgba(0,0,0,1)] transition-transform duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0px_6px_0px_rgba(0,0,0,1)]">
-  Submit ➤
-</button>
-
-
+            <button
+              className="hover:cursor-pointer relative px-10 py-4 rounded-full bg-yellow-400 text-black font-medium text-xl
+    shadow-[0px_8px_0px_rgba(0,0,0,1)] transition-transform duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0px_6px_0px_rgba(0,0,0,1)]"
+            >
+              Submit ➤
+            </button>
           </div>
         </form>
       </div>
