@@ -1,4 +1,7 @@
+'use client'
+
 import React from "react";
+import toast from "react-hot-toast";
 
 const Testimonials = () => {
   const portfolioItems = [
@@ -29,6 +32,9 @@ const Testimonials = () => {
           {/* Right side - Button */}
           <div className="flex justify-center lg:justify-end lg:flex-shrink-0">
             <button
+            onClick={() => {
+              toast.success("Navigating to all reviews...");
+            }}
               className="hover:cursor-pointer relative px-6 md:px-10 py-3 md:py-4 rounded-full bg-[#FF69B4] text-black font-medium text-lg md:text-xl
         shadow-[0px_8px_0px_rgba(0,0,0,1)] transition-transform duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0px_6px_0px_rgba(0,0,0,1)]"
             >
