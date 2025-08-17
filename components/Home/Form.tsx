@@ -68,7 +68,7 @@ const Form: React.FC = () => {
           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
             {/* <span>I'm from</span> */}
             <h1 className="text-4xl md:text-8xl font-bold text-black">
-              I'm from
+              {`I'm from`}
             </h1>
             <input
               type="text"
