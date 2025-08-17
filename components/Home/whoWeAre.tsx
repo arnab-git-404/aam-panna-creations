@@ -145,14 +145,11 @@ const WhoWeAre = () => {
   // );
 
   return (
-    <> 
-    
-    <section className="relative py-16 px-4 md:px-8 lg:px-16  overflow-hidden">
-
-      <div className="mx-auto relative z-10 bg-[#FFD500] ">
+    <section className="relative overflow-hidden ">
+      <div className="px-4 md:px-8 lg:px-16 relative z-10 bg-[#FFD500] ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <div className="space-y-6">
+          <div className="space-y-6 mt-16 ">
             <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight">
               Who are we ?
             </h2>
@@ -209,9 +206,8 @@ const WhoWeAre = () => {
         </div>
       </div>
 
-
-     {/* SVG Wave - positioned to extend below section */}
-      <div className=" relative w-full overflow-hidden leading-none ">
+      {/* SVG Wave - positioned to extend below section */}
+      {/* <div className=" relative w-full mt-[-80px]">
         <svg
           width="1440"
           height="469"
@@ -224,13 +220,23 @@ const WhoWeAre = () => {
             fill="#FFD500"
           />
         </svg>
+      </div> */}
+      <div className="relative w-full mt-[-80px]">
+        <svg
+          className="w-full"
+          height="300"
+          viewBox="0 0 1440 469"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M689.5 422C360 549 74.1667 381 -3.5 334.5L-41 74L1471 0L1462.5 334.5C1222 182.5 997.82 303.163 689.5 422Z"
+            fill="#FFD500"
+          />
+        </svg>
       </div>
-     
     </section>
-
-
-  </>
-
   );
 };
 
