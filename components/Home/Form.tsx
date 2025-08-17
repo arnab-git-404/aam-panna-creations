@@ -1,193 +1,391 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const Form: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    company: "",
+    email: "",
+    message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    toast.success("Form submitted successfully!");
+    console.log("Form submitted:", formData);
+    setFormData({
+      name: "",
+      company: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (
-
-     <div className="bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] p-4 md:p-6">
-      <div className="max-w-5xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-0 min-h-[500px]">
-            
-            {/* Left Side - Enhanced Contact Information */}
-            <div className="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 p-6 lg:p-8 text-white overflow-hidden">
-              {
-              /* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
-                <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full translate-x-12 translate-y-12"></div>
-                <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full opacity-50"></div>
-              </div>
-              
-              <div className="relative z-10 h-full flex flex-col justify-between">
-
-                {/* Header Section */}
-                <div>
-                  
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-opacity-20 rounded-xl mb-4 backdrop-blur-sm">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                  </div>
-
-                  <h2 className="text-2xl lg:text-3xl font-bold mb-3 leading-tight">
-                    {`Let's Start a`} <br />
-                    <span className="text-yellow-300">Conversation</span>
-                  </h2>
-                  <p className="text-sm text-blue-100 mb-6 leading-relaxed">
-                    {`We're here to help and answer any questions you might have.`}
-                  </p>
-                </div>
-
-
-                {/* Contact Information */}
-                <div className="space-y-4">
-
-                  <div className="group hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
-                    <div className="flex items-start space-x-4">
-
-                      <div className="flex-shrink-0 w-10 h-10  bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:bg-opacity-30 transition-all duration-300">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                      
-                      <div className="flex-1">
-                        <h3 className="font-bold text-lg mb-1 text-white">Visit Our Office</h3>
-                        <p className="text-blue-100 text-sm leading-relaxed">
-                          123 Business Avenue<br />
-                          New York, NY 10001
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="group hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-10 h-10  bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:bg-opacity-30 transition-all duration-300">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-bold text-lg mb-1 text-white">Call Us</h3>
-                        <p className="text-blue-100 font-medium">+1 (555) 123-4567</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="group hover:transform hover:scale-105 transition-all duration-300 cursor-pointer">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-10 h-10  bg-opacity-20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:bg-opacity-30 transition-all duration-300">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                        </svg>
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-bold text-lg mb-1 text-white">Email Us</h3>
-                        <p className="text-blue-100 font-medium">hello@company.com</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - Form */}
-            <div className="p-6 lg:p-8">
-              <div className="h-full flex flex-col justify-center">
-                <div className="text-center mb-6">
-                  <h2 className="text-2xl lg:text-3xl font-bold text-gray-800 mb-3">Send us a Message</h2>
-                  <p className="text-gray-600">{`We'd love to hear from you.`}</p>
-                </div>
-                
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                      {`What's your name?`}
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Enter your full name"
-                      className="w-full px-0 py-3 border-0 border-b-2 border-gray-200 focus:border-indigo-500 outline-none transition-all duration-300 bg-transparent placeholder-gray-400"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                      {`What's your email address?`}
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="Enter your email address"
-                      className="w-full px-0 py-3 border-0 border-b-2 border-gray-200 focus:border-indigo-500 outline-none transition-all duration-300 bg-transparent placeholder-gray-400"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                      How can we help you?
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell us about your project"
-                      rows={3}
-                      className="w-full px-0 py-3 border-0 border-b-2 border-gray-200 focus:border-indigo-500 outline-none transition-all duration-300 bg-transparent resize-none placeholder-gray-400"
-                      required
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className=" hover:cursor-pointer w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 px-6 rounded-xl hover:from-indigo-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl"
-                  >
-                    Send Message
-                  </button>
-                </form>
-              </div>
+    <div className="bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] p-4 md:p-6">
+      <div className="mx-auto px-4 md:px-6 lg:px-8 mb-10 ">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          
+          {/* Hello with smiley */}
+          <div className="flex items-center gap-3">
+            <h1 className="text-4xl md:text-8xl font-bold text-black">Hello</h1>
+            <div className="w-12 h-12 md:w-16 md:h-16 border-3 border-black rounded-full flex items-center justify-center bg-white">
+              <span className="text-lg md:text-3xl">😊</span>
             </div>
           </div>
-        </div>
+
+          {/* My name is */}
+          <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
+            {/* <span>My name is</span> */}
+            <h1 className="text-4xl md:text-8xl font-bold text-black">
+              My name is
+            </h1>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              placeholder="Enter your name"
+              className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[250px] flex-1"
+              required
+            />
+          </div>
+
+          {/* I'm from */}
+          <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
+            {/* <span>I'm from</span> */}
+            <h1 className="text-4xl md:text-8xl font-bold text-black">
+              I'm from
+            </h1>
+            <input
+              type="text"
+              name="company"
+              value={formData.company}
+              onChange={handleInputChange}
+              placeholder="Enter your company"
+              className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[280px] flex-1"
+              required
+            />
+          </div>
+
+          {/* here is my email */}
+          <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
+            {/* <span>here is my email</span> */}
+            <h1 className="text-4xl md:text-8xl font-bold text-black">
+              here is my email
+            </h1>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Enter your email"
+              className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
+              required
+            />
+          </div>
+
+          {/* and message */}
+          <div className="flex flex-wrap items-start gap-3 text-3xl md:text-4xl font-bold text-black">
+            {/* <span>and message</span> */}
+            <h1 className="text-4xl md:text-8xl font-bold text-black">
+              and message
+            </h1>
+
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              placeholder="Enter your message"
+              rows={2}
+              className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
+              required
+            />
+          </div>
+
+          {/* Submit Button */}
+          <div className="flex justify-center pt-6">
+            
+            {/* <button
+              type="submit"
+              className=" hover:cursor-pointer bg-yellow-400 hover:bg-yellow-500 text-black font-medium text-lg px-8 py-3 rounded-full border-2 border-black shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            >
+              Submit
+              <span className="text-xl">
+                <svg
+                  width="25"
+                  height="26"
+                  viewBox="0 0 25 26"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.8158 11.6022L5.73245 3.6885C4.46578 3.02225 2.99912 4.176 3.39912 5.52475L5.46578 12.5772C5.54912 12.8697 5.54912 13.1622 5.46578 13.4547L3.39912 20.5072C2.99912 21.856 4.46578 23.0097 5.73245 22.3435L20.8158 14.4297C21.0731 14.2927 21.2878 14.0906 21.4374 13.8447C21.587 13.5988 21.666 13.3181 21.666 13.0322C21.666 12.7463 21.587 12.4657 21.4374 12.2198C21.2878 11.9739 21.0731 11.7718 20.8158 11.6347V11.6022Z"
+                    fill="black"
+                  />
+                </svg>
+              </span>
+            </button> */}
+
+<button className="hover:cursor-pointer relative px-10 py-4 rounded-full bg-yellow-400 text-black font-medium text-xl
+    shadow-[0px_8px_0px_rgba(0,0,0,1)] transition-transform duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0px_6px_0px_rgba(0,0,0,1)]">
+  Submit ➤
+</button>
+
+
+          </div>
+        </form>
       </div>
     </div>
-
-
   );
 };
 
 export default Form;
+
+// 'use client';
+
+// import React, { useState } from 'react';
+// import toast from 'react-hot-toast';
+
+// const Form: React.FC = () => {
+//   const [formData, setFormData] = useState({
+//     name: '',
+//     company: '',
+//     email: '',
+//     message: ''
+//   });
+
+//   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({
+//       ...prev,
+//       [name]: value
+//     }));
+//   };
+
+//   const handleSubmit = (e: React.FormEvent) => {
+//     e.preventDefault();
+//     toast.success('Form submitted successfully!');
+//     console.log('Form submitted:', formData);
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-b from-pink-100 via-pink-300 to-pink-500 flex items-center justify-center p-4">
+//       <div className="w-full max-w-xl">
+//         <form onSubmit={handleSubmit} className="space-y-8">
+
+//           {/* Hello with smiley */}
+//           <div className="flex items-center gap-4">
+//             <h1 className="text-6xl md:text-8xl font-bold text-black">Hello</h1>
+//             <div className="w-16 h-16 md:w-20 md:h-20 border-4 border-black rounded-full flex items-center justify-center bg-white">
+//               <span className="text-2xl md:text-3xl">😊</span>
+//             </div>
+//           </div>
+
+//           {/* My name is */}
+//           <div className="flex flex-wrap items-center gap-4 text-6xl md:text-8xl font-bold text-black">
+//             <span>My name is</span>
+//             <input
+//               type="text"
+//               name="name"
+//               value={formData.name}
+//               onChange={handleInputChange}
+//               placeholder="Enter your name"
+//               className="bg-transparent border-b-4 border-black outline-none placeholder-gray-600 text-4xl md:text-6xl font-bold min-w-[300px] flex-1"
+//               required
+//             />
+//           </div>
+
+//           {/* I'm from */}
+//           <div className="flex flex-wrap items-center gap-4 text-6xl md:text-8xl font-bold text-black">
+//             <span>I'm from</span>
+//             <input
+//               type="text"
+//               name="company"
+//               value={formData.company}
+//               onChange={handleInputChange}
+//               placeholder="Enter your company name"
+//               className="bg-transparent border-b-4 border-black outline-none placeholder-gray-600 text-4xl md:text-6xl font-bold min-w-[400px] flex-1"
+//               required
+//             />
+//           </div>
+
+//           {/* here is my email */}
+//           <div className="flex flex-wrap items-center gap-4 text-6xl md:text-8xl font-bold text-black">
+//             <span>here is my email</span>
+//             <input
+//               type="email"
+//               name="email"
+//               value={formData.email}
+//               onChange={handleInputChange}
+//               placeholder="Enter your email id"
+//               className="bg-transparent border-b-4 border-black outline-none placeholder-gray-600 text-4xl md:text-6xl font-bold min-w-[350px] flex-1"
+//               required
+//             />
+//           </div>
+
+//           {/* and message */}
+//           <div className="flex flex-wrap items-start gap-4 text-6xl md:text-8xl font-bold text-black">
+//             <span>and message</span>
+//             <textarea
+//               name="message"
+//               value={formData.message}
+//               onChange={handleInputChange}
+//               placeholder="Enter your message"
+//               rows={3}
+//               className="bg-transparent border-b-4 border-black outline-none placeholder-gray-600 text-4xl md:text-6xl font-bold min-w-[400px] flex-1 resize-none"
+//               required
+//             />
+//           </div>
+
+//           {/* Submit Button */}
+//           <div className="flex justify-center pt-8">
+//             <button
+//               type="submit"
+//               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-2xl px-12 py-4 rounded-full border-4 border-black shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
+//             >
+//               Submit
+//               <span className="text-3xl">▶</span>
+//             </button>
+//           </div>
+
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Form;
+
+//2ND FINAL
+
+// 'use client';
+
+// import React, { useState } from 'react';
+// import toast from 'react-hot-toast';
+
+// const Form: React.FC = () => {
+//   const [formData, setFormData] = useState({
+//     name: '',
+//     company: '',
+//     email: '',
+//     message: ''
+//   });
+
+//   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({
+//       ...prev,
+//       [name]: value
+//     }));
+//   };
+
+//   const handleSubmit = (e: React.FormEvent) => {
+//     e.preventDefault();
+//     toast.success('Form submitted successfully!');
+//     console.log('Form submitted:', formData);
+//   };
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-b from-pink-100 via-pink-300 to-pink-500 flex items-center justify-center p-4">
+
+//       <div className="w-full max-w-4xl">
+//         <form onSubmit={handleSubmit} className="space-y-6">
+
+//           {/* Hello with smiley */}
+//           <div className="flex items-center gap-3">
+//             <h1 className="text-4xl md:text-5xl font-bold text-black">Hello</h1>
+//             <div className="w-12 h-12 md:w-14 md:h-14 border-3 border-black rounded-full flex items-center justify-center bg-white">
+//               <span className="text-lg md:text-xl">😊</span>
+//             </div>
+//           </div>
+
+//           {/* My name is */}
+//           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
+//             <span>My name is</span>
+//             <input
+//               type="text"
+//               name="name"
+//               value={formData.name}
+//               onChange={handleInputChange}
+//               placeholder="Enter your name"
+//               className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[250px] flex-1"
+//               required
+//             />
+//           </div>
+
+//           {/* I'm from */}
+//           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
+//             <span>I'm from</span>
+//             <input
+//               type="text"
+//               name="company"
+//               value={formData.company}
+//               onChange={handleInputChange}
+//               placeholder="Enter your company"
+//               className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[280px] flex-1"
+//               required
+//             />
+//           </div>
+
+//           {/* here is my email */}
+//           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
+//             <span>here is my email</span>
+//             <input
+//               type="email"
+//               name="email"
+//               value={formData.email}
+//               onChange={handleInputChange}
+//               placeholder="Enter your email"
+//               className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
+//               required
+//             />
+//           </div>
+
+//           {/* and message */}
+//           <div className="flex flex-wrap items-start gap-3 text-3xl md:text-4xl font-bold text-black">
+//             <span>and message</span>
+//             <textarea
+//               name="message"
+//               value={formData.message}
+//               onChange={handleInputChange}
+//               placeholder="Enter your message"
+//               rows={2}
+//               className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[300px] flex-1 resize-none"
+//               required
+//             />
+//           </div>
+
+//           {/* Submit Button */}
+//           <div className="flex justify-center pt-6">
+//             <button
+//               type="submit"
+//               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg px-8 py-3 rounded-full border-3 border-black shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+//             >
+//               Submit
+//               <span className="text-xl">▶</span>
+//             </button>
+//           </div>
+
+//         </form>
+
+//       </div>
+
+//     </div>
+//   );
+// };
+
+// export default Form;

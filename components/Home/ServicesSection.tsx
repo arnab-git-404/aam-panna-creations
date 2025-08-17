@@ -1506,6 +1506,28 @@ interface Service {
   description: string;
 }
 
+
+//   web design & dev
+// social media management
+// personal branding
+// broadcast edits
+// mentorship to early stage startups
+// team trainings
+// technical writing
+// 
+
+
+// web design & dev
+// social media managemnet
+// personal branding 
+// broadcast edits
+// mentorship to early stage starups
+// team trannings
+// techincal writting 
+
+
+
+
 const servicesData: Service[] = [
   {
     id: 1,
@@ -1531,6 +1553,16 @@ const servicesData: Service[] = [
   },
   {
     id: 5,
+    title: "Design",
+    description: "Creative design solutions for your brand and business.",
+  },
+  {
+    id: 6,
+    title: "Design",
+    description: "Creative design solutions for your brand and business.",
+  },
+   {
+    id: 7,
     title: "Design",
     description: "Creative design solutions for your brand and business.",
   },
