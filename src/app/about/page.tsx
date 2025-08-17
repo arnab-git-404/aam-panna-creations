@@ -217,7 +217,7 @@ const About = () => {
             Our Story
           </h1>
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl italic mt-4 px-4">
-            "Turning bland into brand, the Aam Pannaa way!"
+            {' "Turning bland into brand, the Aam Pannaa way!" '}
           </p>
         </div>
 
@@ -303,19 +303,19 @@ const About = () => {
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
             <div className="flex-1 order-2 lg:order-1 textr-xl ">
               <p className="leading-relaxed text-2xl mb-4">
-                Picture this: a chilly winter night, with Digvijay and Nikita
+                {` Picture this: a chilly winter night, with Digvijay and Nikita
                 cozied up by the family fireplace, the air swirling with stories
                 and laughter. Nikita leans in, eyes shining, and confides, "I've
                 always wanted to build something creative, something that's
                 really ours." Digvijay doesn't skip a beat. With a playful wink,
-                he says, "Why don't we name it after our favorite fruit—Aam?"
+                he says, "Why don't we name it after our favorite fruit—Aam?" `}
               </p>
               <p className="leading-relaxed text-2xl ">
-                Suddenly, the room bursts with memories: sticky fingers from
+                {` Suddenly, the room bursts with memories: sticky fingers from
                 mango slices, noisy summer afternoons, and the fun tang of aam
                 panna. That was the spark. Right there, Aam Pannaa Creations
                 came alive, born from warm nostalgia and a desire to do things
-                differently.
+                differently. `}
               </p>
             </div>
 
@@ -416,18 +416,18 @@ const About = () => {
 
             <div className="flex-1">
               <p className="leading-relaxed text-2xl mb-4">
-                So, what keeps Digvijay and Nikita inspired? For them, this
+                {` So, what keeps Digvijay and Nikita inspired? For them, this
                 venture is so much more than just business—it's like mixing the
                 perfect glass of aam panna: a bit of tradition, a splash of
                 creativity, and loads of zest. They love taking plain ideas and
                 turning them into something unforgettable, just like adding
-                masala to a classic summer drink.
+                masala to a classic summer drink. `}
               </p>
               <p className="leading-relaxed text-2xl ">
-                Every project, every campaign, it's their way of sharing that
+                {` Every project, every campaign, it's their way of sharing that
                 childhood magic and energy with people who want their own flavor
                 of success. With Aam Pannaa Creations, there's always room for
-                new ideas and a promise that they'll never be dull.
+                new ideas and a promise that they'll never be dull. `}
               </p>
             </div>
           </div>
