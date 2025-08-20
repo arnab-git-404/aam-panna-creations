@@ -1,3 +1,6 @@
+'use client'
+import { useEffect, useState } from "react";
+
 const Blog = () => {
   const blogPosts = [
     {
@@ -51,6 +54,16 @@ const Blog = () => {
       creator: "Creator"
     }
   ];
+
+const items = ["UI/UX", "Design", "Ideas", "Code", "Testing"];
+const [active, setActive] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setActive((prev) => (prev + 1) % items.length);
+  }, 2000);
+  return () => clearInterval(interval);
+}, []);
 
   return (
     <div className="fade-in">
@@ -141,6 +154,17 @@ const Blog = () => {
         </div>
       </section>
     </div>
+
+
+
+
+
+
+
+
+
+
+
   );
 };
 

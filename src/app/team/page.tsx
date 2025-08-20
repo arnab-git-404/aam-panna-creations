@@ -1,72 +1,7 @@
-// 'use client';
-
-// import { useState } from 'react';
-
-// const Team = () => {
-//   const [teamMembers] = useState([
-//     { id: 1, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 2, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 3, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 4, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 5, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 6, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 7, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 8, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 9, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 10, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 11, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//     { id: 12, name: 'Team Member', role: 'Position', image: '/placeholder-avatar.jpg' },
-//   ]);
-
-//   return (
-//     <div className="fade-in">
-//       {/* Header */}
-//       <section className="py-20">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-//           <h1 className="text-5xl font-bold text-primary mb-16">Our Team</h1>
-//         </div>
-//       </section>
-
-//       {/* Team Grid */}
-//       <section className="pb-20">
-//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  " >
-//           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 ">
-//             {teamMembers.map((member, index) => (
-//               <div
-//                 key={member.id}
-//                 className="text-center card-hover"
-//                 style={{ animationDelay: `${index * 0.1}s` }}
-//               >
-//                 <div className="relative mb-6">
-//                   <div className="w-32 h-32 mx-auto rounded-full bg-gray-400 overflow-hidden">
-//                     {/* Placeholder for team member photo */}
-//                     <div className="w-full h-full bg-gradient-to-br from-muted to-muted-foreground/20 flex items-center justify-center">
-//                       <svg className="w-12 h-12 text-muted-foreground" fill="currentColor" viewBox="0 0 24 24">
-//                         <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-//                       </svg>
-//                     </div>
-//                   </div>
-//                 </div>
-//                 <h3 className="text-lg font-semibold text-primary mb-1">
-//                   {member.name}
-//                 </h3>
-//                 <p className="text-muted-foreground">
-//                   {member.role}
-//                 </p>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// };
-
-// export default Team;
-
 "use client";
 
 import { useState } from "react";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Team = () => {
   const [teamData] = useState({
@@ -74,38 +9,44 @@ const Team = () => {
       {
         id: 1,
         name: "Team Member",
-        role: "CEO",
-        image: "/placeholder-avatar.jpg",
+        role: "Founder",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/founder",
       },
       {
         id: 2,
         name: "Team Member",
-        role: "CTO",
-        image: "/placeholder-avatar.jpg",
+        role: "Advisor",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/advisor",
       },
       {
         id: 3,
         name: "Team Member",
         role: "Creative Director",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/creative-director",
       },
       {
         id: 4,
         name: "Team Member",
         role: "Operations Manager",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/operations-manager",
       },
       {
         id: 5,
         name: "Team Member",
         role: "Strategy Lead",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/strategy-lead",
       },
       {
         id: 6,
         name: "Team Member",
         role: "Marketing Head",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/marketing-head",
       },
     ],
     creative: [
@@ -113,163 +54,107 @@ const Team = () => {
         id: 7,
         name: "Team Member",
         role: "Senior Designer",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/senior-designer",
       },
       {
         id: 8,
         name: "Team Member",
         role: "UI/UX Designer",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/ui-ux-designer",
       },
       {
         id: 9,
         name: "Team Member",
         role: "Frontend Developer",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/frontend-developer",
       },
       {
         id: 10,
         name: "Team Member",
         role: "Content Creator",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/content-creator",
       },
       {
         id: 77,
         name: "Team Member",
         role: "Senior Designer",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/senior-designer",
       },
       {
         id: 76,
         name: "Team Member",
         role: "Senior Designer",
-        image: "/placeholder-avatar.jpg",
+        image: "/human.png",
+        linkedin: "https://linkedin.com/in/senior-designer",
       },
     ],
   });
 
-interface TeamMember {
-  id: number;
-  name: string;
-  role: string;
-  image: string;
-}
+  interface TeamMember {
+    id: number;
+    name: string;
+    role: string;
+    image: string;
+  }
 
-interface TeamMemberCardProps {
-  member: TeamMember;
-  index: number;
-  isYellowSection?: boolean;
-}
+  interface TeamMemberCardProps {
+    member: TeamMember;
+    index: number;
+    isYellowSection?: boolean;
+  }
 
-
-  // const TeamMemberCard = ({ member, index, isYellowSection = false }) => (
-  //   <div className="text-center" style={{ animationDelay: `${index * 0.1}s` }}>
-  //     {/* <div className="relative mb-4">
-  //       <div className="w-40 h-40 mx-auto rounded-full bg-gray-400 overflow-hidden">
-  //         <div className="w-full h-full bg-gradient-to-br from-muted to-muted-foreground/20 flex items-center justify-center">
-  //           <svg
-  //             className="w-40 h-40 text-muted-foreground"
-  //             fill="currentColor"
-  //             viewBox="0 0 40 40"
-  //           >
-  //             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-  //           </svg>
-  //         </div>
-  //       </div>
-  //     </div> */}
-
-  //     <div className="relative mb-4">
-  //       <div className="w-40 h-40 mx-auto rounded-full bg-gray-400 overflow-hidden">
-  //         <div className="w-full h-full bg-gradient-to-br from-muted to-muted-foreground/20 flex items-center justify-center">
-  //           <svg
-  //             className="w-20 h-20 text-muted-foreground"
-  //             fill="currentColor"
-  //             viewBox="0 0 40 40"
-  //           >
-  //             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-  //           </svg>
-  //         </div>
-  //       </div>
-  //     </div>
-
-  //     <h3
-  //       className={`text-lg font-semibold mb-1 ${
-  //         isYellowSection ? "text-gray-800" : "text-primary"
-  //       }`}
-  //     >
-  //       {member.name}
-  //     </h3>
-  //     <p
-  //       className={`text-m ${
-  //         isYellowSection ? "text-gray-600" : "text-muted-foreground"
-  //       }`}
-  //     >
-  //       {member.role}
-  //     </p>
-  //   </div>
-  // )
-const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
-  member,
-  index,
-  isYellowSection = false,
-}) => (
-
-  <div 
-    className="text-center group cursor-pointer transform transition-all duration-300 hover:scale-105" 
-    style={{ animationDelay: `${index * 0.1}s` }}
-  >
-    <div className="relative mb-6">
-      {/* Avatar Container with Enhanced Styling */}
-      <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-gray-200 to-gray-300 overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-300 ring-4 ring-white group-hover:ring-8 group-hover:ring-opacity-50">
-        <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center group-hover:from-gray-50 group-hover:to-gray-100 transition-all duration-300">
-          <svg
-            className={`w-20 h-20 transition-all duration-300 group-hover:scale-110 ${
-              isYellowSection ? "text-gray-400 group-hover:text-gray-500" : "text-gray-400 group-hover:text-primary/70"
-            }`}
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-          </svg>
-        </div>
+  const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member, index }) => (
+    <div
+      className="relative text-center group cursor-pointer"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      {/* Avatar */}
+      <div className="relative w-40 h-40 mx-auto rounded-full overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-full object-cover"
+        />
       </div>
-      
-      {/* Decorative Element */}
-      <div className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 rounded-full transition-all duration-300 ${
-        isYellowSection 
-          ? "bg-gray-700 group-hover:w-16 group-hover:bg-gray-800" 
-          : "bg-primary/30 group-hover:w-16 group-hover:bg-primary"
-      }`}></div>
+
+      {/* Hover Elements (outside the circle) */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        {/* Position */}
+        <span className="absolute top-6 left-[-80px]  text-white text-sm px-3 py-1 rounded-full transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out group-hover:animate-bounce pointer-events-auto">
+          <div>
+            <div className="flex flex-wrap gap-4">
+              <div
+                key={index}
+                className="inline-block bg-pink-300 text-black font-bold text-sm px-4 py-2 rounded-2xl -rotate-12 text-center shadow-md max-w-36 leading-tight"
+              >
+                {member.role}
+              </div>
+            </div>
+          </div>
+        </span>
+
+        {/* LinkedIn */}
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute top-6 right-[-20px] bg-white text-blue-600 text-2xl p-2 rounded-full shadow-md transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out delay-100 group-hover:animate-bounce pointer-events-auto"
+        >
+          <FaLinkedinIn />
+        </a>
+
+        {/* Name */}
+        <span className="absolute -bottom-6 bg-yellow-400 text-black font-semibold px-4 py-1 rounded-full transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out delay-200 group-hover:animate-bounce pointer-events-auto">
+          {member.name}
+        </span>
+      </div>
     </div>
-
-    {/* Name with Enhanced Typography */}
-    <h3
-      className={`text-xl font-bold mb-2 transition-all duration-300 group-hover:scale-105 ${
-        isYellowSection 
-          ? "text-gray-800 group-hover:text-gray-900" 
-          : "text-primary group-hover:text-primary/80"
-      }`}
-    >
-      {member.name}
-    </h3>
-    
-    {/* Role with Better Styling */}
-    <p
-      className={`text-sm font-medium tracking-wide transition-all duration-300 px-3 py-1 rounded-full inline-block ${
-        isYellowSection 
-          ? "text-gray-600 bg-gray-100/50 group-hover:bg-gray-200/70 group-hover:text-gray-700" 
-          : "text-muted-foreground bg-gray-50 group-hover:bg-primary/10 group-hover:text-primary/80"
-      }`}
-    >
-      {member.role}
-    </p>
-
-    {/* Subtle Animation Indicator */}
-    <div className={`mt-3 w-8 h-0.5 mx-auto rounded-full transition-all duration-500 opacity-0 group-hover:opacity-100 ${
-      isYellowSection ? "bg-gray-600" : "bg-primary"
-    }`}></div>
-  </div>
-);
+  );
 
   return (
     <div className="min-h-screen  ">
@@ -328,8 +213,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
               The strategists and changemakers steering our creative powerhouse
             </p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamData.leadership.slice(3).map((member, index) => (
               <TeamMemberCard
                 key={member.id}
@@ -338,12 +222,20 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
                 isYellowSection={true}
               />
             ))}
+          </div> */}
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+            {teamData.leadership.slice(3).map((member, index) => (
+              <TeamMemberCard key={member.id} member={member} index={index} />
+            ))}
           </div>
         </div>
       </section>
 
       {/* Creative Team Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 ">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] ">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -360,14 +252,6 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
               <TeamMemberCard key={member.id} member={member} index={index} />
             ))}
           </div>
-
-          {/* Single member at bottom */}
-          {/* <div className="flex justify-center mt-12">
-            <TeamMemberCard 
-              member={{ id: 99, name: 'Team Member', role: 'Junior Developer', image: '/placeholder-avatar.jpg' }} 
-              index={0} 
-            />
-          </div> */}
         </div>
       </section>
     </div>
