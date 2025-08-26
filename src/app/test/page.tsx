@@ -557,6 +557,8 @@ export default function HorizontalScroll() {
           return value || 0;
         } else {
           // Access scroll position through the correct API
+          
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           return (locoScroll as any).scroll?.instance?.scroll?.y || 0;
         }
       },
