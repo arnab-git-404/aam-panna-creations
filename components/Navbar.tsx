@@ -88,7 +88,7 @@ const Navbar = () => {
                     : "text-muted-foreground"
                 }`}
               >
-                services
+                Services
               </Link>
               <Link
                 href="/team"
