@@ -486,11 +486,79 @@ export default function HorizontalScroll() {
 
     locoScroll.on("scroll", ScrollTrigger.update);
 
-    ScrollTrigger.scrollerProxy(scrollRef.current, {
+    // ScrollTrigger.scrollerProxy(scrollRef.current, {
+    //   scrollTop(value) {
+    //     return arguments.length
+    //       ? locoScroll.scrollTo(value, 0)
+    //       : locoScroll.scroll.instance.scroll.y;
+    //   },
+    //   getBoundingClientRect() {
+    //     return {
+    //       top: 0,
+    //       left: 0,
+    //       width: window.innerWidth,
+    //       height: window.innerHeight,
+    //     };
+    //   },
+    //   pinType: scrollRef.current?.style.transform ? "transform" : "fixed",
+    // });
+
+    // ScrollTrigger.scrollerProxy(scrollRef.current, {
+    //   scrollTop(value) {
+    //     return arguments.length
+    //       ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true })
+    //       : locoScroll.scroll.instance.scroll.y;
+    //   },
+    //   getBoundingClientRect() {
+    //     return {
+    //       top: 0,
+    //       left: 0,
+    //       width: window.innerWidth,
+    //       height: window.innerHeight,
+    //     };
+    //   },
+    //   pinType: scrollRef.current?.style.transform ? "transform" : "fixed",
+    // });
+
+
+    // 3rd
+// ScrollTrigger.scrollerProxy(scrollRef.current, {
+//       scrollTop(value) {
+//         if (arguments.length) {
+//           // Only call scrollTo if value is defined and valid
+//           if (typeof value === 'number') {
+//             locoScroll.scrollTo(value, { duration: 0, disableLerp: true });
+//           }
+//           return value || 0;
+//         } else {
+//           // Access scroll position through the correct API
+//           return locoScroll.scroll?.instance?.scroll?.y || 0;
+//         }
+//       },
+//       getBoundingClientRect() {
+//         return {
+//           top: 0,
+//           left: 0,
+//           width: window.innerWidth,
+//           height: window.innerHeight,
+//         };
+//       },
+//       pinType: scrollRef.current?.style.transform ? "transform" : "fixed",
+//     });
+
+// 4th
+  ScrollTrigger.scrollerProxy(scrollRef.current, {
       scrollTop(value) {
-        return arguments.length
-          ? locoScroll.scrollTo(value, 0, 0)
-          : locoScroll.scroll.instance.scroll.y;
+        if (arguments.length) {
+          // Only call scrollTo if value is defined and valid
+          if (typeof value === 'number') {
+            locoScroll.scrollTo(value, { duration: 0, disableLerp: true });
+          }
+          return value || 0;
+        } else {
+          // Access scroll position through the correct API
+          return (locoScroll as any).scroll?.instance?.scroll?.y || 0;
+        }
       },
       getBoundingClientRect() {
         return {
@@ -502,6 +570,8 @@ export default function HorizontalScroll() {
       },
       pinType: scrollRef.current?.style.transform ? "transform" : "fixed",
     });
+
+
 
     // 🚀 Horizontal Scroll Animation
     const sections = gsap.utils.toArray(".panel");
@@ -520,14 +590,23 @@ export default function HorizontalScroll() {
       });
     }
 
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    // ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    // ScrollTrigger.refresh();
+
+    ScrollTrigger.addEventListener("refresh", () => {
+      if (locoScroll) {
+        locoScroll.update();
+      }
+    });
     ScrollTrigger.refresh();
+
+
 
     return () => {
       if (locoScroll) {
         locoScroll.destroy();
       }
-      ScrollTrigger.kill();
+      ScrollTrigger.killAll();
     };
   }, []);
 
