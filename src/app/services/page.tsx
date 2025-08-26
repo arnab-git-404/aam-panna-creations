@@ -228,6 +228,8 @@ const Projects = () => {
   useEffect(() => {
     if (!isClient || !horizontalRef.current) return;
 
+    /* eslint-disable @typescript-eslint/no-explicit-any */
+
     let gsap: any;
     let ScrollTrigger: any;
 
