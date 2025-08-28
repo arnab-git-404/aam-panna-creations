@@ -205,7 +205,7 @@ const About = () => {
         <div className="text-center mb-16">
           <div className="flex justify-center items-center mb-8">
             <Image
-              src="/our-story-hero-section.svg"
+              src="/ourStory/our-story-hero-section.svg"
               alt="Aam Pannaa"
               width={550}
               height={260}
@@ -325,7 +325,7 @@ const About = () => {
               <div className="relative w-full h-full transform hover:scale-110 transition-all duration-300 ease-in-out">
                 {/* Original image - hidden on hover */}
                 <Image
-                  src="/our-story-male-image.svg"
+                  src="/ourStory/our-story-male-image.svg"
                   alt="Digvijay"
                   fill
                   className="object-contain "
@@ -333,7 +333,7 @@ const About = () => {
                 {/* Extra SVG that appears on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out">
                   <Image
-                    src="/our-story-male-image-2.svg"
+                    src="/ourStory/our-story-male-image-2.svg"
                     alt="Digvijay"
                     fill
                     className="object-contain"
@@ -397,7 +397,7 @@ const About = () => {
             <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] relative flex-shrink-0 group">
               <div className="relative w-full h-full transform hover:scale-110 transition-all duration-300 ease-in-out ">
                 <Image
-                  src="/our-story-female-image.svg"
+                  src="/ourStory/our-story-female-image.svg"
                   alt="Nikita"
                   fill
                   className="object-contain"
@@ -405,7 +405,7 @@ const About = () => {
                 {/* Extra SVG that appears on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out">
                   <Image
-                    src="/our-story-female-image-2.svg"
+                    src="/ourStory/our-story-female-image-2.svg"
                     alt="Heart icon"
                     fill
                     className="object-contain"
@@ -440,7 +440,7 @@ const About = () => {
           <div className="max-w-4xl w-full relative group">
             <div className="transform hover:scale-110 transition-all duration-300 ease-in-out">
               <Image
-                src="/our-story-combined.svg"
+                src="/ourStory/our-story-combined.svg"
                 alt="Aam Pannaa Team"
                 width={761}
                 height={450}
@@ -451,7 +451,7 @@ const About = () => {
             {/* Extra SVG that appears on hover */}
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out">
               <Image
-                src="/our-story-combined-2.svg"
+                src="/ourStory/our-story-combined-2.svg"
                 alt="Aam Pannaa Team Hover"
                 width={761}
                 height={450}
