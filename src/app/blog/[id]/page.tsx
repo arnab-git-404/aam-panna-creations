@@ -269,10 +269,12 @@ import { useRouter, useParams } from "next/navigation";
 import { toast } from "react-hot-toast";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 import { blogData } from "../../blogData/blogData";
+import Image from "next/image";
 
 export interface BlogPost {
   id: number;
   title: string;
+  img: string;
   excerpt: string;
   date: string;
   tags?: string[];
@@ -353,7 +355,7 @@ const BlogPostPage = () => {
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background py-6 px-6 ">
       {/* Navigation Bar */}
       <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -383,7 +385,7 @@ const BlogPostPage = () => {
       </nav>
 
       {/* Blog Post Content */}
-      <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <article className="max-w-7xl mx-auto px-4 sm:px-16 lg:px-8 sm:py-4 bg-[#FFD500] rounded-4xl mt-10 ">
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center space-x-2 mb-6">
@@ -415,7 +417,7 @@ const BlogPostPage = () => {
         </header>
 
         {/* Featured Image */}
-        <div className="aspect-video bg-gray-400 rounded-lg mb-12"></div>
+        {/* <div className="aspect-video bg-gray-400 rounded-lg mb-12"></div> */}
 
         {/* Content */}
         <div className="prose prose-lg max-w-none">
@@ -423,13 +425,21 @@ const BlogPostPage = () => {
             {post.excerpt}
           </div>
 
-          {/* Main Content */}
-          <div
-            className="space-y-8 text-foreground leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+            
 
-          {/* Additional Sections */}
+          
+<div className="flex justify-center mb-8">
+  <Image
+    src={post.img}
+    alt={post.title}
+    className="object-cover rounded-lg"
+    width={600}
+    height={400}
+  />
+</div>
+
+
+          {/* Main Content */}
           {post.fullContent && (
             <div className="space-y-12 mt-12">
               {post.fullContent.map((section, index: number) => (
@@ -437,7 +447,7 @@ const BlogPostPage = () => {
                   <h2 className="text-2xl font-bold text-primary mb-4">
                     {section.title}
                   </h2>
-                  <p className="text-muted-foreground leading-relaxed text-lg">
+                  <p className="text-muted-foreground leading-relaxed text-lg whitespace-pre-line ">
                     {section.content}
                   </p>
                 </section>
@@ -455,13 +465,13 @@ const BlogPostPage = () => {
             <div className="flex space-x-4">
               <button
                 onClick={handleBack}
-                className="px-4 py-2 text-sm border border-border rounded-lg hover:bg-muted transition-colors"
+                className="hover:cursor-pointer px-4 py-2 text-sm border border-border rounded-lg hover:bg-pink-300 transition-colors"
               >
                 ← Back
               </button>
               <button
                 onClick={handleBackToBlog}
-                className="px-4 py-2 text-sm bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                className="hover:cursor-pointer px-4 py-2 text-sm border border-border rounded-lg hover:bg-pink-300 transition-colors"
               >
                 View All Posts
               </button>
