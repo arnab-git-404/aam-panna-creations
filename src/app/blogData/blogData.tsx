@@ -126,42 +126,41 @@ export const blogData: BlogPost[] = [
       },
       {
         title: "Boosting Employee Morale",
-content: "It becomes only normal for new ventures to focus so much on customers and be user-centric that they tend not to instill in their new employees a sense of pride for being in a new startup venture. This is where the CMO drives engagement among employees by showing them just how important a milestone the success of the company is for their career. This is especially important for young employees who are just starting their careers. It gives them a sense of accomplishment and drives them to achieve more in their roles.\n\nTo conclude, a Chief Marketing Officer is required not only for initial success but for continued growth. By investing in a CMO, new ventures can explore competitive market landscapes, branding strategies, lead generation in tricky spaces, and other marketing activities right from the get-go. Time does not stop for anyone, and prolonging activities that can be done by a CMO and their team cohesively and simultaneously will only hamper a company’s early and continuous growth. Invest in a well-experienced Chief Marketing Officer (CMO) today and see the results for yourself!"
+        content: "It becomes only normal for new ventures to focus so much on customers and be user-centric that they tend not to instill in their new employees a sense of pride for being in a new startup venture. This is where the CMO drives engagement among employees by showing them just how important a milestone the success of the company is for their career. This is especially important for young employees who are just starting their careers. It gives them a sense of accomplishment and drives them to achieve more in their roles.\n\nTo conclude, a Chief Marketing Officer is required not only for initial success but for continued growth. By investing in a CMO, new ventures can explore competitive market landscapes, branding strategies, lead generation in tricky spaces, and other marketing activities right from the get-go. Time does not stop for anyone, and prolonging activities that can be done by a CMO and their team cohesively and simultaneously will only hamper a company’s early and continuous growth. Invest in a well-experienced Chief Marketing Officer (CMO) today and see the results for yourself!"
       },
     ]
   },
   {
     id: 4,
-    title: "JavaScript Performance Optimization",
+    title: "Addressing Pain Points with Value Proposition",
     img: "/blogs/blog-04.svg",
     excerpt:
-      "Discover techniques to optimize JavaScript performance in web applications. Learn about code splitting, lazy loading, and memory management to create faster, more efficient applications.",
-    date: "01 Dec 2023",
+          "Addressing pain points through a value proposition helps businesses identify and solve customer problems, enhancing product quality and user satisfaction. This involves identifying issues, aligning them with company goals, communicating solutions clearly, and differentiating from competitors. Continuous iterations and refinements ensure sustained business growth.",
+    date: "17 June 2024",
     featured: true,
     readMore: "View more",
-    creator: "Sarah Wilson",
-    content: `
-      <h2>JavaScript Performance Optimization</h2>
-      <p>Performance is crucial for user experience. This comprehensive guide covers various techniques to optimize JavaScript performance in modern web applications.</p>
-      
-      <h3>Code Splitting</h3>
-      <p>Break your code into smaller chunks that can be loaded on demand, reducing initial bundle size and improving loading times.</p>
-      
-      <h3>Memory Management</h3>
-      <p>Understanding how JavaScript manages memory and how to avoid memory leaks is essential for building performant applications.</p>
-    `,
+    creator: "Avantika Poddar",
+    content: "Dummy content for JavaScript Performance Optimization blog post.",
     fullContent: [
       {
-        title: "Bundle Optimization",
-        content: "Learn how to analyze and optimize your JavaScript bundles using tools like webpack-bundle-analyzer and implementing effective code splitting strategies."
+        title: "Identification",
+        content: "The first step is to provide a space for users to test the product in a surveillanced setting to assess their reactions and comments. Only then can we discover that there is a problem. This can be done through interviews, surveys, and usability testing.\n\nUsability testing is a very popular method in UX research to continuously take feedback from users regarding the development of a product or design. In this system, a UX engineer monitors the usage of a product by a user, assessing their every reaction and taking notes. The pain points are discovered from this one-on-one interaction and grouped through diagrams and trees."
       },
       {
-        title: "Lazy Loading Techniques",
-        content: "Implement lazy loading for components, images, and other resources to improve initial page load times and reduce bandwidth usage."
+        title: "Alignment",
+        content:"After identification, you must align these points with your bigger goals. For instance, an older person may have expressed that it is difficult for them to use complicated car rental websites. In this case, a major goal for your company could be to simplify the technical aspects of car renting for senior citizens. It is important here to focus on benefits rather than challenges. It is also beneficial to use a case study to align these pain points with how the product or service aims to solve them."
       },
       {
-        title: "Memory Leak Prevention",
-        content: "Understand common causes of memory leaks in JavaScript applications and learn techniques to prevent them, including proper event listener cleanup and avoiding circular references."
+        title: "Communication",
+        content: "After internally understanding the pain point and aligning it with your main goals, you must communicate the same to potential users. Use diagrams and flowcharts, or any type of mapping, to solve this issue. The goal is to make people understand that there is a problem but there is also a solution, and that the solution is more important than the problem. It is also important to simplify this process and avoid any jargon."
+      },
+      {
+        title: "Differentiation from Competitors",
+        content: "Take a pain point and see how a fellow competitor performs in that aspect. Perform competitive analysis and present your findings if legal. This type of analysis works best with a rating for each point and how your organization or product strives to solve it, and how much better or worse it is than the competitor."
+      },
+      {
+        title: "Iterations and Refining",
+        content: "Conduct usability testing again and keep improving the design and prototypes so that constant feedback can be taken from users to discover new pain points. You may even use A/B testing to test different versions of your product to discover different sets of pain points.\n\nTo conclude, identifying pain points with value propositions fosters business growth. The first step is understanding a customer's challenges and then aligning them with your company values and goals. The third step is to communicate how your company fulfills the users’ needs and solves their pain points in very simple, layman’s terms. Finally, it is important to analyze other companies’ performances and use their mistakes as lessons. This whole process reiterates until the product reaches a high-quality stage. To put it simply, a compelling value proposition not only attracts customers but also drives continuous and long-term growth."
       }
     ]
   },
