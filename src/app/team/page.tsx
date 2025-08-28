@@ -5,12 +5,36 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const Team = () => {
   const [teamData] = useState({
+
+    companyHead :[
+      {
+        id: 1,
+        name: "Nikita Singh",
+        role: "Founder",
+        image: "/nikita.png",
+        linkedin: "https://linkedin.com/in/founder",
+      },
+      {
+        id: 1,
+        name: "Nikita Singh",
+        role: "Advisor",
+        image: "/nikita.png",
+        linkedin: "https://linkedin.com/in/founder",
+      },
+      {
+        id: 1,
+        name: "Nikita Singh",
+        role: "Creative Director",
+        image: "/nikita.png",
+        linkedin: "https://linkedin.com/in/founder",
+      }
+    ],
     leadership: [
       {
         id: 1,
-        name: "Team Member",
-        role: "Founder",
-        image: "/human.png",
+        name: "Godhuli Vyas",
+        role: "Operation & Client Retention manager",
+        image: "/godhuli.png",
         linkedin: "https://linkedin.com/in/founder",
       },
       {
@@ -27,71 +51,38 @@ const Team = () => {
         image: "/human.png",
         linkedin: "https://linkedin.com/in/creative-director",
       },
-      {
-        id: 4,
-        name: "Team Member",
-        role: "Operations Manager",
-        image: "/human.png",
-        linkedin: "https://linkedin.com/in/operations-manager",
-      },
-      {
-        id: 5,
-        name: "Team Member",
-        role: "Strategy Lead",
-        image: "/human.png",
-        linkedin: "https://linkedin.com/in/strategy-lead",
-      },
-      {
-        id: 6,
-        name: "Team Member",
-        role: "Marketing Head",
-        image: "/human.png",
-        linkedin: "https://linkedin.com/in/marketing-head",
-      },
+     
     ],
     creative: [
       {
         id: 7,
-        name: "Team Member",
-        role: "Senior Designer",
-        image: "/human.png",
-        linkedin: "https://linkedin.com/in/senior-designer",
+        name: "Arnab Mukherjee",
+        role: "Full Stack Website Developer",
+        image: "/arnab.png",
+        linkedin: "https://www.linkedin.com/in/0xarnab",
       },
       {
         id: 8,
-        name: "Team Member",
-        role: "UI/UX Designer",
-        image: "/human.png",
-        linkedin: "https://linkedin.com/in/ui-ux-designer",
+        name: "Binith Kumar",
+        role: "Team Lead / UI UX Designer",
+        image: "/binith.png",
+        linkedin: "https://www.linkedin.com/in/binith-kumar",
       },
       {
         id: 9,
-        name: "Team Member",
-        role: "Frontend Developer",
-        image: "/human.png",
+        name: "Abhirami. M",
+        role: "UI/UX design intern",
+        image: "/abhirami.png",
         linkedin: "https://linkedin.com/in/frontend-developer",
       },
       {
         id: 10,
-        name: "Team Member",
-        role: "Content Creator",
-        image: "/human.png",
+        name: "Mahak Bharti",
+        role: "Founders office Intern",
+        image: "/mahak.png",
         linkedin: "https://linkedin.com/in/content-creator",
       },
-      {
-        id: 77,
-        name: "Team Member",
-        role: "Senior Designer",
-        image: "/human.png",
-        linkedin: "https://linkedin.com/in/senior-designer",
-      },
-      {
-        id: 76,
-        name: "Team Member",
-        role: "Senior Designer",
-        image: "/human.png",
-        linkedin: "https://linkedin.com/in/senior-designer",
-      },
+      
     ],
   });
 
@@ -100,6 +91,7 @@ const Team = () => {
     name: string;
     role: string;
     image: string;
+    linkedin: string;
   }
 
   interface TeamMemberCardProps {
@@ -140,7 +132,7 @@ const Team = () => {
 
         {/* LinkedIn */}
         <a
-          href="https://linkedin.com"
+          href={member.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           className="absolute top-6 right-[-20px] bg-white text-blue-600 text-2xl p-2 rounded-full shadow-md transform opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-out delay-100 group-hover:animate-bounce pointer-events-auto"
@@ -176,7 +168,7 @@ const Team = () => {
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-            {teamData.leadership.slice(0, 3).map((member, index) => (
+            {teamData.companyHead.slice(0, 3).map((member, index) => (
               <TeamMemberCard key={member.id} member={member} index={index} />
             ))}
           </div>
@@ -227,7 +219,7 @@ const Team = () => {
 
         <div className="relative z-10 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-            {teamData.leadership.slice(3).map((member, index) => (
+            {teamData.leadership.map((member, index) => (
               <TeamMemberCard key={member.id} member={member} index={index} />
             ))}
           </div>
