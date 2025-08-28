@@ -603,12 +603,14 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useRouter } from "next/navigation";
 import { FaCircleArrowLeft } from "react-icons/fa6";
+import Image from "next/image";
 
 import { blogData } from "../blogData/blogData";
 
 export interface BlogPost {
   id: number;
   title: string;
+  img: string;
   excerpt: string;
   date: string;
   tags?: string[];
@@ -642,13 +644,23 @@ const Blog = () => {
 
   const renderFeaturedPost = (post: BlogPost) => (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-      <div className="aspect-video bg-gray-400 rounded-lg"></div>
+
+    
+        <Image
+          src={post.img}
+          alt={post.title}
+          className="object-cover rounded-lg"
+          width={600}
+          height={400}
+        />
+      
+
       <div className="space-y-4">
         <div className="flex justify-between items-start">
           <h2 className="text-3xl font-bold text-primary">
             {post.title}
           </h2>
-          <span className="text-sm text-muted-foreground whitespace-nowrap ml-4">
+          <span className="text-m text-muted-foreground whitespace-nowrap ml-4">
             {post.date}
           </span>
         </div>
@@ -665,7 +677,7 @@ const Blog = () => {
           </button>
         )}
         <div className="flex justify-between items-center pt-4">
-          <span className="text-sm text-muted-foreground">
+          <span className="text-xl text-muted-foreground">
             By {post.creator}
           </span>
           {post.tags && (
@@ -673,7 +685,7 @@ const Blog = () => {
               {post.tags.map((tag: string, index: number) => (
                 <span 
                   key={index}
-                  className="px-2 py-1 bg-primary text-primary-foreground rounded-full text-xs"
+                  className="px-2 py-1 bg-primary text-primary-foreground rounded-full text-m"
                 >
                   {tag}
                 </span>
@@ -687,7 +699,8 @@ const Blog = () => {
 
   const renderRegularPost = (post: BlogPost) => (
     <div className="bg-gray-100 rounded-lg p-8 cursor-pointer hover:bg-gray-200 transition-colors"
-         onClick={() => handleViewMore(post.id)}>
+        onClick={() => handleViewMore(post.id)}
+        >
       <div className="flex justify-between items-start mb-6">
         <h2 className="text-3xl font-bold text-primary">
           {post.title}
@@ -718,9 +731,9 @@ const Blog = () => {
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold text-primary mb-4">Our Blog</h1>
+            <h1 className="text-5xl font-bold text-primary mb-4">Our Blog</h1>
             <p className="text-muted-foreground text-lg">
-              Discover insights, tutorials, and latest updates from our team
+              {`We embrace agility to deliver timely, relevant content that resonates with your needs, ensuring we're always in tune with our audience.`}
             </p>
           </div>
           
