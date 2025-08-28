@@ -486,11 +486,11 @@ const BlogPostPage = () => {
           <h2 className="text-3xl font-bold text-primary mb-8">
             Related Posts
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
             {relatedPosts.map((relatedPost: BlogPost) => (
               <div
                 key={relatedPost.id}
-                className="bg-background rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                className="bg-background rounded-lg p-6 shadow-sm hover:shadow-2xl transition-shadow cursor-pointer bg-[#FFD500]"
                 onClick={() => router.push(`/blog/${relatedPost.id}`)}
               >
                 <h3 className="text-xl font-semibold text-primary mb-3">
