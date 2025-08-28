@@ -363,7 +363,7 @@ const BlogPostPage = () => {
             <div className="flex items-center space-x-4">
               <button
                 onClick={handleBack}
-                className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
+                className=" hover:cursor-pointer px-4 py-2 rounded-lg hover:bg-pink-300 border border-border flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <FaCircleArrowLeft className="w-5 h-5" />
                 <span>Back</span>
@@ -371,7 +371,7 @@ const BlogPostPage = () => {
               <div className="h-6 w-px bg-border"></div>
               <button
                 onClick={handleBackToBlog}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="text-muted-foreground hover:text-primary transition-colors hover:cursor-pointer px-4 py-2 rounded-lg hover:bg-pink-300 border border-border  "
               >
                 All Posts
               </button>
@@ -424,9 +424,6 @@ const BlogPostPage = () => {
           <div className="text-xl text-muted-foreground leading-relaxed mb-8">
             {post.excerpt}
           </div>
-
-            
-
           
 <div className="flex justify-center mb-8">
   <Image
