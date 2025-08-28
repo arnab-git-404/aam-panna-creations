@@ -335,7 +335,7 @@ const BlogPostPage = () => {
             Post Not Found
           </h1>
           <p className="text-muted-foreground mb-8">
-            The blog post you're looking for doesn't exist.
+            {`The blog post you're looking for doesn't exist.`}
           </p>
           <button
             onClick={handleBackToBlog}
