@@ -172,7 +172,7 @@ const Navbar = () => {
 
       {/* Mobile sliding panel */}
       <div
-        className={`fixed top-0 right-0 z-50 h-full w-80 bg-background border-l border-border shadow-2xl transform transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed top-0 right-0 z-50 h-full w-80 bg-white border-l border-border shadow-2xl transform transition-transform duration-300 ease-in-out md:hidden ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
