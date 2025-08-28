@@ -212,7 +212,7 @@ const Navbar = () => {
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About us" },
-              { href: "/projects", label: "Projects" },
+              { href: "/services", label: "Services" },
               { href: "/team", label: "Our team" },
               { href: "/blog", label: "Blog" },
             ].map((item, index) => (
