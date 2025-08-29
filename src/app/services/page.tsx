@@ -221,6 +221,61 @@ const Projects = () => {
     { id: 4, title: "Title", description: "Description" },
   ];
 
+interface Client {
+  img: string;
+  name: string; 
+}
+
+const clientLogos: Client[] = [
+  {
+    img:"/clientLogos/claylab.png",
+    name :"ClayLab"
+  },
+  {
+    img:"/clientLogos/WolnutLogo.png",
+    name :"Wolnut"
+  },
+  {
+    img:"/clientLogos/Jyotsnasingh.png",
+    name :"Jyotsna Singh"
+  },
+  {
+    img:"/clientLogos/image.png",
+    name :"CreatorDesk"
+  },
+  {
+    img:"/clientLogos/littlepineapple.png",
+    name :"Little Pineapple"
+  },
+  {
+    img:"/clientLogos/aksh-e-sarfiri.png",
+    name: "aksh-e-sarfiri"
+  },
+  {
+    img: "/clientLogos/josh.png",
+    name: "Josh App"
+  },
+  {
+    img: "/clientLogos/kancha.png",
+    name: "kancha"
+  },
+  {
+    img: "/clientLogos/luminaryPathways.png",
+    name: "Luminary Pathwayst"
+  },
+  {
+    img:"/clientLogos/minsstance.png",
+    name: "Minsstance"
+  },
+  {
+    img: "/clientLogos/one7logo.png",
+    name: "One7 Sports"
+  },
+  
+
+]
+
+
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -428,23 +483,40 @@ const Projects = () => {
       {/* Portfolio Gallery */}
       <section className="bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] pb-16">
         {/* <div className="mx-auto  px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] "> */}
+        
         <div className="mx-auto  px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] ">
+          
           <div className="relative overflow-hidden mb-16">
+            
             <div className="flex animate-scroll">
               {/* First set of items */}
-              {[...Array(10)].map((_, i) => (
+               {clientLogos.map((client, i) => (
                 <div
                   key={`first-${i}`}
-                  className="flex-shrink-0 w-32 h-32 bg-gray-400 rounded-lg mr-4"
-                ></div>
+                  className="flex-shrink-0 w-32 h-32 border-2 ml-6 rounded-lg mb-4 relative overflow-hidden"
+                >
+                  <Image
+                    src={client.img}
+                    alt={client.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               ))}
-
+              
               {/* Duplicate set for seamless loop */}
-              {[...Array(10)].map((_, i) => (
+              {clientLogos.map((client, i) => (
                 <div
                   key={`second-${i}`}
-                  className="flex-shrink-0 w-32 h-32 bg-gray-400 rounded-lg mr-4"
-                ></div>
+                  className="flex-shrink-0 w-32 h-32 border-2 ml-6 rounded-lg mb-4 relative overflow-hidden"
+                >
+                  <Image
+                    src={client.img}
+                    alt={client.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               ))}
             </div>
           </div>
