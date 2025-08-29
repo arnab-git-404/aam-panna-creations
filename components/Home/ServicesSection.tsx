@@ -1188,11 +1188,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { FiClock } from "react-icons/fi";
+import Image from "next/image";
 
 interface Service {
   id: number;
   title: string;
   description: string;
+}
+
+interface Client {
+  img: string;
+  name: string; 
 }
 
 const servicesData: Service[] = [
@@ -1428,6 +1434,55 @@ const ServiceIcons = {
   ),
 };
 
+const clientLogos: Client[] = [
+  {
+    img:"/clientLogos/claylab.png",
+    name :"ClayLab"
+  },
+  {
+    img:"/clientLogos/WolnutLogo.png",
+    name :"Wolnut"
+  },
+  {
+    img:"/clientLogos/Jyotsnasingh.png",
+    name :"Jyotsna Singh"
+  },
+  {
+    img:"/clientLogos/image.png",
+    name :"CreatorDesk"
+  },
+  {
+    img:"/clientLogos/littlepineapple.png",
+    name :"Little Pineapple"
+  },
+  {
+    img:"/clientLogos/aksh-e-sarfiri.png",
+    name: "aksh-e-sarfiri"
+  },
+  {
+    img: "/clientLogos/josh.png",
+    name: "Josh App"
+  },
+  {
+    img: "/clientLogos/kancha.png",
+    name: "kancha"
+  },
+  {
+    img: "/clientLogos/luminaryPathways.png",
+    name: "Luminary Pathwayst"
+  },
+  {
+    img:"/clientLogos/minsstance.png",
+    name: "Minsstance"
+  },
+  {
+    img: "/clientLogos/one7logo.png",
+    name: "One7 Sports"
+  },
+  
+
+]
+
 const Services: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [activeCardIndex, setActiveCardIndex] = useState<number>(0);
@@ -1590,20 +1645,55 @@ const Services: React.FC = () => {
             }}
           >
             {/* First set of items */}
-            {[...Array(10)].map((_, i) => (
+            {/* {clientLogos.map((client, i) => (
               <div
                 key={`first-${i}`}
-                className="flex-shrink-0 w-32 h-32 bg-gray-400 rounded-lg mb-4"
-              ></div>
-            ))}
+                className="flex-shrink-0 w-32 h-32 bg-gray-400 rounded-lg mb-4 "
+              >
+               <Image
+                 src={client.img}
+                 alt={client.name}
+                 layout="fill"
+                 objectFit="contain"
+               />
+              </div>
+            ))} */}
 
             {/* Duplicate set for seamless loop */}
-            {[...Array(10)].map((_, i) => (
+            {/* {clientLogos.map((_, i) => (
               <div
                 key={`second-${i}`}
                 className="flex-shrink-0 w-32 h-32 bg-gray-400 rounded-lg mb-4"
               ></div>
-            ))}
+            ))} */}
+            {clientLogos.map((client, i) => (
+  <div
+    key={`first-${i}`}
+    className="flex-shrink-0 w-32 h-32 border-2 rounded-lg mb-4 relative overflow-hidden"
+  >
+    <Image
+      src={client.img}
+      alt={client.name}
+      fill
+      className="object-contain"
+    />
+  </div>
+))}
+
+{/* Duplicate set for seamless loop */}
+{clientLogos.map((client, i) => (
+  <div
+    key={`second-${i}`}
+    className="flex-shrink-0 w-32 h-32 border-2 rounded-lg mb-4 relative overflow-hidden"
+  >
+    <Image
+      src={client.img}
+      alt={client.name}
+      fill
+      className="object-contain"
+    />
+  </div>
+))}
           </div>
         </div>
         <style jsx>{`
