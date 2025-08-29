@@ -221,78 +221,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* The Spark Section */}
-        {/* <section className="max-w-7xl mb-16 mx-auto">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold mb-8">
-            The Spark of Aam Pannaa
-          </h2>
-
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-            <div className="flex-1 order-2 lg:order-1">
-              <p className="leading-relaxed text-base sm:text-lg mb-4">
-                Picture this: a chilly winter night, with Digvijay and Nikita
-                cozied up by the family fireplace, the air swirling with stories
-                and laughter. Nikita leans in, eyes shining, and confides, "I've
-                always wanted to build something creative, something that's
-                really ours." Digvijay doesn't skip a beat. With a playful wink,
-                he says, "Why don't we name it after our favorite fruit—Aam?"
-              </p>
-              <p className="leading-relaxed text-base sm:text-lg">
-                Suddenly, the room bursts with memories: sticky fingers from
-                mango slices, noisy summer afternoons, and the fun tang of aam
-                panna. That was the spark. Right there, Aam Pannaa Creations
-                came alive, born from warm nostalgia and a desire to do things
-                differently.
-              </p>
-            </div>
-
-            <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 relative order-1 lg:order-2 flex-shrink-0">
-              <div className="relative w-full h-full transform hover:scale-105 hover:rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg">
-                <Image
-                  src="/our-story-male-image.svg"
-                  alt="Digvijay"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        {/* Adding Flavor Section */}
-        {/* <section className="mx-auto max-w-7xl mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold mb-8 text-center">
-            Adding Flavor to Startups
-          </h2>
-
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 relative flex-shrink-0">
-              <div className="relative w-full h-full transform hover:scale-105 hover:-rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg">
-                <Image
-                  src="/our-story-female-image.svg"
-                  alt="Nikita"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="flex-1">
-              <p className="leading-relaxed text-base sm:text-lg">
-                So, what keeps Digvijay and Nikita inspired? For them, this
-                venture is so much more than just business—it's like mixing the
-                perfect glass of aam panna: a bit of tradition, a splash of
-                creativity, and loads of zest. They love taking plain ideas and
-                turning them into something unforgettable, just like adding
-                masala to a classic summer drink. Every project, every campaign,
-                it's their way of sharing that childhood magic and energy with
-                people who want their own flavor of success. With Aam Pannaa
-                Creations, there's always room for new ideas and a promise that
-                they'll never be dull.
-              </p>
-            </div>
-          </div>
-        </section> */}
 
         {/* The Spark Section */}
         <section className="max-w-7xl mb-16 mx-auto">
@@ -343,50 +271,6 @@ const About = () => {
             </div>
           </div>
         </section>
-
-        {/* Adding Flavor Section */}
-        {/* <section className="mx-auto max-w-7xl mb-16">
-          {/* <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold mb-8 text-center">
-            Adding Flavor to Startups
-          </h2> */}
-
-        {/* <div className="flex flex-col lg:flex-row items-center gap-8"> */}
-        {/* <div className="w-40 h-40 sm:w-52 sm:h-52 lg:w-60 lg:h-80  relative flex-shrink-0 group">
-              <div className="relative w-full h-full transform hover:scale-105 hover:-rotate-3 transition-all duration-300 ease-in-out hover:shadow-lg">
-                <Image
-                  src="/our-story-female-image.svg"
-                  alt="Nikita"
-                  fill
-                  className="object-contain"
-                /> */}
-        {/* Extra SVG that appears on hover */}
-        {/* <div className="absolute -top-4 -left-4 w-8 h-8 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-500 ease-out">
-                  <Image
-                    src="/heart-icon.svg"
-                    alt="Heart icon"
-                    fill
-                    className="object-contain"
-                  />
-                </div> */}
-        {/* </div> */}
-        {/* </div> */}
-
-        {/* <div className="flex-1">
-              <p className="leading-relaxed text-base sm:text-lg">
-                So, what keeps Digvijay and Nikita inspired? For them, this
-                venture is so much more than just business—it's like mixing the
-                perfect glass of aam panna: a bit of tradition, a splash of
-                creativity, and loads of zest. They love taking plain ideas and
-                turning them into something unforgettable, just like adding
-                masala to a classic summer drink. Every project, every campaign,
-                it's their way of sharing that childhood magic and energy with
-                people who want their own flavor of success. With Aam Pannaa
-                Creations, there's always room for new ideas and a promise that
-                they'll never be dull.
-              </p>
-            </div> */}
-        {/* </div> */}
-        {/* </section>  */}
 
         <section className="mx-auto max-w-7xl mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-serif font-bold mb-8 text-end">
