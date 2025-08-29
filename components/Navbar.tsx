@@ -47,7 +47,7 @@ const Navbar = () => {
       <nav className="border-b border-border relative z-50">
 
         <div className=" mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#FFFDE8] to-[#FFFBD2]  ">
-          <div className="flex justify-between items-center h-16 font-semibold ">
+          <div className="flex justify-between items-center h-18 font-semibold ">
             {/* Logo */}
             <Link
               href="/"
@@ -64,17 +64,20 @@ const Navbar = () => {
 
             {/* Desktop Navigation Links */}
             <div className="hidden md:flex items-center space-x-6 lg:space-x-8 ">
+              
               <Link
                 href="/"
-                className={`text-sm font-bold transition-colors hover:text-primary ${
+                className={`hover:underline text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/") ? "text-primary" : "text-muted-foreground"
                 }`}
               >
+
+               
                 Home
               </Link>
               <Link
                 href="/about"
-                className={`text-sm font-bold transition-colors hover:text-primary ${
+                className={`hover:underline text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/about") ? "text-primary" : "text-muted-foreground"
                 }`}
               >
@@ -82,7 +85,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="/services"
-                className={`text-sm font-bold transition-colors hover:text-primary ${
+                className={`hover:underline text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/services")
                     ? "text-primary"
                     : "text-muted-foreground"
@@ -92,7 +95,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="/team"
-                className={`text-sm font-bold transition-colors hover:text-primary ${
+                className={`hover:underline text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/team") ? "text-primary" : "text-muted-foreground"
                 }`}
               >
@@ -100,12 +103,13 @@ const Navbar = () => {
               </Link>
               <Link
                 href="/blog"
-                className={`text-sm font-bold transition-colors hover:text-primary ${
+                className={`hover:underline text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/blog") ? "text-primary" : "text-muted-foreground"
                 }`}
               >
                 Blog
               </Link>
+
             </div>
 
             {/* Desktop CTA Button */}
@@ -156,6 +160,8 @@ const Navbar = () => {
               </div>
             </button>
           </div>
+
+
         </div>
       </nav>
 
