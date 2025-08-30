@@ -171,12 +171,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
-        {/* Decorative Corner Elements */}
-        <div className="absolute top-0 left-0 w-32 h-32 border-l-4 border-t-4 border-yellow-400/50 rounded-tl-3xl"></div>
-        <div className="absolute top-0 right-0 w-32 h-32 border-r-4 border-t-4 border-orange-400/50 rounded-tr-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-32 h-32 border-l-4 border-b-4 border-pink-400/50 rounded-bl-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-32 h-32 border-r-4 border-b-4 border-purple-400/50 rounded-br-3xl"></div>
       </div>
 
       {/* Custom Styles */}
