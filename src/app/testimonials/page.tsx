@@ -131,7 +131,7 @@ const TestimonialsPage: React.FC = () => {
                   <div className="flex items-center justify-between mb-6">
                     {/* Quote icon */}
                     <div className="text-4xl font-serif text-black/60 group-hover:text-black/80 transition-colors duration-300">
-                      "
+                      {`"`}
                     </div>
 
                     {/* Enhanced stars */}
@@ -159,7 +159,7 @@ const TestimonialsPage: React.FC = () => {
                       {item.role}
                     </h4>
                     <p className="text-sm text-black/70 group-hover:text-black/90 leading-relaxed mb-6 transition-colors duration-300 flex-grow">
-                      "{item.description}"
+                      {`"${item.description}"`}
                     </p>
                   </div>
 
@@ -209,8 +209,8 @@ const TestimonialsPage: React.FC = () => {
                 Ready to Join Our Success Stories?
               </h3>
               <p className="text-black mb-8 max-w-2xl mx-auto">
-                Experience the same level of excellence and dedication that our
-                clients rave about. Let's create something amazing together.
+                {`Experience the same level of excellence and dedication that our
+                clients rave about. Let's create something amazing together.`}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button className="hover:cursor-pointer group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-black font-semibold shadow-xl hover:shadow-2xl transform transition-all duration-300 hover:scale-105 overflow-hidden">
