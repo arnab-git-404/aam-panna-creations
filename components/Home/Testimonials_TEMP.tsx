@@ -2,6 +2,7 @@
 
 import React from "react";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 const Testimonials = () => {
   const portfolioItems = [
@@ -38,7 +39,9 @@ const Testimonials = () => {
               className="hover:cursor-pointer relative px-6 md:px-10 py-3 md:py-4 rounded-full bg-[#FF69B4] text-black font-medium text-lg md:text-xl
         shadow-[0px_8px_0px_rgba(0,0,0,1)] transition-transform duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0px_6px_0px_rgba(0,0,0,1)]"
             >
-              see all the reviews
+              <Link href="/testimonials">
+                see all the reviews
+              </Link>
             </button>
           </div>
         </div>
