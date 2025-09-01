@@ -6,12 +6,15 @@ import Testimonials from '@/components/Home/Testimonials_TEMP';
 import WhoWeAre from '@/components/Home/whoWeAre';
 import Form from '@/components/Home/Form';
 
+import Page from '@/src/app/test/page'
+
 export default function Home() {
   return (
     <main>
       <Hero />
       <WhoWeAre />
-      <Services />
+      {/* <Services /> */}
+      <Page />
       <Testimonials />
       <Form />
     </main>
