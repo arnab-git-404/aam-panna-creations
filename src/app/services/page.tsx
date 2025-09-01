@@ -1031,7 +1031,7 @@ const Projects = () => {
                     {/* Testimonial text with better readability */}
                     <div className="relative">
                       <p className="text-gray-700 text-sm sm:text-base leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
-                        "{item.description}"
+                        {`"${item.description}"`}
                       </p>
                       {/* Gradient fade for long text */}
                       {/* <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-50"></div> */}
