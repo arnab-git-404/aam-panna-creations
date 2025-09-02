@@ -371,6 +371,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { clientTestimonials } from "@/data/testimonials";
 
 const Projects = () => {
   const [isClient, setIsClient] = useState(false);
@@ -738,130 +739,147 @@ const Projects = () => {
 
   return (
     <div className="fade-in">
-      {/* Main Projects Section */}
-      {/* <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl px-4 sm:px-6 lg:px-20 mt-10">
-        Services
-      </h1> */}
+      
       <div className="relative min-h-[40vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50">
-  {/* Animated Background Elements */}
-  <div className="absolute inset-0">
-    {/* Floating geometric shapes */}
-    <div className="absolute top-20 left-10 w-20 h-20 bg-purple-300/20 rounded-full animate-bounce"></div>
-    <div className="absolute top-32 right-20 w-16 h-16 bg-blue-300/30 rotate-45 animate-pulse"></div>
-    <div className="absolute bottom-32 left-20 w-12 h-12 bg-pink-300/40 rounded-full animate-ping"></div>
-    <div className="absolute bottom-20 right-10 w-24 h-24 bg-orange-300/25 rounded-lg rotate-12 animate-bounce"></div>
-    
-    {/* Grid pattern overlay */}
-    <div className="absolute inset-0 opacity-5">
-      <div className="grid grid-cols-12 gap-4 h-full">
-        {[...Array(48)].map((_, i) => (
-          <div key={i} className="bg-gray-400 rounded-sm"></div>
-        ))}
-      </div>
-    </div>
-  </div>
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0">
+          {/* Floating geometric shapes */}
+          <div className="absolute top-20 left-10 w-20 h-20 bg-purple-300/20 rounded-full animate-bounce"></div>
+          <div className="absolute top-32 right-20 w-16 h-16 bg-blue-300/30 rotate-45 animate-pulse"></div>
+          <div className="absolute bottom-32 left-20 w-12 h-12 bg-pink-300/40 rounded-full animate-ping"></div>
+          <div className="absolute bottom-20 right-10 w-24 h-24 bg-orange-300/25 rounded-lg rotate-12 animate-bounce"></div>
 
-  {/* Main Header Content */}
-  <div className="relative z-10 text-center px-4 sm:px-6 lg:px-20 py-16">
-    {/* Icon decoration */}
-    <div className="inline-flex items-center justify-center w-20 h-20 mb-8 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg">
-      <svg
-        className="w-10 h-10 text-purple-600"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
-        />
-      </svg>
-    </div>
-
-    {/* Decorative top line */}
-    <div className="flex items-center justify-center mb-8">
-      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent max-w-xs"></div>
-      <div className="mx-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-        <span className="text-sm font-medium text-purple-600 uppercase tracking-wider">What We Offer</span>
-      </div>
-      <div className="flex-1 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent max-w-xs"></div>
-    </div>
-
-    {/* Main Title with Animation */}
-    <div className="relative mb-8">
-      {/* Background text effect */}
-      <h1 className="absolute inset-0 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-200/30 blur-sm animate-pulse">
-        Services
-      </h1>
-      
-      {/* Main title */}
-      <h1 className="relative font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 animate-gradient tracking-tight">
-        Services
-      </h1>
-      
-      {/* Decorative elements around title */}
-      <div className="absolute -top-4 -left-4 w-8 h-8 border-t-4 border-l-4 border-purple-400/50 rounded-tl-lg"></div>
-      <div className="absolute -top-4 -right-4 w-8 h-8 border-t-4 border-r-4 border-blue-400/50 rounded-tr-lg"></div>
-      <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-4 border-l-4 border-pink-400/50 rounded-bl-lg"></div>
-      <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-4 border-r-4 border-purple-400/50 rounded-br-lg"></div>
-    </div>
-
-    {/* Subtitle */}
-    <div className="max-w-4xl mx-auto mb-8">
-      <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
-        Comprehensive digital solutions tailored to elevate your brand and drive success
-      </p>
-      <div className="flex items-center justify-center mt-4 space-x-2">
-        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
-        <div className="w-2 h-2 bg-blue-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-        <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-      </div>
-    </div>
-
-    {/* Stats or features */}
-    <div className="flex flex-wrap justify-center gap-8 mb-8">
-      <div className="text-center group">
-        <div className="w-16 h-16 mx-auto mb-2 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <span className="text-2xl font-bold text-purple-600">6+</span>
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="grid grid-cols-12 gap-4 h-full">
+              {[...Array(48)].map((_, i) => (
+                <div key={i} className="bg-gray-400 rounded-sm"></div>
+              ))}
+            </div>
+          </div>
         </div>
-        <p className="text-sm font-medium text-gray-600">Services Offered</p>
-      </div>
-      <div className="text-center group">
-        <div className="w-16 h-16 mx-auto mb-2 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <span className="text-2xl font-bold text-blue-600">50+</span>
+
+        {/* Main Header Content */}
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-20 py-16">
+          {/* Icon decoration */}
+          <div className="inline-flex items-center justify-center w-20 h-20 mb-8 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 shadow-lg">
+            <svg
+              className="w-10 h-10 text-purple-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+              />
+            </svg>
+          </div>
+
+          {/* Decorative top line */}
+          <div className="flex items-center justify-center mb-8">
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent max-w-xs"></div>
+            <div className="mx-4 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+              <span className="text-sm font-medium text-purple-600 uppercase tracking-wider">
+                What We Offer
+              </span>
+            </div>
+            <div className="flex-1 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent max-w-xs"></div>
+          </div>
+
+          {/* Main Title with Animation */}
+          <div className="relative mb-8">
+            {/* Background text effect */}
+            <h1 className="absolute inset-0 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-200/30 blur-sm animate-pulse">
+              Services
+            </h1>
+
+            {/* Main title */}
+            <h1 className="relative font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-pink-600 animate-gradient tracking-tight">
+              Services
+            </h1>
+
+            {/* Decorative elements around title */}
+            <div className="absolute -top-4 -left-4 w-8 h-8 border-t-4 border-l-4 border-purple-400/50 rounded-tl-lg"></div>
+            <div className="absolute -top-4 -right-4 w-8 h-8 border-t-4 border-r-4 border-blue-400/50 rounded-tr-lg"></div>
+            <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-4 border-l-4 border-pink-400/50 rounded-bl-lg"></div>
+            <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-4 border-r-4 border-purple-400/50 rounded-br-lg"></div>
+          </div>
+
+          {/* Subtitle */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed font-medium">
+              Comprehensive digital solutions tailored to elevate your brand and
+              drive success
+            </p>
+            <div className="flex items-center justify-center mt-4 space-x-2">
+              <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
+              <div
+                className="w-2 h-2 bg-blue-400 rounded-full animate-bounce"
+                style={{ animationDelay: "0.1s" }}
+              ></div>
+              <div
+                className="w-2 h-2 bg-pink-400 rounded-full animate-bounce"
+                style={{ animationDelay: "0.2s" }}
+              ></div>
+            </div>
+          </div>
+
+          {/* Stats or features */}
+          <div className="flex flex-wrap justify-center gap-8 mb-8">
+            <div className="text-center group">
+              <div className="w-16 h-16 mx-auto mb-2 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-purple-600">6+</span>
+              </div>
+              <p className="text-sm font-medium text-gray-600">
+                Services Offered
+              </p>
+            </div>
+            <div className="text-center group">
+              <div className="w-16 h-16 mx-auto mb-2 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-blue-600">50+</span>
+              </div>
+              <p className="text-sm font-medium text-gray-600">Happy Clients</p>
+            </div>
+            <div className="text-center group">
+              <div className="w-16 h-16 mx-auto mb-2 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl font-bold text-pink-600">100%</span>
+              </div>
+              <p className="text-sm font-medium text-gray-600">Satisfaction</p>
+            </div>
+          </div>
+
+          {/* Bottom decorative line */}
+          <div className="w-32 h-1 bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 mx-auto rounded-full"></div>
+
+          {/* Scroll indicator */}
+          <div className="mt-12 animate-bounce">
+            <svg
+              className="w-6 h-6 mx-auto text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
         </div>
-        <p className="text-sm font-medium text-gray-600">Happy Clients</p>
+
+        {/* Decorative corner elements */}
+        <div className="absolute top-0 left-0 w-32 h-32 border-l-4 border-t-4 border-purple-400/30 rounded-tl-3xl"></div>
+        <div className="absolute top-0 right-0 w-32 h-32 border-r-4 border-t-4 border-blue-400/30 rounded-tr-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-32 h-32 border-l-4 border-b-4 border-pink-400/30 rounded-bl-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-32 h-32 border-r-4 border-b-4 border-purple-400/30 rounded-br-3xl"></div>
+
+        {/* CSS Animations */}
       </div>
-      <div className="text-center group">
-        <div className="w-16 h-16 mx-auto mb-2 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <span className="text-2xl font-bold text-pink-600">100%</span>
-        </div>
-        <p className="text-sm font-medium text-gray-600">Satisfaction</p>
-      </div>
-    </div>
-
-    {/* Bottom decorative line */}
-    <div className="w-32 h-1 bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 mx-auto rounded-full"></div>
-    
-    {/* Scroll indicator */}
-    <div className="mt-12 animate-bounce">
-      <svg className="w-6 h-6 mx-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-      </svg>
-    </div>
-  </div>
-
-  {/* Decorative corner elements */}
-  <div className="absolute top-0 left-0 w-32 h-32 border-l-4 border-t-4 border-purple-400/30 rounded-tl-3xl"></div>
-  <div className="absolute top-0 right-0 w-32 h-32 border-r-4 border-t-4 border-blue-400/30 rounded-tr-3xl"></div>
-  <div className="absolute bottom-0 left-0 w-32 h-32 border-l-4 border-b-4 border-pink-400/30 rounded-bl-3xl"></div>
-  <div className="absolute bottom-0 right-0 w-32 h-32 border-r-4 border-b-4 border-purple-400/30 rounded-br-3xl"></div>
-
-  {/* CSS Animations */}
- 
-</div>
 
       {/* Conditional rendering based on screen size */}
       <MobileProjectsSection />
@@ -905,69 +923,23 @@ const Projects = () => {
             </div>
           </div>
 
-
           {/* Project cards */}
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {portfolioItems.map((item, index) => (
+          <div className="mx-auto flex flex-col md:flex-row lg:flex-row justify-center items-stretch gap-6 lg:gap-16">
+            {clientTestimonials.slice(0, 3).map((item, index) => (
               <div
                 key={item.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
+                className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-0 w-full sm:w-80 md:w-96 lg:w-80 xl:w-96"
                 style={{
                   transform: `rotate(${(index % 2 === 0 ? 1 : -1) * 1}deg)`,
                   animationDelay: `${index * 0.1}s`,
                 }}
               >
-                <div className="p-4 sm:p-6">
-
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-3 h-3 rounded-full bg-gray-400"></div>
-                    <div className="flex space-x-1">
-                      {[...Array(5)].map((_, j) => (
-                        <svg
-                          key={j}
-                          className="w-3 h-3 text-yellow-400"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                        </svg>
-                      ))}
-                    </div>
-                  </div>
-
-                  <h3 className="font-bold mb-1 text-sm sm:text-base">{item.title}</h3>
-                  <h3 className="font-bold mb-1 text-sm sm:text-base">{item.role}</h3>
-                  <p className="text-xs sm:text-sm text-gray-600">
-                    {item.description}
-                  </p>
-                  
-                  <div className="mt-4 pt-4 border-t border-gray-200">
-                    <span className="text-xs text-gray-500">
-                      Description
-                    </span>
-                  </div>
-
-                </div>
-              </div>
-            ))}
-          </div> */}
-
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {portfolioItems.map((item, index) => (
-              <div
-                key={item.id}
-                className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-0"
-                style={{
-                  transform: `rotate(${(index % 2 === 0 ? 1 : -1) * 1}deg)`,
-                  animationDelay: `${index * 0.1}s`,
-                }}
-              >
+                {/* ...existing code... */}
                 {/* Gradient overlay for visual depth */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
                 {/* Quote decoration */}
-                {/* <div className="absolute top-4 right-4 text-gray-200 group-hover:text-blue-200 transition-colors duration-300">
+                <div className="absolute top-4 left-4 text-gray-200 group-hover:text-blue-200 transition-colors duration-300">
                   <svg
                     className="w-8 h-8"
                     fill="currentColor"
@@ -975,7 +947,7 @@ const Projects = () => {
                   >
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
                   </svg>
-                </div> */}
+                </div>
 
                 <div className="relative p-6 sm:p-8">
                   {/* Header with avatar and rating */}
@@ -1083,32 +1055,38 @@ const Projects = () => {
         }
       `}</style>
 
-       <style jsx>{`
-    @keyframes gradient {
-      0%, 100% {
-        background-size: 200% 200%;
-        background-position: left center;
-      }
-      50% {
-        background-size: 200% 200%;
-        background-position: right center;
-      }
-    }
+      <style jsx>{`
+        @keyframes gradient {
+          0%,
+          100% {
+            background-size: 200% 200%;
+            background-position: left center;
+          }
+          50% {
+            background-size: 200% 200%;
+            background-position: right center;
+          }
+        }
 
-    .animate-gradient {
-      background-size: 200% 200%;
-      animation: gradient 3s ease-in-out infinite;
-    }
+        .animate-gradient {
+          background-size: 200% 200%;
+          animation: gradient 3s ease-in-out infinite;
+        }
 
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
-    }
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
 
-    .animate-float {
-      animation: float 3s ease-in-out infinite;
-    }
-  `}</style>
+        .animate-float {
+          animation: float 3s ease-in-out infinite;
+        }
+      `}</style>
     </div>
   );
 };
