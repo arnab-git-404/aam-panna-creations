@@ -1,6 +1,8 @@
 import React from "react";
+import { clientTestimonials } from "@/data/testimonials";
 
-interface PortfolioItem {
+
+interface Testimonials {
   id: number;
   title: string;
   role: string;
@@ -9,50 +11,7 @@ interface PortfolioItem {
 
 const TestimonialsPage: React.FC = () => {
   // Sample data - replace with your actual portfolioItems data
-  const portfolioItems: PortfolioItem[] = [
-    {
-      id: 1,
-      title: "Sarah Johnson",
-      role: "CEO, TechStart Inc.",
-      description:
-        "Outstanding service and incredible attention to detail. The team exceeded our expectations and delivered results that transformed our business.",
-    },
-    {
-      id: 2,
-      title: "Michael Chen",
-      role: "Creative Director",
-      description:
-        "The creative vision and professional execution made this collaboration exceptional. Highly recommend their innovative approach to complex challenges.",
-    },
-    {
-      id: 3,
-      title: "Emily Rodriguez",
-      role: "Marketing Manager",
-      description:
-        "Working with this team was a game-changer for our brand. Their strategic insights and flawless execution delivered remarkable results.",
-    },
-    {
-      id: 4,
-      title: "David Thompson",
-      role: "Product Manager",
-      description:
-        "Exceptional quality and professionalism throughout the entire process. The results speak for themselves - truly outstanding work.",
-    },
-    {
-      id: 5,
-      title: "Lisa Wang",
-      role: "Startup Founder",
-      description:
-        "Professional, reliable, and incredibly talented. They brought our vision to life better than we could have imagined.",
-    },
-    {
-      id: 6,
-      title: "James Miller",
-      role: "Operations Director",
-      description:
-        "The attention to detail and commitment to excellence is unmatched. Truly a pleasure to work with such dedicated professionals.",
-    },
-  ];
+
 
   // Function to get initials from name
   const getInitials = (name: string): string => {
@@ -111,36 +70,53 @@ const TestimonialsPage: React.FC = () => {
             <div className="w-32 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mt-8 rounded-full"></div>
           </div>
 
-          {/* Testimonials Grid - Your original structure enhanced */}
           {/* Testimonials Flex Container - Your original structure enhanced */}
+
           <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
-            {portfolioItems.map((item, index) => (
+            {clientTestimonials.map((item, index) => (
               <div
                 key={item.id}
-                className="group relative bg-white backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-500 hover:scale-105 border border-black/20 flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)]"
+                className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-0 w-full sm:w-80 md:w-96 lg:w-80 xl:w-96"
                 style={{
                   transform: `rotate(${(index % 2 === 0 ? 1 : -1) * 1}deg)`,
                   animationDelay: `${index * 0.1}s`,
                 }}
               >
-                {/* Hover glow effect */}
-                <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                {/* ...existing code... */}
+                {/* Gradient overlay for visual depth */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                <div className="relative p-4 sm:p-6 flex flex-col h-full">
-                  {/* Header with quote and stars */}
-                  <div className="flex items-center justify-between mb-6">
-                    {/* Quote icon */}
-                    <div className="text-4xl font-serif text-black/60 group-hover:text-black/80 transition-colors duration-300">
-                      {`"`}
+                {/* Quote decoration */}
+                <div className="absolute top-4 left-4 text-gray-200 group-hover:text-blue-200 transition-colors duration-300">
+                  <svg
+                    className="w-8 h-8"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+                  </svg>
+                </div>
+
+                <div className="relative p-6 sm:p-8">
+                  {/* Header with avatar and rating */}
+                  <div className="flex items-start justify-between mb-6">
+                    {/* Avatar placeholder with gradient */}
+                    <div className="relative">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 rounded-full flex items-center justify-center shadow-lg">
+                        <span className="text-white font-bold text-lg">
+                          {item.title?.charAt(0) || "U"}
+                        </span>
+                      </div>
+                      {/* Online indicator */}
+                      <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
                     </div>
 
-                    {/* Enhanced stars */}
+                    {/* Star rating with improved styling */}
                     <div className="flex space-x-1">
                       {[...Array(5)].map((_, j) => (
                         <svg
                           key={j}
-                          className="w-4 h-4 text-yellow-400 drop-shadow-sm group-hover:scale-110 transition-transform duration-300"
-                          style={{ animationDelay: `${j * 0.1}s` }}
+                          className="w-4 h-4 text-yellow-400 drop-shadow-sm"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -150,54 +126,58 @@ const TestimonialsPage: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Content - grows to fill available space */}
-                  <div className="flex-grow flex flex-col">
-                    <h3 className="font-bold mb-2 text-lg text-black group-hover:text-black transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <h4 className="font-semibold mb-4 text-sm text-purple-500 group-hover:text-purple-500 transition-colors duration-300">
-                      {item.role}
-                    </h4>
-                    <p className="text-sm text-black/70 group-hover:text-black/90 leading-relaxed mb-6 transition-colors duration-300 flex-grow">
-                      {`"${item.description}"`}
-                    </p>
+                  {/* Content section */}
+                  <div className="space-y-4">
+                    {/* Name with enhanced typography */}
+                    <div>
+                      <h3 className="font-bold text-lg sm:text-xl text-gray-900 mb-1 group-hover:text-blue-600 transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      {item.role && (
+                        <p className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full inline-block">
+                          {item.role}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Testimonial text with better readability */}
+                    <div className="relative">
+                      <p className="text-gray-700 text-sm sm:text-base leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+                        {`"${item.description}"`}
+                      </p>
+                      {/* Gradient fade for long text */}
+                      {/* <div className="absolute bottom-0 left-0 right-0 h-4 bg-gradient-to-t from-white to-transparent pointer-events-none opacity-50"></div> */}
+                    </div>
                   </div>
 
-                  {/* Enhanced footer - stays at bottom */}
-                  <div className="pt-4 border-t border-black/20 group-hover:border-black/30 transition-colors duration-300 mt-auto">
+                  {/* Footer section with enhanced styling */}
+                  <div className="mt-6 pt-4 border-t border-gray-100 group-hover:border-blue-100 transition-colors duration-300">
                     <div className="flex items-center justify-between">
-                      {/* Avatar with gradient border */}
-                      <div className="relative">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 p-0.5">
-                          <div className="w-full h-full  rounded-full flex items-center justify-center">
-                            <span className="text-black font-semibold text-sm">
-                              {getInitials(item.title)}
-                            </span>
-                          </div>
-                        </div>
-                        {/* Online indicator */}
-                        <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-slate-900"></div>
-                      </div>
+                      <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Client Testimonial
+                      </span>
 
-                      <div className="text-right flex flex-col items-end">
-                        <span className="text-xs text-black font-medium transition-colors duration-300">
-                          Verified Client
-                        </span>
-                        <div className="flex items-center mt-1">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-                          <span className="text-xs text-green-500 font-medium">
-                            Confirmed
-                          </span>
-                        </div>
+                      {/* Verified badge */}
+                      <div className="flex items-center gap-1 text-xs text-green-600 bg-green-50 px-2 py-1 rounded-full">
+                        <svg
+                          className="w-3 h-3"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span className="font-medium">Verified</span>
                       </div>
                     </div>
                   </div>
+
+                  {/* Hover effect decoration */}
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                 </div>
 
-                {/* Decorative corner elements */}
-                <div className="absolute top-4 left-4 w-2 h-2 bg-green-500 rounded-full"></div>
-                <div className="absolute top-4 right-4 w-1 h-1 bg-green-500 rounded-full"></div>
-                <div className="absolute bottom-4 left-4 w-1 h-1 bg-green-500 rounded-full"></div>
+                {/* Floating elements for visual interest */}
+                <div className="absolute top-2 left-2 w-2 h-2 bg-blue-300 rounded-full opacity-0 group-hover:opacity-60 transition-opacity duration-500 delay-100"></div>
+                <div className="absolute bottom-8 right-8 w-1 h-1 bg-purple-300 rounded-full opacity-0 group-hover:opacity-60 transition-opacity duration-500 delay-200"></div>
               </div>
             ))}
           </div>
