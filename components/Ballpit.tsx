@@ -669,7 +669,7 @@ function processPointerInteraction() {
 
 function onTouchStart(e: TouchEvent) {
   if (e.touches.length > 0) {
-    
+    e.preventDefault();
     pointerPosition.set(e.touches[0].clientX, e.touches[0].clientY);
     for (const [elem, data] of pointerMap) {
       const rect = elem.getBoundingClientRect();
