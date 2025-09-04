@@ -243,8 +243,8 @@ const Footer = () => {
             </div>
 
             <p className="text-lg text-black leading-relaxed max-w-md">
-              Thanks for hanging out with us! Let's design, code, and brand the
-              future together.
+              {`Thanks for hanging out with us! Let's design, code, and brand the
+              future together.`}
             </p>
 
             {/* Contact info */}
