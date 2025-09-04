@@ -173,7 +173,6 @@ import React, { useState } from "react";
 import {
   Linkedin,
   Instagram,
-  Facebook,
   ArrowRight,
   Mail,
   Phone,
@@ -198,9 +197,8 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "/linkedin", name: "LinkedIn" },
-    { icon: Instagram, href: "/instagram", name: "Instagram" },
-    { icon: Facebook, href: "/facebook", name: "Facebook" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/aam-pannaa-creations/", name: "LinkedIn" },
+    { icon: Instagram, href: "https://www.instagram.com/aampannaacreations/", name: "Instagram" },
   ];
 
   return (
