@@ -170,13 +170,13 @@ const WhoWeAre = () => {
           </div>
 
           {/* Right decorative elements */}
-          <div className="relative flex justify-center">
+          <div className=" relative flex justify-center">
             {/* LinkedIn icon */}
             <Link
               href="https://linkedin.com/0x_arnab"
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute top-0 right-20 w-16 h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center transform rotate-12 transition-all duration-300 hover:border-blue-600 hover:bg-blue-600 hover:text-white cursor-pointer group"
+              className=" absolute top-0 right-20 w-16 h-16 border-2 border-gray-300 rounded-lg flex items-center justify-center transform rotate-12 transition-all duration-300 hover:border-blue-600 hover:bg-blue-600 hover:text-white cursor-pointer group"
             >
               <svg
                 className="w-8 h-8 text-gray-600 group-hover:text-white transition-colors duration-300"
@@ -207,20 +207,7 @@ const WhoWeAre = () => {
       </div>
 
       {/* SVG Wave - positioned to extend below section */}
-      {/* <div className=" relative w-full mt-[-80px]">
-        <svg
-          width="1440"
-          height="469"
-          viewBox="0 0 1440 469"
-          fill=" "
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M689.5 422C360 549 74.1667 381 -3.5 334.5L-41 74L1471 0L1462.5 334.5C1222 182.5 997.82 303.163 689.5 422Z"
-            fill="#FFD500"
-          />
-        </svg>
-      </div> */}
+      
       <div className="relative w-full mt-[-80px]">
         <svg
           className="w-full"
