@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useState } from "react";
@@ -27,7 +25,8 @@ const Team = () => {
         name: "Digvijay Singh",
         role: "Advisor",
         image: "/team/DigvijaySingh.jpeg",
-        linkedin: "https://www.linkedin.com/in/digvijay-singh-4724a440/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        linkedin:
+          "https://www.linkedin.com/in/digvijay-singh-4724a440/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       },
     ],
     leadership: [
@@ -40,16 +39,16 @@ const Team = () => {
       },
       {
         id: 2,
-        name: "Team Member",
-        role: "Advisor",
-        image: "/human.png",
+        name: "Pratyush Sahu",
+        role: "Strategy Head",
+        image: "/team/Pratyush Sahu.png",
         linkedin: "https://linkedin.com/in/advisor",
       },
       {
         id: 3,
-        name: "Team Member",
-        role: "Creative Director",
-        image: "/human.png",
+        name: "Pratham Bhimnani",
+        role: "Founder's Office Associate",
+        image: "/team/Pratham Bhimnani.png",
         linkedin: "https://linkedin.com/in/creative-director",
       },
     ],
@@ -82,7 +81,6 @@ const Team = () => {
         image: "/team/abhirami.jpg",
         linkedin: "https://www.linkedin.com/in/abhirami-m-35909b19b",
       },
-      
     ],
   });
 
@@ -248,7 +246,7 @@ const Team = () => {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 justify-items-center">
+          <div className="flex flex-wrap justify-center gap-12 md:gap-8">
             {teamData.leadership.map((member, index) => (
               <TeamMemberCard key={member.id} member={member} index={index} />
             ))}
@@ -269,14 +267,13 @@ const Team = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-8 justify-items-center">
+          <div className="flex flex-wrap justify-center gap-12 md:gap-8">
             {teamData.creative.map((member, index) => (
               <TeamMemberCard key={member.id} member={member} index={index} />
             ))}
           </div>
         </div>
       </section>
-
     </div>
   );
 };
