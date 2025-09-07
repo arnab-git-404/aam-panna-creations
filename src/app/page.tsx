@@ -5,6 +5,7 @@ import Services from '@/components/Home/ServicesSection';
 import Testimonials from '@/components/Home/Testimonials';
 import WhoWeAre from '@/components/Home/whoWeAre';
 import Form from '@/components/Home/Form';
+import FeatureSection from '@/components/Home/featureSection';
 
 import Page from '@/src/app/test/page'
 
@@ -17,6 +18,7 @@ export default function Home() {
       
       {/* <Page /> */}
       <Testimonials />
+      <FeatureSection />
       <Form />
     </main>
   );
