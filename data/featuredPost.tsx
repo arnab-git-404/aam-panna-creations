@@ -46,5 +46,12 @@ export const featuredPosts: Post[] = [
     img: "/featuredPost/India news.svg",
     description:
       "Professional, reliable, and incredibly talented. They brought our vision to life better than we could have imagined.",
+  },
+  {
+    id:6,
+    title: "Strategic Pivots: Turning challenges into opportunities",
+    link: "https://www.linkedin.com/posts/authornikitasingh_podcast-growth-community-activity-7323244180376354817-vq06/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-PqnABAQzSoy5nggyAIhFWc7wckukyHPw",
+    img: "/featuredPost/The Hindu Business Line.svg",
+    description:""
   }
 ];
