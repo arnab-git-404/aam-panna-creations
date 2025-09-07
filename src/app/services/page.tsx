@@ -372,80 +372,82 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { clientTestimonials } from "@/data/testimonials";
+import { projects } from "@/data/projects";
+
 
 const Projects = () => {
   const [isClient, setIsClient] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const horizontalRef = useRef<HTMLElement>(null);
 
-  const projects = [
-    {
-      id: 1,
-      title: "Web Design & Development",
-      icon: "/services/Code.svg",
-      description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
-      ],
-      projectName: "Lagun Advisor",
-      projectDes: "A platform for personalized travel recommendations.",
-      liveLink: "https://lagunadvisor.com",
-    },
-    {
-      id: 2,
-      title: "Social Media Management",
-      icon: "/services/Social media.svg",
-      description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
-      ],
-      projectName: "Social Media Project",
-      projectDes: "Comprehensive social media management solution.",
-      liveLink: "https://lagunadvisor.com",
-    },
-    {
-      id: 3,
-      title: "Personal Branding",
-      icon: "/services/Personal branding.svg",
-      description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
-      ],
-      projectName: "Brand Identity Project",
-      projectDes: "Complete personal branding solution.",
-      liveLink: "https://lagunadvisor.com",
-    },
-    {
-      id: 4,
-      title: "UI/UX Design and Development",
-      icon: "/services/UX Design.svg",
-      description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
-      ],
-      projectName: "Design System Project",
-      projectDes: "Modern UI/UX design and development.",
-      liveLink: "",
-    },
-    {
-      id: 5,
-      title: "Digital Marketing",
-      icon: "/services/Mentorship and consultancy.svg",
-      description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
-      ],
-      projectName: "Content Creator",
-      projectDes: "Creating engaging content for various platforms.",
-      liveLink: "https://lagunadvisor.com",
-    },
-    {
-      id: 6,
-      title: "Podcast editing",
-      icon: "/services/Podcast editing.svg",
-      description: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
-      ],
-      projectName: "Podcast Production",
-      projectDes: "Professional podcast editing and production services.",
-      liveLink: "https://lagunadvisor.com",
-    },
-  ];
+  // const projects = [
+  //   {
+  //     id: 1,
+  //     title: "Web Design & Development",
+  //     icon: "/services/Code.svg",
+  //     description: [
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
+  //     ],
+  //     projectName: "Lagun Advisor",
+  //     projectDes: "A platform for personalized travel recommendations.",
+  //     liveLink: "https://lagunadvisor.com",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Social Media Management",
+  //     icon: "/services/Social media.svg",
+  //     description: [
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
+  //     ],
+  //     projectName: "Social Media Project",
+  //     projectDes: "Comprehensive social media management solution.",
+  //     liveLink: "https://lagunadvisor.com",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Personal Branding",
+  //     icon: "/services/Personal branding.svg",
+  //     description: [
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
+  //     ],
+  //     projectName: "Brand Identity Project",
+  //     projectDes: "Complete personal branding solution.",
+  //     liveLink: "https://lagunadvisor.com",
+  //   },
+  //   {
+  //     id: 4,
+  //     title: "UI/UX Design and Development",
+  //     icon: "/services/UX Design.svg",
+  //     description: [
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
+  //     ],
+  //     projectName: "Design System Project",
+  //     projectDes: "Modern UI/UX design and development.",
+  //     liveLink: "",
+  //   },
+  //   {
+  //     id: 5,
+  //     title: "Digital Marketing",
+  //     icon: "/services/Mentorship and consultancy.svg",
+  //     description: [
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
+  //     ],
+  //     projectName: "Content Creator",
+  //     projectDes: "Creating engaging content for various platforms.",
+  //     liveLink: "https://lagunadvisor.com",
+  //   },
+  //   {
+  //     id: 6,
+  //     title: "Podcast editing",
+  //     icon: "/services/Podcast editing.svg",
+  //     description: [
+  //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit id venenatis pretium risus euismod dictum egestas orci netus feugiat ut egestas ut sagittis tincidunt phasellus elit etiam cursus orci in. Id sed montes.",
+  //     ],
+  //     projectName: "Podcast Production",
+  //     projectDes: "Professional podcast editing and production services.",
+  //     liveLink: "https://lagunadvisor.com",
+  //   },
+  // ];
 
   const portfolioItems = [
     {
@@ -712,7 +714,7 @@ const Projects = () => {
                 </p>
 
                 <h2 className="text-2xl xl:text-3xl font-bold">
-                  Client: {project.projectName}
+                  { project.projectName ? <span>Client : {project.projectName}</span> : null }
                 </h2>
                 <p className="text-black/90 leading-relaxed">
                   {project.projectDes}
@@ -828,7 +830,7 @@ const Projects = () => {
           </div>
 
           {/* Stats or features */}
-          <div className="flex flex-wrap justify-center gap-8 mb-8">
+          {/* <div className="flex flex-wrap justify-center gap-8 mb-8">
             <div className="text-center group">
               <div className="w-16 h-16 mx-auto mb-2 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl font-bold text-purple-600">6+</span>
@@ -849,7 +851,7 @@ const Projects = () => {
               </div>
               <p className="text-sm font-medium text-gray-600">Satisfaction</p>
             </div>
-          </div>
+          </div> */}
 
           {/* Bottom decorative line */}
           <div className="w-32 h-1 bg-gradient-to-r from-purple-400 via-blue-400 to-pink-400 mx-auto rounded-full"></div>
