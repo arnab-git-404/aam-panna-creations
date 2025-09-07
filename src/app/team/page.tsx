@@ -37,19 +37,19 @@ const Team = () => {
         image: "/team/godhuli.jpg",
         linkedin: "https://www.linkedin.com/in/godhuli-vyas-4b7128253/",
       },
-      {
-        id: 2,
-        name: "Pratyush Sahu",
-        role: "Strategy Head",
-        image: "/team/Pratyush Sahu.png",
-        linkedin: "https://linkedin.com/in/advisor",
-      },
+      // {
+      //   id: 2,
+      //   name: "Pratyush Sahu",
+      //   role: "Strategy Head",
+      //   image: "/team/Pratyush Sahu.png",
+      //   linkedin: "https://www.linkedin.com/in/sahup03",
+      // },
       {
         id: 3,
         name: "Pratham Bhimnani",
         role: "Founder's Office Associate",
         image: "/team/Pratham Bhimnani.png",
-        linkedin: "https://linkedin.com/in/creative-director",
+        linkedin: "https://www.linkedin.com/in/pratham-bhimnani-36736725a",
       },
     ],
     creative: [
