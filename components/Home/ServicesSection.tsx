@@ -20,35 +20,35 @@ const servicesData: Service[] = [
     id: 1,
     title: "Web Design & Development",
     description:
-      "Creating modern, responsive websites and web applications with cutting-edge technologies.",
+      "We craft seamless digital experiences through thoughtful UI/UX design and precise development. From wireframes to high-fidelity prototypes, we focus on creating interfaces that are intuitive, engaging, and aligned with your brand. Startups, growing businesses, and enterprises trust us to design and build websites that not only look beautiful but also work effortlessly for their users.",
     icon: <Code size={32} />,
   },
   {
     id: 2,
     title: "Social Media Management",
     description:
-      "Strategic social media planning and content creation to boost your online presence.",
+      "We help brands grow and engage their audiences through smart, consistent, and creative social media strategies. From content creation to campaign execution, we ensure your brand voice is authentic and your presence stands out across platforms. Businesses and entrepreneurs count on us to turn followers into communities and engagement into impact.",
     icon: <Share2 size={32} />,
   },
   {
     id: 3,
     title: "Personal Branding",
     description:
-      "Build a strong personal brand that resonates with your target audience.",
+      "We work with individuals and professionals to craft personal brands that resonate. Through strategy, design, and storytelling, we highlight what makes you unique and position you to connect with the right opportunities. Our tailored approach ensures your personal brand feels both authentic and influential.",
     icon: <User size={32} />,
   },
   {
     id: 4,
     title: "Podcast editing",
     description:
-      "Intuitive and beautiful user interface designs that enhance user experience.",
+      "We refine your recordings into professional, polished podcasts that captivate listeners. From sound engineering to smooth transitions and clear audio, we handle the details so your voice and message take center stage. Podcasters and businesses trust us to deliver content that sounds as good as it inspires.",
     icon: <Palette size={32} />,
   },
   {
     id: 5,
     title: "Mentorship and Consulting",
     description:
-      "Comprehensive digital marketing strategies to grow your business online.",
+      "We guide startups, creators, and businesses through the challenges of building and scaling with clarity and confidence. Combining industry insights with hands-on experience, we provide practical strategies and honest feedback to help you make informed decisions. Clients rely on us as trusted advisors who turn vision into actionable growth.",
     icon: <TrendingUp size={32} />,
   },
 ];
