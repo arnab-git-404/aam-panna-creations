@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { toast } from "react-hot-toast";
 import { FaCircleArrowLeft } from "react-icons/fa6";
-import { blogData } from "../../blogData/blogData";
+import { blogData } from "@/data/blogData";
 import Image from "next/image";
 
 export interface BlogPost {
@@ -121,7 +121,7 @@ const BlogPostPage = () => {
       </nav>
 
       {/* Blog Post Content */}
-      <article className="max-w-7xl mx-auto px-4 sm:px-16 lg:px-8 sm:py-4 bg-[#FFD500] rounded-4xl mt-10 ">
+      <article className="max-w-7xl mx-auto px-4 sm:px-16 lg:px-8 sm:py-4 bg-[#EED241] rounded-4xl mt-10 ">
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center space-x-2 mb-6">
@@ -223,7 +223,7 @@ const BlogPostPage = () => {
             {relatedPosts.map((relatedPost: BlogPost) => (
               <div
                 key={relatedPost.id}
-                className="bg-background rounded-lg p-6 shadow-sm hover:shadow-2xl transition-shadow cursor-pointer bg-[#FFD500]"
+                className="bg-background rounded-lg p-6 shadow-sm hover:shadow-2xl transition-shadow cursor-pointer bg-[#EED241]"
                 onClick={() => router.push(`/blog/${relatedPost.id}`)}
               >
                 <h3 className="text-xl font-semibold text-primary mb-3">
