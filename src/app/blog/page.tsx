@@ -605,7 +605,7 @@ import { useRouter } from "next/navigation";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 import Image from "next/image";
 
-import { blogData } from "../blogData/blogData";
+import { blogData } from "@/data/blogData";
 
 export interface BlogPost {
   id: number;
