@@ -72,8 +72,8 @@ const TestimonialsPage: React.FC = () => {
 
           {/* Testimonials Flex Container - Your original structure enhanced */}
 
-          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
-            {clientTestimonials.map((item, index) => (
+          {/* <div className="flex flex-wrap justify-center gap-6 lg:gap-8"> */}
+            {/* {clientTestimonials.map((item, index) => (
               <div
                 key={item.id}
                 className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-0 w-full sm:w-80 md:w-96 lg:w-80 xl:w-96"
@@ -81,7 +81,19 @@ const TestimonialsPage: React.FC = () => {
                   transform: `rotate(${(index % 2 === 0 ? 1 : -1) * 1}deg)`,
                   animationDelay: `${index * 0.1}s`,
                 }}
+              > */}
+
+            <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 lg:gap-8 space-y-6">
+            {clientTestimonials.map((item, index) => (
+              <div
+                key={item.id}
+                className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-0 break-inside-avoid mb-6"
+                style={{
+                  transform: `rotate(${(index % 2 === 0 ? 1 : -1) * 1}deg)`,
+                  animationDelay: `${index * 0.1}s`,
+                }}
               >
+
                 {/* ...existing code... */}
                 {/* Gradient overlay for visual depth */}
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
