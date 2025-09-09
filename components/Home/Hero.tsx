@@ -2,6 +2,7 @@
 
 import React from "react";
 import Ballpit from "../Ballpit";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -21,15 +22,6 @@ const Hero = () => {
         {/* Gradient Overlay */}
         <div className="absolute inset-0 z-5 bg-gradient-to-br from-black/10 via-transparent to-purple/20 pointer-events-none"></div>
 
-        {/* Animated Background Elements 
-        <div className="absolute inset-0 z-5 pointer-events-none">
-          <div className="absolute top-20 left-10 w-20 h-20 bg-yellow-400/30 rounded-full animate-bounce"></div>
-          <div className="absolute top-40 right-20 w-16 h-16 bg-orange-400/40 rotate-45 animate-pulse"></div>
-          <div className="absolute bottom-32 left-20 w-12 h-12 bg-pink-400/50 rounded-full animate-ping"></div>
-          <div className="absolute bottom-20 right-10 w-24 h-24 bg-purple-400/30 rounded-lg rotate-12 animate-bounce"></div>
-        </div> 
-        */}
-
         {/* Main Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-6xl mx-auto pointer-events-none">
           {/* Welcome Text with Animation */}
@@ -45,7 +37,9 @@ const Hero = () => {
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 rounded-full"></div>
             
             {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-pink-500 animate-gradient leading-tight">
+            {/* <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-pink-500 animate-gradient leading-tight"> */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-black animate-gradient leading-tight">
+              
               Aam Panna Creations
             </h1>
             
@@ -56,14 +50,18 @@ const Hero = () => {
           {/* Subtitle */}
           <div className="mb-8 overflow-hidden">
             <p className="text-lg sm:text-xl md:text-2xl text-gray-700 animate-slide-up-delay font-medium tracking-wide">
-              Creative Solutions • Digital Excellence • Innovative Design
+              {/* Creative Solutions • Digital Excellence • Innovative Design */}
+              Where Limits Defy, We Redefine Marketing
             </p>
           </div>
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up pointer-events-auto">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl touch-manipulation">
+              
+              <Link href="/services">
               <span className="relative z-10">Explore Our Work</span>
+              </Link>
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </button>
             
