@@ -40,7 +40,7 @@ const Form: React.FC = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Hello with smiley */}
           <div className="flex items-center gap-3">
-            <h1 className="text-4xl md:text-8xl font-bold text-black">Hello</h1>
+            <h1 className="text-2xl md:text-8xl font-bold text-black">Hello</h1>
             <div className="w-12 h-12 md:w-16 md:h-16 border-3 border-black rounded-full flex items-center justify-center bg-white">
               <span className="text-lg md:text-3xl">😊</span>
             </div>
@@ -49,7 +49,7 @@ const Form: React.FC = () => {
           {/* My name is */}
           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
             {/* <span>My name is</span> */}
-            <h1 className="text-4xl md:text-8xl font-bold text-black">
+            <h1 className="text-2xl md:text-8xl font-bold text-black">
               My name is
             </h1>
             <input
@@ -58,7 +58,7 @@ const Form: React.FC = () => {
               value={formData.name}
               onChange={handleInputChange}
               placeholder="Enter your name"
-              className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[250px] flex-1"
+              className="mt-7 bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[250px] flex-1"
               required
             />
           </div>
@@ -66,7 +66,7 @@ const Form: React.FC = () => {
           {/* I'm from */}
           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
             {/* <span>I'm from</span> */}
-            <h1 className="text-4xl md:text-8xl font-bold text-black">
+            <h1 className="text-2xl md:text-8xl font-bold text-black">
               {`I'm from`}
             </h1>
             <input
@@ -75,7 +75,7 @@ const Form: React.FC = () => {
               value={formData.company}
               onChange={handleInputChange}
               placeholder="Enter your company"
-              className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[280px] flex-1"
+              className="mt-7 bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[280px] flex-1"
               required
             />
           </div>
@@ -83,7 +83,7 @@ const Form: React.FC = () => {
           {/* here is my email */}
           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
             {/* <span>here is my email</span> */}
-            <h1 className="text-4xl md:text-8xl font-bold text-black">
+            <h1 className="text-2xl md:text-8xl font-bold text-black">
               here is my email
             </h1>
             <input
@@ -92,7 +92,7 @@ const Form: React.FC = () => {
               value={formData.email}
               onChange={handleInputChange}
               placeholder="Enter your email"
-              className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
+              className="mt-7 bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
               required
             />
           </div>
@@ -100,7 +100,7 @@ const Form: React.FC = () => {
           {/* and message */}
           <div className="flex flex-wrap items-start gap-3 text-3xl md:text-4xl font-bold text-black">
             {/* <span>and message</span> */}
-            <h1 className="text-4xl md:text-8xl font-bold text-black">
+            <h1 className="text-2xl md:text-8xl font-bold text-black">
               and message
             </h1>
 
@@ -110,7 +110,7 @@ const Form: React.FC = () => {
               onChange={handleInputChange}
               placeholder="Enter your message"
               rows={2}
-              className=" border-2 bg-transparent border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
+              className=" mt-4 border-2 bg-transparent border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
               required
             />
           </div>
@@ -153,237 +153,3 @@ const Form: React.FC = () => {
 
 export default Form;
 
-// 'use client';
-
-// import React, { useState } from 'react';
-// import toast from 'react-hot-toast';
-
-// const Form: React.FC = () => {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     company: '',
-//     email: '',
-//     message: ''
-//   });
-
-//   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-//     const { name, value } = e.target;
-//     setFormData(prev => ({
-//       ...prev,
-//       [name]: value
-//     }));
-//   };
-
-//   const handleSubmit = (e: React.FormEvent) => {
-//     e.preventDefault();
-//     toast.success('Form submitted successfully!');
-//     console.log('Form submitted:', formData);
-//   };
-
-//   return (
-//     <div className="min-h-screen bg-gradient-to-b from-pink-100 via-pink-300 to-pink-500 flex items-center justify-center p-4">
-//       <div className="w-full max-w-xl">
-//         <form onSubmit={handleSubmit} className="space-y-8">
-
-//           {/* Hello with smiley */}
-//           <div className="flex items-center gap-4">
-//             <h1 className="text-6xl md:text-8xl font-bold text-black">Hello</h1>
-//             <div className="w-16 h-16 md:w-20 md:h-20 border-4 border-black rounded-full flex items-center justify-center bg-white">
-//               <span className="text-2xl md:text-3xl">😊</span>
-//             </div>
-//           </div>
-
-//           {/* My name is */}
-//           <div className="flex flex-wrap items-center gap-4 text-6xl md:text-8xl font-bold text-black">
-//             <span>My name is</span>
-//             <input
-//               type="text"
-//               name="name"
-//               value={formData.name}
-//               onChange={handleInputChange}
-//               placeholder="Enter your name"
-//               className="bg-transparent border-b-4 border-black outline-none placeholder-gray-600 text-4xl md:text-6xl font-bold min-w-[300px] flex-1"
-//               required
-//             />
-//           </div>
-
-//           {/* I'm from */}
-//           <div className="flex flex-wrap items-center gap-4 text-6xl md:text-8xl font-bold text-black">
-//             <span>I'm from</span>
-//             <input
-//               type="text"
-//               name="company"
-//               value={formData.company}
-//               onChange={handleInputChange}
-//               placeholder="Enter your company name"
-//               className="bg-transparent border-b-4 border-black outline-none placeholder-gray-600 text-4xl md:text-6xl font-bold min-w-[400px] flex-1"
-//               required
-//             />
-//           </div>
-
-//           {/* here is my email */}
-//           <div className="flex flex-wrap items-center gap-4 text-6xl md:text-8xl font-bold text-black">
-//             <span>here is my email</span>
-//             <input
-//               type="email"
-//               name="email"
-//               value={formData.email}
-//               onChange={handleInputChange}
-//               placeholder="Enter your email id"
-//               className="bg-transparent border-b-4 border-black outline-none placeholder-gray-600 text-4xl md:text-6xl font-bold min-w-[350px] flex-1"
-//               required
-//             />
-//           </div>
-
-//           {/* and message */}
-//           <div className="flex flex-wrap items-start gap-4 text-6xl md:text-8xl font-bold text-black">
-//             <span>and message</span>
-//             <textarea
-//               name="message"
-//               value={formData.message}
-//               onChange={handleInputChange}
-//               placeholder="Enter your message"
-//               rows={3}
-//               className="bg-transparent border-b-4 border-black outline-none placeholder-gray-600 text-4xl md:text-6xl font-bold min-w-[400px] flex-1 resize-none"
-//               required
-//             />
-//           </div>
-
-//           {/* Submit Button */}
-//           <div className="flex justify-center pt-8">
-//             <button
-//               type="submit"
-//               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-2xl px-12 py-4 rounded-full border-4 border-black shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
-//             >
-//               Submit
-//               <span className="text-3xl">▶</span>
-//             </button>
-//           </div>
-
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Form;
-
-//2ND FINAL
-
-// 'use client';
-
-// import React, { useState } from 'react';
-// import toast from 'react-hot-toast';
-
-// const Form: React.FC = () => {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     company: '',
-//     email: '',
-//     message: ''
-//   });
-
-//   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-//     const { name, value } = e.target;
-//     setFormData(prev => ({
-//       ...prev,
-//       [name]: value
-//     }));
-//   };
-
-//   const handleSubmit = (e: React.FormEvent) => {
-//     e.preventDefault();
-//     toast.success('Form submitted successfully!');
-//     console.log('Form submitted:', formData);
-//   };
-
-//   return (
-//     <div className="min-h-screen bg-gradient-to-b from-pink-100 via-pink-300 to-pink-500 flex items-center justify-center p-4">
-
-//       <div className="w-full max-w-4xl">
-//         <form onSubmit={handleSubmit} className="space-y-6">
-
-//           {/* Hello with smiley */}
-//           <div className="flex items-center gap-3">
-//             <h1 className="text-4xl md:text-5xl font-bold text-black">Hello</h1>
-//             <div className="w-12 h-12 md:w-14 md:h-14 border-3 border-black rounded-full flex items-center justify-center bg-white">
-//               <span className="text-lg md:text-xl">😊</span>
-//             </div>
-//           </div>
-
-//           {/* My name is */}
-//           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
-//             <span>My name is</span>
-//             <input
-//               type="text"
-//               name="name"
-//               value={formData.name}
-//               onChange={handleInputChange}
-//               placeholder="Enter your name"
-//               className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[250px] flex-1"
-//               required
-//             />
-//           </div>
-
-//           {/* I'm from */}
-//           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
-//             <span>I'm from</span>
-//             <input
-//               type="text"
-//               name="company"
-//               value={formData.company}
-//               onChange={handleInputChange}
-//               placeholder="Enter your company"
-//               className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[280px] flex-1"
-//               required
-//             />
-//           </div>
-
-//           {/* here is my email */}
-//           <div className="flex flex-wrap items-center gap-3 text-3xl md:text-4xl font-bold text-black">
-//             <span>here is my email</span>
-//             <input
-//               type="email"
-//               name="email"
-//               value={formData.email}
-//               onChange={handleInputChange}
-//               placeholder="Enter your email"
-//               className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
-//               required
-//             />
-//           </div>
-
-//           {/* and message */}
-//           <div className="flex flex-wrap items-start gap-3 text-3xl md:text-4xl font-bold text-black">
-//             <span>and message</span>
-//             <textarea
-//               name="message"
-//               value={formData.message}
-//               onChange={handleInputChange}
-//               placeholder="Enter your message"
-//               rows={2}
-//               className="bg-transparent border-b-3 border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[300px] flex-1 resize-none"
-//               required
-//             />
-//           </div>
-
-//           {/* Submit Button */}
-//           <div className="flex justify-center pt-6">
-//             <button
-//               type="submit"
-//               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg px-8 py-3 rounded-full border-3 border-black shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
-//             >
-//               Submit
-//               <span className="text-xl">▶</span>
-//             </button>
-//           </div>
-
-//         </form>
-
-//       </div>
-
-//     </div>
-//   );
-// };
-
-// export default Form;
