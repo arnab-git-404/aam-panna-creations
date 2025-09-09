@@ -99,14 +99,26 @@ const WhoWeAre = () => {
               Who are we ?
             </h2>
             <div className="mt-4 max-w-7xl">
-              <p className="text-lg md:text-xl text-black leading-relaxed">
+              {/* <p className="text-lg md:text-xl text-black leading-relaxed">
                 {`At Aam Pannaa Creations, we believe every startup has a story worth sharing, a story that inspires, connects, and drives growth.We started with a vision: to bridge gaps in the startup ecosystem and empower early-stage ventures to thrive. While startups brim with ideas, many struggle to build a compelling brand identity. That’s where we step in crafting authentic stories and impactful marketing that help them scale.`}
                 <br />
                 <br />
-                {`Our approach combines creativity with strategy, transforming visions into captivating brands and managing social media with precision. For us, it’s not just about marketing; It’s about forging meaningful connections that fuel growth. We specialize in supporting early-stage startups, B2B companies seeking insights, and women-led social ventures making an impact. Our tailored consultations align with your unique goals to deliver real, lasting results. At Aam Pannaa Creations, we’re not just partners; we’re advocates for your success. Let’s write your growth story together.`}{" "}
+                {`Our approach combines creativity with strategy, transforming visions into captivating brands and managing social media with precision. For us, it’s not just about marketing; It’s about forging meaningful connections that fuel growth. We specialize in supporting <strong>early-stage startups</strong>, B2B companies seeking insights, and women-led social ventures making an impact. Our tailored consultations align with your unique goals to deliver real, lasting results. At Aam Pannaa Creations, we’re not just partners; we’re advocates for your success. Let’s write your growth story together.`}{" "}
                 <br />
                 <br />
-              </p>
+              </p> */}
+              <p className="text-lg md:text-xl text-black leading-relaxed">
+  {`At Aam Pannaa Creations, we believe every startup has a story worth sharing, a story that inspires, connects, and drives growth.We started with a vision: to bridge gaps in the startup ecosystem and empower early-stage ventures to thrive. While startups brim with ideas, many struggle to build a compelling brand identity. That's where we step in crafting authentic stories and impactful marketing that help them scale.`}
+  <br />
+  <br />
+  {`Our approach combines creativity with strategy, transforming visions into captivating brands and managing social media with precision. For us, it's not just about marketing; It's about forging meaningful connections that fuel growth. We specialize in supporting `}
+  <strong>early-stage startups</strong><strong>, B2B</strong>
+  {`,  companies seeking insights, and `}
+  <strong>women-led social ventures</strong>
+  {` making an impact. Our tailored consultations align with your unique goals to deliver real, lasting results. At Aam Pannaa Creations, we're not just partners; we're advocates for your success. Let's write your growth story together.`}
+  <br />
+  <br />
+</p>
             </div>
           </div>
 
