@@ -40,7 +40,7 @@ const Testimonials = () => {
 
         {/* <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"> */}
         <div className="mx-auto flex flex-col md:flex-row lg:flex-row justify-center items-stretch gap-6 lg:gap-16">
-          {clientTestimonials.slice(0, 3).map((item, index) => (
+          {clientTestimonials.slice(0, 4).map((item, index) => (
             <div
               key={item.id}
               className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:rotate-0 w-full sm:w-80 md:w-96 lg:w-80 xl:w-96"
@@ -49,7 +49,6 @@ const Testimonials = () => {
                 animationDelay: `${index * 0.1}s`,
               }}
             >
-              {/* ...existing code... */}
               {/* Gradient overlay for visual depth */}
               <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
