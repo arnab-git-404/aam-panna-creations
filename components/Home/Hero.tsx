@@ -40,7 +40,7 @@ const Hero = () => {
             {/* <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-pink-500 animate-gradient leading-tight"> */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-black animate-gradient leading-tight">
               
-              Aam Panna Creations
+              Aam Pannaa Creations
             </h1>
             
             {/* Bottom decorative line */}
