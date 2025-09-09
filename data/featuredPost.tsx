@@ -49,9 +49,9 @@ export const featuredPosts: Post[] = [
   },
   {
     id:6,
-    title: "Strategic Pivots: Turning challenges into opportunities",
+    title: "Strategic Pivots",
     link: "https://www.linkedin.com/posts/authornikitasingh_podcast-growth-community-activity-7323244180376354817-vq06/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC-PqnABAQzSoy5nggyAIhFWc7wckukyHPw",
-    img: "/featuredPost/The Hindu Business Line.svg",
+    img: "/featuredPost/Strategic Pivots.svg",
     description:""
   }
 ];
