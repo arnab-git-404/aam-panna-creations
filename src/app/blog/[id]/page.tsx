@@ -121,7 +121,7 @@ const BlogPostPage = () => {
       </nav>
 
       {/* Blog Post Content */}
-      <article className="max-w-7xl mx-auto px-4 sm:px-16 lg:px-8 sm:py-4 bg-[#EED241] rounded-4xl mt-10 ">
+      <article className="max-w-7xl mx-auto px-4 sm:px-16 lg:px-8 sm:py-4 bg-[#EED241]/40 rounded-4xl mt-10 ">
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center space-x-2 mb-6">
@@ -160,17 +160,16 @@ const BlogPostPage = () => {
           <div className="text-xl text-muted-foreground leading-relaxed mb-8">
             {post.excerpt}
           </div>
-          
-<div className="flex justify-center mb-8">
-  <Image
-    src={post.img}
-    alt={post.title}
-    className="object-cover rounded-lg"
-    width={600}
-    height={400}
-  />
-</div>
 
+          <div className="flex justify-center mb-8">
+            <Image
+              src={post.img}
+              alt={post.title}
+              className="object-cover rounded-lg"
+              width={600}
+              height={400}
+            />
+          </div>
 
           {/* Main Content */}
           {post.fullContent && (
@@ -223,7 +222,7 @@ const BlogPostPage = () => {
             {relatedPosts.map((relatedPost: BlogPost) => (
               <div
                 key={relatedPost.id}
-                className="bg-background rounded-lg p-6 shadow-sm hover:shadow-2xl transition-shadow cursor-pointer bg-[#EED241]"
+                className="bg-background rounded-lg p-6 shadow-sm hover:shadow-2xl transition-shadow cursor-pointer bg-[#EED241]/40"
                 onClick={() => router.push(`/blog/${relatedPost.id}`)}
               >
                 <h3 className="text-xl font-semibold text-primary mb-3">
