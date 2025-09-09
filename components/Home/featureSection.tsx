@@ -1,122 +1,20 @@
-// import React from 'react';
-// import Image from 'next/image';
-// import { featuredPosts } from '@/data/featuredPost';
 
-
-// const FeatureSection: React.FC = () => {
- 
-
-//   return (
-//     <section className="py-16 px-4 ">
-//       <div className="max-w-7xl mx-auto">
-//         {/* Section Header */}
-//         <div className="text-center mb-12">
-//           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-//             Founder's Journey
-//           </h2>
-//         </div>
-
-//         {/* Features Container */}
-//         <div className="flex flex-wrap justify-center gap-6">
-//           {featuredPosts.map((feature) => (
-//             <div
-//               key={feature.id}
-//               className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] max-w-sm"
-//             >
-//               {/* <div className=" rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"> */}
-//                 {/* Image Container */}
-//                 {/* <div className="relative h-64 w-full rounded-4xl">
-//                   <Image
-//                     src={feature.img}
-//                     alt={feature.title}
-//                     fill
-//                     className="object-cover"
-//                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-//                   />
-//                 </div> */}
-
-//                 {/* <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"> */}
-//                 {/* Image Container */}
-//                 {/* <div className="relative h-64 w-full">
-//                   <Image
-//                     src={feature.img}
-//                     alt={feature.title}
-//                     fill
-//                     className="object-cover object-center"
-//                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-//                   />
-//                 </div> */}
-                
-//                 {/* Content */}
-//                 {/* <div className="p-4">
-//                   <h3 className="text-sm font-bold text-gray-800 mb-2 uppercase tracking-wide">
-//                     {feature.title}
-//                   </h3>
-//                   {feature.description && (
-//                     <p className="text-sm text-gray-600 leading-relaxed">
-//                       {feature.description}
-//                     </p>
-//                   )}
-//                 </div>
-//               </div> */}
-
-
-
-//                 <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-//                 {/* Image Container */}
-//                 <div className="relative h-64 w-full overflow-hidden rounded-t-lg">
-//                   <Image
-//                     src={feature.img}
-//                     alt={feature.title}
-//                     fill
-//                     className="object-cover object-center"
-//                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-//                   />
-//                 </div>
-                
-//                 {/* Content */}
-//                 <div className="p-4">
-//                   <h3 className="text-sm font-bold text-gray-800 mb-2 uppercase tracking-wide">
-//                     {feature.title}
-//                   </h3>
-//                   {feature.description && (
-//                     <p className="text-sm text-gray-600 leading-relaxed">
-//                       {feature.description}
-//                     </p>
-//                   )}
-//                 </div>
-//               </div>
-
-
-//             </div>
-//           ))}
-//         </div>
-
-//         {/* Additional items will automatically wrap and center */}
-//         <div className="mt-8 text-center">
-//           <p className="text-sm text-gray-500">
-//             More features coming soon...
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default FeatureSection;
-
-
-
+'use client'
 
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { featuredPosts } from '@/data/featuredPost';
 
+
 const FeatureSection: React.FC = () => {
+
+  
   return (
     <section className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
+
+
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -175,7 +73,7 @@ const FeatureSection: React.FC = () => {
                     </h3>
                     {feature.description && (
                       <p className="text-sm text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                        {feature.description}
+                        {/* {feature.description} */}
                       </p>
                     )}
                     
@@ -209,6 +107,7 @@ const FeatureSection: React.FC = () => {
             More features coming soon...
           </p>
         </div>
+
       </div>
     </section>
   );
