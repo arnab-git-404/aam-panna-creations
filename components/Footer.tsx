@@ -251,15 +251,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-black hover:text-black transition-colors duration-200">
                 <Mail size={18} />
-                <span>hello@designstudio.com</span>
+                <span>operations@aampanna.net</span>
               </div>
-              <div className="flex items-center space-x-3 text-black hover:text-black transition-colors duration-200">
+              {/* <div className="flex items-center space-x-3 text-black hover:text-black transition-colors duration-200">
                 <Phone size={18} />
                 <span>+1 (555) 123-4567</span>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-3 text-black hover:text-black transition-colors duration-200">
                 <MapPin size={18} />
-                <span>San Francisco, CA</span>
+                <span>Ghaziabad, Uttar Pradesh, India</span>
               </div>
             </div>
           </div>
