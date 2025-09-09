@@ -3,11 +3,12 @@ import React, { useState, useEffect } from "react";
 import { Code, Share2, User, Palette, TrendingUp, Clock } from "lucide-react";
 import Image from "next/image";
 
+
 interface Service {
   id: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: string;
 }
 
 interface Client {
@@ -20,36 +21,36 @@ const servicesData: Service[] = [
     id: 1,
     title: "Web Design & Development",
     description:
-      "We craft seamless digital experiences through thoughtful UI/UX design and precise development. From wireframes to high-fidelity prototypes, we focus on creating interfaces that are intuitive, engaging, and aligned with your brand. Startups, growing businesses, and enterprises trust us to design and build websites that not only look beautiful but also work effortlessly for their users.",
-    icon: <Code size={32} />,
+      "We turn ideas into stunning, functional websites, where design meets flawless development. From concept to content to tech support, we handle it all, so your brand shines and your users stay engaged.",
+    icon: "/services/Web Design & Development.jpeg",
   },
   {
     id: 2,
     title: "Social Media Management",
     description:
-      "We help brands grow and engage their audiences through smart, consistent, and creative social media strategies. From content creation to campaign execution, we ensure your brand voice is authentic and your presence stands out across platforms. Businesses and entrepreneurs count on us to turn followers into communities and engagement into impact.",
-    icon: <Share2 size={32} />,
+      "We craft strategic, creative, and consistent social media that builds your brand and engages audiences. From content to campaigns, we manage and distribute across platforms turning followers into communities and engagement into real impact",
+    icon: "/services/Social Media Management.jpeg",
   },
   {
     id: 3,
     title: "Personal Branding",
     description:
-      "We work with individuals and professionals to craft personal brands that resonate. Through strategy, design, and storytelling, we highlight what makes you unique and position you to connect with the right opportunities. Our tailored approach ensures your personal brand feels both authentic and influential.",
-    icon: <User size={32} />,
+      "We help you craft a personal brand that brings out your authentic story and builds industry credibility. Through strategy, design, and storytelling, we position you to stand out, connect, and grow with the right opportunities.",
+    icon: "/services/Personal Branding.jpeg",
   },
   {
     id: 4,
     title: "Podcast editing",
     description:
-      "We refine your recordings into professional, polished podcasts that captivate listeners. From sound engineering to smooth transitions and clear audio, we handle the details so your voice and message take center stage. Podcasters and businesses trust us to deliver content that sounds as good as it inspires.",
-    icon: <Palette size={32} />,
+      "We turn raw recordings into engaging, shareable conversations. With expert editing, creative direction, and smart distribution, we ensure your podcast not only sounds professional but also resonates with the right audience.",
+    icon: "/services/Podcast editing.jpeg",
   },
   {
     id: 5,
     title: "Mentorship and Consulting",
     description:
-      "We guide startups, creators, and businesses through the challenges of building and scaling with clarity and confidence. Combining industry insights with hands-on experience, we provide practical strategies and honest feedback to help you make informed decisions. Clients rely on us as trusted advisors who turn vision into actionable growth.",
-    icon: <TrendingUp size={32} />,
+      "We offer one-on-one consultations both one-time and monthly to guide startups, creators, and businesses with the right strategy, support, and steps. Blending industry insights with hands-on experience.",
+    icon: "/services/Mentorship and Consulting.jpeg",
   },
 ];
 
@@ -81,7 +82,7 @@ const Services: React.FC = () => {
   }, []);
 
   const generateCircularIcons = () => {
-    const radius = 200;
+    const radius = 220;
     const totalIcons = servicesData.length;
     const angleStep = 180 / (totalIcons - 1);
     const startAngle = -90;
@@ -89,7 +90,7 @@ const Services: React.FC = () => {
     return servicesData.map((service, index) => {
       const angle = startAngle + index * angleStep;
       const x = Math.cos((angle * Math.PI) / 150) * radius;
-      const y = Math.sin((angle * Math.PI) / 170) * radius;
+      const y = Math.sin((angle * Math.PI) / 160) * radius;
 
       return {
         ...service,
@@ -106,7 +107,7 @@ const Services: React.FC = () => {
       <div className="hidden lg:flex items-center justify-between min-h-screen relative overflow-hidden left-0 ">
         {/* Left Side - Circular Layout - Completely attached to left wall */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-96 h-full flex items-center ">
-          <div className="relative w-full h-80 flex items-center justify-center ml-[-60px]">
+          <div className="relative w-full h-80 flex items-center justify-center ml-[-20px]">
             {generateCircularIcons().map((item, index) => (
               <div
                 key={index}
@@ -122,14 +123,14 @@ const Services: React.FC = () => {
               >
                 <div
                   className={`
-                    w-30 h-30 rounded-2xl shadow-lg flex items-center justify-center
+                    w-35 h-35 rounded shadow-lg flex items-center justify-center
                     transition-all duration-700 border-2
                     ${
                       item.active
                         ? "bg-gradient-to-br from-orange-400 to-pink-500 border-white shadow-2xl"
                         : "bg-white border-gray-200 hover:border-orange-300 hover:shadow-xl"
                     }
-                    group-hover:scale-105
+                    group-hover:scale-110
                   `}
                 >
                   <div
@@ -139,7 +140,12 @@ const Services: React.FC = () => {
                         : "text-gray-600 group-hover:text-orange-500"
                     }
                   >
-                    {item.icon}
+                    <Image
+                      src={item.icon}
+                      alt={item.title}
+                      width={120}
+                      height={120}
+                    />
                   </div>
                 </div>
 
@@ -149,9 +155,7 @@ const Services: React.FC = () => {
                     className={`text-xs text-center font-medium transition-colors duration-300 ${
                       item.active ? "text-orange-600" : "text-gray-500"
                     }`}
-                  >
-                    {/* {item.title} */}
-                  </p>
+                  ></p>
                 </div>
               </div>
             ))}
@@ -164,7 +168,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Center Content - Properly centered */}
-        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-lg px-8">
+        <div className="ml-36 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-lg px-8">
           <div className="text-center space-y-6">
             <div className="overflow-hidden">
               <h2 className="text-4xl xl:text-7xl font-bold text-gray-800 leading-tight transition-all duration-700 transform">
