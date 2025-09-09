@@ -200,7 +200,7 @@ const About = () => {
   return (
     <div className="min-h-screen">
       {/* Main Content */}
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="flex justify-center items-center mb-8">
@@ -319,7 +319,7 @@ const About = () => {
       </main>
 
       {/* Combined Image Section */}
-      <div className="w-full bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] py-10">
+      <div className="w-full bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] ">
         <div className="flex justify-center items-center px-4">
           <div className="max-w-4xl w-full relative group">
             <div className="transform hover:scale-110 transition-all duration-300 ease-in-out">
