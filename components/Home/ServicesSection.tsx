@@ -58,7 +58,7 @@ const clientLogos: Client[] = [
   { name: "ClayLab", img: "/clientLogos/claylab.png" },
   { name: "Lagum Advisors", img: "/clientLogos/la.png" },
   { name: "Wolnut", img: "/clientLogos/WolnutLogo.png" },
-  { name: "Jyotsna Singh", img: "/clientLogos/jyotsnasingh.png" },
+  { name: "Jyotsna Singh", img: "/clientLogos/Jyotsnasingh.png" },
   { name: "Kancha", img: "/clientLogos/kancha.png" },
   { name: "Little Pineapple", img: "/clientLogos/littlepineapple.png" },
   { name: "aksh-e-sarfiri", img: "/clientLogos/aksh-e-sarfiri.png" },
