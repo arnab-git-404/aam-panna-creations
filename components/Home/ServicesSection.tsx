@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Code, Share2, User, Palette, TrendingUp, Clock } from "lucide-react";
 import Image from "next/image";
 
-
 interface Service {
   id: number;
   title: string;
@@ -63,8 +62,8 @@ const clientLogos: Client[] = [
   { name: "Little Pineapple", img: "/clientLogos/littlepineapple.png" },
   { name: "aksh-e-sarfiri", img: "/clientLogos/aksh-e-sarfiri.png" },
   { name: "Luminary Pathways", img: "/clientLogos/luminaryPathways.png" },
-  { name: "Escape Velocity", img: "/clientLogos/ev.png" },  
-  
+  { name: "Escape Velocity", img: "/clientLogos/ev.png" },
+
   // { name: "The Local Project",
   //   img: "/clientLogos/thelocalproject.png"
   // },
@@ -74,14 +73,13 @@ const Services: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
-
   // Auto carousel effect
   useEffect(() => {
     if (isHovered) return;
-    
+
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % servicesData.length);
-    }, 2000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [isHovered]);
 
@@ -108,15 +106,14 @@ const Services: React.FC = () => {
   return (
     <div className="min-h-screen ">
       {/* Desktop Version - Fixed visibility */}
-      <div 
-      className="hidden lg:flex items-center justify-between min-h-screen relative overflow-hidden left-0 ">
+      <div className="hidden lg:flex items-center justify-between min-h-screen relative overflow-hidden left-0 ">
         {/* Left Side - Circular Layout */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-96 h-full flex items-center ">
           <div className="relative w-full h-80 flex items-center justify-center ml-[-20px]">
             {generateCircularIcons().map((item, index) => (
               <div
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
                 key={index}
                 className="absolute transition-all duration-700 ease-out cursor-pointer group"
                 style={{
@@ -253,6 +250,8 @@ const Services: React.FC = () => {
           <div className="flex justify-center gap-6 mb-12">
             {servicesData.map((service, index) => (
               <div
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
                 key={index}
                 className={`
                   w-16 h-16 rounded-2xl shadow-lg flex items-center justify-center
@@ -272,11 +271,11 @@ const Services: React.FC = () => {
                 >
                   {/* {service.icon} */}
                   <Image
-                      src={service.icon}
-                      alt={service.title}
-                      width={120}
-                      height={120}
-                    />
+                    src={service.icon}
+                    alt={service.title}
+                    width={120}
+                    height={120}
+                  />
                 </div>
               </div>
             ))}
@@ -330,6 +329,8 @@ const Services: React.FC = () => {
         <div className="grid grid-cols-2 gap-4 px-4 mb-8">
           {servicesData.map((service, index) => (
             <div
+              onTouchStart={() => setIsHovered(true)}
+              onTouchEnd={() => setIsHovered(false)}
               key={index}
               className={`
                 p-4 rounded-2xl border-2 transition-all duration-500 cursor-pointer
@@ -381,7 +382,12 @@ const Services: React.FC = () => {
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
                 <div className="text-white">
-                  {servicesData[activeIndex].icon}
+                  <Image
+                    src={servicesData[activeIndex].icon}
+                    alt={servicesData[activeIndex].title}
+                    width={120}
+                    height={120}
+                  />
                 </div>
               </div>
               <div>
