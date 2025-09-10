@@ -57,7 +57,7 @@ const servicesData: Service[] = [
 const clientLogos: Client[] = [
   { name: "ClayLab", img: "/clientLogos/claylab.png" },
   { name: "Lagum Advisors", img: "/clientLogos/la.png" },
-  { name: "Wolnut", img: "/clientLogos/wolnutLogo.png" },
+  { name: "Wolnut", img: "/clientLogos/WolnutLogo.png" },
   { name: "Jyotsna Singh", img: "/clientLogos/jyotsnasingh.png" },
   { name: "Kancha", img: "/clientLogos/kancha.png" },
   { name: "Little Pineapple", img: "/clientLogos/littlepineapple.png" },
