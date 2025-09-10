@@ -47,7 +47,7 @@ const servicesData: Service[] = [
   },
   {
     id: 5,
-    title: "Mentorship and Consulting",
+    title: "Mentorship & Consulting",
     description:
       "We offer one-on-one consultations both one-time and monthly to guide startups, creators, and businesses with the right strategy, support, and steps. Blending industry insights with hands-on experience.",
     icon: "/services/Mentorship and Consulting.jpeg",
