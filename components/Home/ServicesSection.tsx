@@ -40,7 +40,7 @@ const servicesData: Service[] = [
   },
   {
     id: 4,
-    title: "Podcast editing",
+    title: "Podcast Editing",
     description:
       "We turn raw recordings into engaging, shareable conversations. With expert editing, creative direction, and smart distribution, we ensure your podcast not only sounds professional but also resonates with the right audience.",
     icon: "/services/Podcast editing.jpeg",
@@ -105,7 +105,7 @@ const Services: React.FC = () => {
     <div className="min-h-screen ">
       {/* Desktop Version - Fixed visibility */}
       <div className="hidden lg:flex items-center justify-between min-h-screen relative overflow-hidden left-0 ">
-        {/* Left Side - Circular Layout - Completely attached to left wall */}
+        {/* Left Side - Circular Layout */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-96 h-full flex items-center ">
           <div className="relative w-full h-80 flex items-center justify-center ml-[-20px]">
             {generateCircularIcons().map((item, index) => (
