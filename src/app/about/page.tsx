@@ -236,7 +236,7 @@ const About = () => {
                 and laughter. Nikita leans in, eyes shining, and confides, "I've
                 always wanted to build something creative, something that's
                 really ours." Digvijay doesn't skip a beat. With a playful wink,
-                he says, "Why don't we name it after our favorite fruit—Aam?" `}
+                he says, "Why don't we name it after our favorite fruit, Aam?" `}
               </p>
               <p className="leading-relaxed text-2xl ">
                 {` Suddenly, the room bursts with memories: sticky fingers from
@@ -301,7 +301,7 @@ const About = () => {
             <div className="flex-1">
               <p className="leading-relaxed text-2xl mb-4">
                 {` So, what keeps Digvijay and Nikita inspired? For them, this
-                venture is so much more than just business—it's like mixing the
+                venture is so much more than just business. It's like mixing the
                 perfect glass of aam panna: a bit of tradition, a splash of
                 creativity, and loads of zest. They love taking plain ideas and
                 turning them into something unforgettable, just like adding
