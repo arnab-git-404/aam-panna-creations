@@ -1,13 +1,10 @@
 import React from 'react'
 import Hero from "@/components/Home/Hero";
 import Services from '@/components/Home/ServicesSection';
-// import Testimonials from '@/components/Home/Testimonials';
 import Testimonials from '@/components/Home/Testimonials';
 import WhoWeAre from '@/components/Home/whoWeAre';
 import Form from '@/components/Home/Form';
 import FeatureSection from '@/components/Home/featureSection';
-
-import Page from '@/src/app/test/page'
 
 export default function Home() {
   return (
@@ -15,8 +12,6 @@ export default function Home() {
       <Hero />
       <WhoWeAre />
       <Services /> 
-      
-      {/* <Page /> */}
       <Testimonials />
       <FeatureSection />
       <Form />
