@@ -72,14 +72,18 @@ const clientLogos: Client[] = [
 
 const Services: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
 
   // Auto carousel effect
   useEffect(() => {
+    if (isHovered) return;
+    
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % servicesData.length);
     }, 2000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isHovered]);
 
   const generateCircularIcons = () => {
     const radius = 220;
@@ -104,12 +108,15 @@ const Services: React.FC = () => {
   return (
     <div className="min-h-screen ">
       {/* Desktop Version - Fixed visibility */}
-      <div className="hidden lg:flex items-center justify-between min-h-screen relative overflow-hidden left-0 ">
+      <div 
+      className="hidden lg:flex items-center justify-between min-h-screen relative overflow-hidden left-0 ">
         {/* Left Side - Circular Layout */}
         <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-96 h-full flex items-center ">
           <div className="relative w-full h-80 flex items-center justify-center ml-[-20px]">
             {generateCircularIcons().map((item, index) => (
               <div
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
                 key={index}
                 className="absolute transition-all duration-700 ease-out cursor-pointer group"
                 style={{
@@ -263,7 +270,13 @@ const Services: React.FC = () => {
                     index === activeIndex ? "text-white" : "text-gray-600"
                   }
                 >
-                  {service.icon}
+                  {/* {service.icon} */}
+                  <Image
+                      src={service.icon}
+                      alt={service.title}
+                      width={120}
+                      height={120}
+                    />
                 </div>
               </div>
             ))}
@@ -340,7 +353,13 @@ const Services: React.FC = () => {
                       index === activeIndex ? "text-white" : "text-gray-600"
                     }
                   >
-                    {service.icon}
+                    {/* {service.icon} */}
+                    <Image
+                      src={service.icon}
+                      alt={service.title}
+                      width={120}
+                      height={120}
+                    />
                   </div>
                 </div>
                 <h3
