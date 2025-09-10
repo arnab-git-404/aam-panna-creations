@@ -6,8 +6,6 @@ import Footer from "../../components/Footer";
 import { Toaster } from 'react-hot-toast';
 
 
-
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -19,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aam Panna Creations",
-  description: "Aam Panna Creations is a creative studio specializing in web design, development, and digital solutions.",
+  title: "Aam Pannaa Creations",
+  description: "Aam Pannaa Creations is a creative studio specializing in web design, development, and digital solutions.",
 };
 
 export default function RootLayout({
