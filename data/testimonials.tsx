@@ -8,8 +8,8 @@ interface Testimonials {
 export const clientTestimonials: Testimonials[] = [
   {
     id: 1,
-    title: "Celsi",
-    role: "Little Pineapple",
+    title: "Kelsey Donnellan",
+    role: "LittlePineapple",
     description:
       "Team APC put their heart and expertise into making every process smooth. With their support, I was able to build confidence in marketing — something that had always felt daunting since I started my venture. I can truly vouch for this talented team that is dedicated to building brands successfully.",
   },
@@ -29,8 +29,8 @@ export const clientTestimonials: Testimonials[] = [
   },
   {
     id: 4,
-    title: "- Vivek",
-    role: "Claylab Foundation",
+    title: "Vivek",
+    role: "Claylab Education Foundation",
     description:
       "It has been a great association with Nikita and Godhuli. Over time, our trust has only grown stronger, and with their expertise, they are amplifying our presence meaningfully.",
   },
@@ -50,7 +50,7 @@ export const clientTestimonials: Testimonials[] = [
   },
   {
     id: 7,
-    title: "-Rashi Mittal",
+    title: "Rashi Mittal",
     role: "Founder, Lagum Advisors",
     description:
       "I truly appreciate the entire team for their patience and for attentively working on my needs and vision. Wishing Aam Pannaa Creations the very best for all their future endeavors!",
