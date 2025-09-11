@@ -26,8 +26,8 @@ const Hero = () => {
         {/* Main Content */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-6xl mx-auto pointer-events-none">
           {/* Welcome Text with Animation */}
-          <div className="mb-4 overflow-hidden">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-gray-800 animate-slide-up tracking-wider">
+          <div className="font-bricolage mb-4 overflow-hidden">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-black animate-slide-up tracking-wider">
               Welcome to
             </h1>
           </div>
@@ -35,7 +35,7 @@ const Hero = () => {
           {/* Main Title with Decorative Elements */}
           <div className="relative mb-8">
             {/* Decorative lines */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 rounded-full"></div>
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-78 h-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 rounded-full"></div>
 
             {/* Main Title */}
             {/* <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-pink-500 animate-gradient leading-tight"> */}
@@ -49,7 +49,8 @@ const Hero = () => {
                 pauseDuration={2500}
                 loop={true}
                 initialDelay={500}
-                className="text-black"
+                className="font-bricolage text-black"
+                
                 showCursor={true}
                 cursorCharacter="_"
               />
@@ -61,8 +62,8 @@ const Hero = () => {
           </div>
 
           {/* Subtitle */}
-          <div className="mb-8 overflow-hidden">
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-700 animate-slide-up-delay font-medium tracking-wide">
+          <div className="mb-8 overflow-hidden font-bricolage ">
+            <p className="text-lg sm:text-xl md:text-2xl text-black animate-slide-up-delay font-light tracking-wide">
               {/* Creative Solutions • Digital Excellence • Innovative Design */}
               Where Limits Defy, We Redefine Marketing
             </p>
