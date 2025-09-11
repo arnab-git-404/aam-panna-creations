@@ -498,7 +498,7 @@ const Services: React.FC = () => {
         }
 
         .animate-scroll-vertical {
-          animation: scroll-vertical 5s linear infinite;
+          animation: scroll-vertical 10s linear infinite;
         }
 
         .animate-scroll-horizontal {
