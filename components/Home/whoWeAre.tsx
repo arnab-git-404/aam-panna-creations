@@ -108,21 +108,26 @@ const WhoWeAre = () => {
                 <br />
               </p> */}
               <p className="text-lg md:text-xl text-black leading-relaxed">
-  {`At Aam Pannaa Creations, we believe every startup has a story worth sharing, a story that inspires, connects, and drives growth.We started with a vision: to bridge gaps in the startup ecosystem and empower early-stage ventures to thrive. While startups brim with ideas, many struggle to build a compelling brand identity. That's where we step in crafting authentic stories and impactful marketing that help them scale.`}
-  <br />
-  <br />
-  {`Our approach combines creativity with strategy, transforming visions into captivating brands and managing social media with precision. For us, it's not just about marketing; It's about forging meaningful connections that fuel growth. We specialize in supporting `}
-  <strong>early-stage startups</strong><strong>, B2B</strong>
-  {`,  companies seeking insights, and `}
-  <strong>women-led social ventures</strong>
-  {` making an impact. Our tailored consultations align with your unique goals to deliver real, lasting results. At Aam Pannaa Creations, we're not just partners; we're advocates for your success. Let's write your growth story together.`}
-  <br />
-  <br />
-</p>
+                {`At Aam Pannaa Creations, we believe every startup has a story worth sharing, a story that inspires, connects, and drives growth. We started with a vision: to bridge gaps in the startup ecosystem and empower early-stage ventures to thrive. While startups brim with ideas, many struggle to build a compelling brand identity. That's where we step in crafting authentic stories and impactful marketing that help them scale.`}
+                <br />
+                <br />
+                {`Our approach combines creativity with strategy, transforming visions into captivating brands and managing social media with precision. For us, it's not just about marketing; It's about forging meaningful connections that fuel growth. We specialize in supporting `}
+                <strong>early-stage startups</strong>
+                <strong>, B2B</strong>
+                {`,  companies seeking insights, and `}
+                <strong>women-led social ventures</strong>
+                making an impact. Our tailored consultations align with your unique goals to deliver real, lasting results. At Aam Pannaa Creations, <span className="italic">We're not just partners; we're advocates for your success.</span>
+
+                <br />
+                <br />
+                <p className="font-bold text-xl md:text-2xl underline">
+                  Let's write your growth story together
+                </p>
+              </p>
             </div>
           </div>
 
-        {/* Right decorative elements */}
+          {/* Right decorative elements */}
           <div className="flex-shrink-0 lg:w-1/3 relative flex justify-center lg:justify-end gap-4 lg:gap-0 mt-8 lg:mt-0">
             {/* LinkedIn icon */}
             <Link
@@ -144,7 +149,6 @@ const WhoWeAre = () => {
               <FaInstagram className="w-12 h-12 lg:w-16 lg:h-16 text-white lg:text-gray-600 lg:group-hover:text-white transition-colors duration-300" />
             </Link>
           </div>
-
         </div>
       </div>
 
