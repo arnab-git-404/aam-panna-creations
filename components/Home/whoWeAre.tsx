@@ -94,7 +94,7 @@ const WhoWeAre = () => {
       <div className="px-4 md:px-8 lg:px-16 relative z-10 bg-[#FFD500] ">
         <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12">
           {/* Left content */}
-          <div className="flex-1 space-y-6 mt-16 ">
+          <div className="flex-1 space-y-6 mt-16 font-bricolage ">
             <h2 className="font-bold text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight">
               Who are we ?
             </h2>
