@@ -746,7 +746,7 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-6 lg:space-x-8 ">
               <Link
                 href="/"
-                className={`flex items-center gap-2 hover:underline text-lg font-bold transition-colors hover:text-primary ${
+                className={`flex items-center gap-2  text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/") ? "text-primary" : "text-muted-foreground"
                 }`}
               >
@@ -755,7 +755,8 @@ const Navbar = () => {
               </Link>
               <Link
                 href="/about"
-                className={`flex items-center gap-2 hover:underline text-lg font-bold transition-colors hover:text-primary ${
+                className={`flex items-center gap-2 
+                   text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/about") ? "text-primary" : "text-muted-foreground"
                 }`}
               >
@@ -764,7 +765,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="/services"
-                className={`flex items-center gap-2 hover:underline text-lg font-bold transition-colors hover:text-primary ${
+                className={`flex items-center gap-2  text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/services")
                     ? "text-primary"
                     : "text-muted-foreground"
@@ -775,7 +776,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="/team"
-                className={`flex items-center gap-2 hover:underline text-lg font-bold transition-colors hover:text-primary ${
+                className={`flex items-center gap-2  text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/team") ? "text-primary" : "text-muted-foreground"
                 }`}
               >
@@ -784,7 +785,7 @@ const Navbar = () => {
               </Link>
               <Link
                 href="/blog"
-                className={`flex items-center gap-2 hover:underline text-lg font-bold transition-colors hover:text-primary ${
+                className={`flex items-center gap-2 text-lg font-bold transition-colors hover:text-primary ${
                   isActive("/blog") ? "text-primary" : "text-muted-foreground"
                 }`}
               >
