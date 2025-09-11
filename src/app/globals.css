@@ -13,6 +13,10 @@
   }
 }
 
+.font-bricolage {
+  font-family: var(--font-bricolage-grotesque), system-ui, sans-serif;
+}
+
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }
