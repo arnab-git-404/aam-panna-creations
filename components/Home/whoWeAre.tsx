@@ -116,12 +116,11 @@ const WhoWeAre = () => {
                 <strong>, B2B</strong>
                 {`,  companies seeking insights, and `}
                 <strong>women-led social ventures</strong>
-                making an impact. Our tailored consultations align with your unique goals to deliver real, lasting results. At Aam Pannaa Creations, <span className="italic">We're not just partners; we're advocates for your success.</span>
-
+                {`making an impact. Our tailored consultations align with your unique goals to deliver real, lasting results. At Aam Pannaa Creations,`} <span className="italic">{`We're not just partners; we're advocates for your success.`}</span>
                 <br />
                 <br />
                 <p className="font-bold text-xl md:text-2xl underline">
-                  Let's write your growth story together
+                  {`Let's write your growth story together`}
                 </p>
               </p>
             </div>
