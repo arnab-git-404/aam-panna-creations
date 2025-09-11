@@ -944,7 +944,7 @@ const Navbar = () => {
                 closeMobileMenu();
                 if (pathname === "/") {
                   e.preventDefault();
-                  setTimeout(() => smoothScrollToForm(), 400); // Wait for menu to close
+                  setTimeout(() => smoothScrollToForm(), 400); 
                 }
               }}
               className="w-full flex items-center justify-center gap-2 minimal-button minimal-button-primary transform transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"

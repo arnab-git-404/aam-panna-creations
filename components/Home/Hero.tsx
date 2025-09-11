@@ -66,7 +66,9 @@ const Hero = () => {
             </button>
             
             <button className="px-8 py-4 border-2 border-gray-800 text-gray-800 font-semibold rounded-full transition-all duration-300 hover:bg-gray-800 hover:text-white hover:scale-105 hover:shadow-xl touch-manipulation">
-              Get In Touch
+              <Link href="/#contact-form" >
+                Get In Touch
+              </Link>
             </button>
           </div>
 
