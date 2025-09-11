@@ -594,7 +594,7 @@ const Projects = () => {
             key={project.id}
             className=" panel flex items-center justify-center w-screen text-black px-8 xl:px-20"
           >
-            <div className="border-2 rounded-2xl py-10 px-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 items-center">
+            <div className=" rounded-2xl py-10 px-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-16 items-center">
               {/* Project image */}
               <div className="aspect-video rounded-2xl backdrop-blur-sm relative overflow-hidden">
                 <Image
@@ -606,7 +606,7 @@ const Projects = () => {
               </div>
 
               {/* Project details */}
-              <div className="space-y-6">
+              <div className="space-y-6 font-bricolage ">
                 <h1 className="text-3xl xl:text-5xl font-bold leading-tight">
                   {project.title}
                 </h1>
