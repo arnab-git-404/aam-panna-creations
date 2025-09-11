@@ -1,8 +1,9 @@
-'use client'
+"use client";
 
 import React from "react";
 import Ballpit from "../Ballpit";
 import Link from "next/link";
+import TextType from "../TextType";
 
 const Hero = () => {
   return (
@@ -35,14 +36,26 @@ const Hero = () => {
           <div className="relative mb-8">
             {/* Decorative lines */}
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 rounded-full"></div>
-            
+
             {/* Main Title */}
             {/* <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-black to-pink-500 animate-gradient leading-tight"> */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-clip-text bg-black animate-gradient leading-tight">
+              {/* Aam Pannaa Creations */}
+
+              <TextType
+                text={["Aam Pannaa Creations","Aam Pannaa Creations","Aam Pannaa Creations"]}
+                variableSpeed={{ min: 50, max: 150 }}
+                deletingSpeed={60}
+                pauseDuration={2500}
+                loop={true}
+                initialDelay={500}
+                className="text-black"
+                showCursor={true}
+                cursorCharacter="_"
+              />
               
-              Aam Pannaa Creations
             </h1>
-            
+
             {/* Bottom decorative line */}
             <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-pink-400 via-orange-400 to-yellow-400 rounded-full"></div>
           </div>
@@ -58,31 +71,28 @@ const Hero = () => {
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up pointer-events-auto">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-semibold rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl touch-manipulation">
-              
               <Link href="/services">
-              <span className="relative z-10">Explore Our Work</span>
+                <span className="relative z-10">Explore Our Work</span>
               </Link>
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </button>
-            
+
             <button className="px-8 py-4 border-2 border-gray-800 text-gray-800 font-semibold rounded-full transition-all duration-300 hover:bg-gray-800 hover:text-white hover:scale-105 hover:shadow-xl touch-manipulation">
-              <Link href="/#contact-form" >
-                Get In Touch
-              </Link>
+              <Link href="/#contact-form">Get In Touch</Link>
             </button>
           </div>
 
           {/* Scroll Indicator */}
           <div className="ml-5 absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce pointer-events-auto">
-            <div className="flex flex-col items-center text-gray-600 cursor-pointer touch-manipulation"
-                 onClick={() => {
-                   window.scrollTo({
-                     top: window.innerHeight,
-                     behavior: 'smooth'
-                   });
-                 }}>
-              
-            </div>
+            <div
+              className="flex flex-col items-center text-gray-600 cursor-pointer touch-manipulation"
+              onClick={() => {
+                window.scrollTo({
+                  top: window.innerHeight,
+                  behavior: "smooth",
+                });
+              }}
+            ></div>
           </div>
         </div>
       </div>
@@ -129,7 +139,8 @@ const Hero = () => {
         }
 
         @keyframes gradient {
-          0%, 100% {
+          0%,
+          100% {
             background-size: 200% 200%;
             background-position: left center;
           }
@@ -161,13 +172,13 @@ const Hero = () => {
           .hero h1 {
             line-height: 1.1;
           }
-          
+
           /* Ensure touch targets are large enough */
           button {
             min-height: 44px;
             min-width: 44px;
           }
-          
+
           /* Better mobile performance */
           .hero {
             -webkit-transform: translateZ(0);
