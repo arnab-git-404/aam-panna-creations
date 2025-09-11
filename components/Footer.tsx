@@ -249,10 +249,13 @@ const Footer = () => {
 
             {/* Contact info */}
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-black hover:text-black transition-colors duration-200">
-                <Mail size={18} />
-                <span>operations@aampanna.net</span>
-              </div>
+              <a 
+                href="mailto:operations@aampanna.net"
+                className="flex items-center space-x-3 text-black hover:text-blue-600 transition-colors duration-200 group"
+              >
+                <Mail size={18} className="group-hover:scale-110 transition-transform duration-200" />
+                <span className="hover:underline">operations@aampanna.net</span>
+              </a>
               {/* <div className="flex items-center space-x-3 text-black hover:text-black transition-colors duration-200">
                 <Phone size={18} />
                 <span>+1 (555) 123-4567</span>
