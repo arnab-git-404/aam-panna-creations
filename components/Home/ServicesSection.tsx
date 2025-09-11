@@ -108,7 +108,7 @@ const Services: React.FC = () => {
       {/* Desktop Version - Fixed visibility */}
       <div className="hidden lg:flex items-center justify-between min-h-screen relative overflow-hidden left-0 ">
         {/* Left Side - Circular Layout */}
-        <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-96 h-full flex items-center ">
+        <div className="font-bricolage absolute left-0 top-1/2 transform -translate-y-1/2 w-96 h-full flex items-center ">
           <div className="relative w-full h-80 flex items-center justify-center ml-[-20px]">
             {generateCircularIcons().map((item, index) => (
               <div
@@ -172,7 +172,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Center Content - Properly centered */}
-        <div className="ml-36 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-lg px-8">
+        <div className="font-bricolage ml-30 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-xl px-8">
           <div className="text-center space-y-6">
             <div className="overflow-hidden">
               <h2 className="text-4xl xl:text-7xl font-bold text-gray-800 leading-tight transition-all duration-700 transform">
