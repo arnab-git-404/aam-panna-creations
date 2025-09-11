@@ -256,6 +256,7 @@ const Footer = () => {
                 <Mail size={18} className="group-hover:scale-110 transition-transform duration-200" />
                 <span className="hover:underline">operations@aampanna.net</span>
               </a>
+
               {/* <div className="flex items-center space-x-3 text-black hover:text-black transition-colors duration-200">
                 <Phone size={18} />
                 <span>+1 (555) 123-4567</span>
@@ -386,18 +387,29 @@ const Footer = () => {
                   <a
                     key={social.name}
                     href={social.href}
-                    className="group relative w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`group relative w-12 h-12 bg-white border-2 border-gray-300 rounded-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 ${
+                      social.name === 'LinkedIn'
+                        ? 'hover:bg-[#0077B5] hover:border-[#0077B5]'
+                        : 'hover:bg-gradient-to-br hover:from-[#E4405F] hover:via-[#E1306C] hover:to-[#833AB4] hover:border-transparent'
+                    }`}
                     title={social.name}
                   >
                     <social.icon
                       size={20}
-                      className="text-white group-hover:text-white transition-colors duration-300"
+                      className={`transition-colors duration-300 ${
+                        social.name === 'LinkedIn'
+                          ? 'text-[#0077B5] group-hover:text-white'
+                          : 'text-[#E4405F] group-hover:text-white'
+                      }`}
                     />
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                   </a>
                 ))}
               </div>
             </div>
+
+
           </div>
         </div>
       </div>
