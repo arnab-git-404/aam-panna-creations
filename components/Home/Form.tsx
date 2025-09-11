@@ -111,7 +111,7 @@ const Form: React.FC = () => {
               onChange={handleInputChange}
               placeholder="Enter your message"
               rows={2}
-              className=" mt-4 border-2 bg-transparent border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
+              className=" mt-4 border-b-3 bg-transparent border-black outline-none placeholder-gray-600 text-2xl md:text-3xl font-bold min-w-[260px] flex-1"
               required
             />
           </div>
