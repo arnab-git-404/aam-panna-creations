@@ -282,14 +282,14 @@ const Footer = () => {
                     onMouseEnter={() => setHoveredLink(link.name)}
                     onMouseLeave={() => setHoveredLink(null)}
                   >
-                    <ArrowRight
+                    {/* <ArrowRight
                       size={16}
                       className={`transform transition-all duration-200 ${
                         hoveredLink === link.name
                           ? "translate-x-1 text-blue-400"
                           : "translate-x-0 opacity-0 group-hover:opacity-100"
                       }`}
-                    />
+                    /> */}
                     <span className="relative">
                       {link.name}
                       <span
@@ -320,14 +320,14 @@ const Footer = () => {
                     onMouseEnter={() => setHoveredLink(link.name)}
                     onMouseLeave={() => setHoveredLink(null)}
                   >
-                    <ArrowRight
+                    {/* <ArrowRight
                       size={16}
                       className={`transform transition-all duration-200 ${
                         hoveredLink === link.name
                           ? "translate-x-1 text-blue-400"
                           : "translate-x-0 opacity-0 group-hover:opacity-100"
                       }`}
-                    />
+                    /> */}
                     <span className="relative">
                       {link.name}
                       <span
