@@ -200,11 +200,11 @@ const Team = () => {
       {/* Rest of your existing sections remain the same */}
       {/* Header Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center font-bricolage ">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Meet the minds behind the magic
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-black max-w-3xl mx-auto">
             From visionary founders to creative innovators, our team blends
             fresh energy with seasoned wisdom — turning caffeine-fueled ideas
             into art, strategy, and impact.
@@ -242,7 +242,7 @@ const Team = () => {
           </svg>
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="relative z-10 max-w-6xl mx-auto font-bricolage">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Leadership Team
@@ -264,7 +264,7 @@ const Team = () => {
 
       {/* Creative Team Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4]">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto font-bricolage ">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Creative Team
