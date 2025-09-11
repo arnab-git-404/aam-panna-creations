@@ -725,7 +725,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="border-b border-border relative z-50">
+      <nav className=" relative z-50">
         <div className=" mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#FFFDE8] to-[#FFFBD2]  ">
           <div className="flex justify-between items-center h-18 font-semibold ">
             {/* Logo */}
@@ -798,9 +798,13 @@ const Navbar = () => {
             <Link 
               href="/#contact-form"
               onClick={handleContactClick}
-              className="text-black hover:cursor-pointer bg-[#FFD500] rounded-2xl px-4 py-2 h-8 hidden sm:flex items-center gap-2 minimal-button minimal-button-primary text-sm lg:text-base"
+              // className="text-black hover:cursor-pointer bg-[#FFD500] rounded-2xl px-4 py-2 h-8 hidden sm:flex items-center gap-2 minimal-button minimal-button-primary text-sm lg:text-base"
+            // >
+            className="hover:cursor-pointer relative  rounded-full bg-[#FF69B4] text-black font-medium text-lg sm:flex item-center  gap-2 px-2 py-1 hidden
+        shadow-[0px_8px_0px_rgba(0,0,0,1)] transition-transform duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0px_6px_0px_rgba(0,0,0,1)]"
             >
-              <HiChat className="w-5 h-5" />
+
+              <HiChat className="w-5 h-5 mt-1 " />
               {`Let's chat`}
             </Link>
 
@@ -937,7 +941,7 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="p-4 border-t border-border">
+          <div className="p-4 border-t border-border font-bricolage ">
             <Link
               href="/#contact-form"
               onClick={(e) => {
@@ -947,8 +951,14 @@ const Navbar = () => {
                   setTimeout(() => smoothScrollToForm(), 400); 
                 }
               }}
-              className="w-full flex items-center justify-center gap-2 minimal-button minimal-button-primary transform transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            //   className="w-full flex items-center justify-center gap-2 minimal-button minimal-button-primary transform transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            // >
+
+className="hover:cursor-pointer relative px-6 md:px-10 py-3 md:py-4 rounded-full bg-[#FF69B4] text-black font-medium text-lg md:text-xl
+        shadow-[0px_8px_0px_rgba(0,0,0,1)] transition-transform duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-[0px_6px_0px_rgba(0,0,0,1)]"
             >
+
+
               <HiChat className="w-5 h-5" />
               {`Let's chat`}
             </Link>
