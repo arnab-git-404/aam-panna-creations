@@ -202,7 +202,7 @@ const About = () => {
       {/* Main Content */}
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 font-bricolage ">
           <div className="flex justify-center items-center mb-8">
             <Image
               src="/ourStory/our-story-hero-section.svg"
@@ -213,18 +213,18 @@ const About = () => {
             />
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
             Our Story
           </h1>
-          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl italic mt-4 px-4">
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl  mt-4 px-4">
             {' "Turning bland into brand, the Aam Pannaa way!" '}
           </p>
         </div>
 
 
         {/* The Spark Section */}
-        <section className="max-w-7xl mb-16 mx-auto">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-serif font-bold mb-8">
+        <section className="max-w-7xl mb-16 mx-auto font-bricolage ">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium mb-8">
             The Spark of Aam Pannaa
           </h2>
 
@@ -272,8 +272,8 @@ const About = () => {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-serif font-bold mb-8 text-end">
+        <section className="mx-auto max-w-7xl mb-16 font-bricolage ">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-medium mb-8 text-end">
             Adding Flavor to Startups
           </h2>
 
