@@ -35,7 +35,8 @@ const Form: React.FC = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] p-4 md:p-6">
+    <div id="contact-form"
+    className="bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] p-4 md:p-6">
       <div className="mx-auto px-4 md:px-6 lg:px-8 mb-10 ">
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Hello with smiley */}
