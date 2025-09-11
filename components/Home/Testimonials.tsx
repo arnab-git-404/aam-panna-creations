@@ -11,7 +11,7 @@ const Testimonials = () => {
       <div className=" mx-auto px-4 md:px-8 lg:px-16  ">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12">
           {/* Left side - Heading and description */}
-          <div className="lg:max-w-2xl">
+          <div className="lg:max-w-2xl font-bricolage ">
             <h2 className="font-bold text-4xl md:text-4xl lg:text-5xl text-gray-900 leading-tight mb-6 lg:mb-4">
               We work with some <br /> pretty cool people
             </h2>
