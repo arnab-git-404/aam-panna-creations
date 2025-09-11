@@ -17,7 +17,7 @@ export const projects: Project[] = [
         description: [
             "At Aam Pannaa Creations we don’t just build websites, we create digital experiences. From research and UI/UX design to content, development, and deployment, every step is fueled by creativity. The result is a site that’s visually appealing, fully functional, mobile-friendly, and enriched with smooth animations. Your website becomes more than a presence, it becomes an experience that inspires and engages.",
         ],
-        projectName: "ClayLab",
+        projectName: "ClayLab Educational Foundation",
         projectDes: "We built ClayLab Foundation’s website from scratch and strengthened their digital presence with impactful design and social media strategy. By aligning their platform with their mission, we helped position them as a credible and inspiring education-focused brand.",
         liveLink: "https://claylab-ver.vercel.app/",
     },
