@@ -37,7 +37,7 @@ const Form: React.FC = () => {
   return (
     <div id="contact-form"
     className="bg-gradient-to-b from-[#FFFFFF] to-[#FF69B4] p-4 md:p-6">
-      <div className="mx-auto px-4 md:px-6 lg:px-8 mb-10 ">
+      <div className=" mx-auto px-4 md:px-6 lg:px-8 mb-10 ">
         
         <form 
         action='https://formspree.io/f/mayrrgno'
